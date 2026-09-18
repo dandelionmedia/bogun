@@ -399,6 +399,35 @@ body{font-size:18px;line-height:1.78;letter-spacing:-.012em;background:linear-gr
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.prompt-card,.toc a,.copy-btn,.backtop,.sidebar,.overlay{transition:none!important}}
 
+
+/* v13 consistent body side margins (hero excluded) */
+.main{padding-inline:0!important}
+.hero{margin-left:0;margin-right:0;border-radius:0 0 28px 28px}
+.search-wrap,
+.content,
+.footer{
+  width:min(1280px,calc(100% - 120px));
+  max-width:none;
+  margin-left:auto;
+  margin-right:auto;
+}
+.search-wrap{padding-left:22px;padding-right:22px}
+.content{padding:42px 0 112px}
+.footer{padding-left:0;padding-right:0}
+@media(max-width:1180px){
+  .search-wrap,.content,.footer{width:calc(100% - 72px)}
+}
+@media(max-width:820px){
+  .hero{border-radius:0}
+  .search-wrap,.content,.footer{width:calc(100% - 30px)}
+  .search-wrap{padding-left:12px;padding-right:12px}
+  .content{padding:30px 0 92px}
+  .footer{padding:28px 0 42px}
+}
+@media(max-width:480px){
+  .search-wrap,.content,.footer{width:calc(100% - 24px)}
+}
+
 </style>
 </head>
 <body>
@@ -507,19 +536,43 @@ body{font-size:18px;line-height:1.78;letter-spacing:-.012em;background:linear-gr
 
   <div class="pricing-grid pricing-grid-main">
     <article class="price-card tool-chatgpt">
-      <div class="price-brand"><div class="price-logo"><img src="https://chatgpt.com/favicon.ico" alt="ChatGPT 로고"></div><div><h3>ChatGPT</h3><small>OpenAI</small></div></div>
-      <div class="plan-list">
-        <div class="plan-row"><strong>Free</strong><span>무료</span></div>
-        <div class="plan-row"><strong>Go</strong><span>저가형 유료 · 지역별 표시</span></div>
-        <div class="plan-row recommended"><strong>Plus</strong><span>US$20 / 월</span></div>
-        <div class="plan-row"><strong>Pro</strong><span>상위 개인 요금제</span></div>
+      <div class="plan-ribbon">ChatGPT 개인 요금제 상세</div>
+      <div class="price-brand"><div class="price-logo"><img src="https://chatgpt.com/favicon.ico" alt="ChatGPT 로고" loading="lazy"></div><div><h3>ChatGPT</h3><small>OpenAI</small></div></div>
+      <div class="google-plan-summary">
+        <div class="google-plan-item free">
+          <div class="gp-top"><strong>Free</strong><span class="gp-price">US$0</span></div>
+          <p>기본 ChatGPT를 무료로 사용합니다. 웹 검색, 파일 업로드, 이미지 생성, 데이터 분석 등 주요 기능을 제한된 사용량으로 체험할 수 있습니다.</p>
+          <span class="gp-fit">가벼운 질문·문서 초안·AI 입문 실습</span>
+        </div>
+        <div class="google-plan-item plus">
+          <div class="gp-top"><strong>Go</strong><span class="gp-price">US$8/월*</span></div>
+          <p>Free보다 메시지·파일 업로드·이미지 생성·데이터 분석 한도가 확대되는 저가형 개인 요금제입니다. 국가에 따라 현지 가격이 적용될 수 있습니다.</p>
+          <span class="gp-fit">가벼운 업무를 자주 쓰는 교사·입문 사용자</span>
+        </div>
+        <div class="google-plan-item pro recommended-plan">
+          <div class="gp-top"><strong>Plus</strong><span class="gp-price">US$20/월</span></div>
+          <p>Free보다 높은 모델·도구 사용 한도와 우선 접근을 제공하며, 파일 분석·이미지 제작·Deep Research·고급 추론 등 실무 활용 범위가 넓어집니다.</p>
+          <span class="gp-fit">보건교사 개인 실무·수업자료 제작에 가장 범용적</span>
+        </div>
+        <div class="google-plan-item ultra">
+          <div class="gp-top"><strong>Pro 5X</strong><span class="gp-price">US$100/월</span></div>
+          <p>Plus보다 약 5배 높은 사용량 구간으로, Pro 모델·Codex·Deep Research·이미지 생성·메모리·파일 업로드 등 고급 기능을 더 넉넉하게 사용합니다.</p>
+          <span class="gp-fit">고강도 자료 제작·코딩·연구·콘텐츠 생산 중심</span>
+        </div>
+        <div class="google-plan-item ultra">
+          <div class="gp-top"><strong>Pro 20X</strong><span class="gp-price">US$200/월</span></div>
+          <p>Plus 대비 약 20배 높은 사용량 구간입니다. 다만 2026년 9월 10일부터 신규 가입·업그레이드는 일시 중지되어 기존 구독자만 계속 이용할 수 있습니다.</p>
+          <span class="gp-fit">매우 높은 사용량이 필요한 전문 사용자</span>
+        </div>
       </div>
+      <div class="google-clarity-note"><b>학교·기관 이용 참고</b><br>개인용 외에 ChatGPT Business·Enterprise·Edu 계열도 있습니다. 학교나 교육기관에서 조직 단위로 도입할 경우 개인 요금제보다 보안·관리·계정 운영 정책을 함께 검토하는 것이 좋습니다. 실제 한국 결제금액은 환율·세금·결제 플랫폼에 따라 달라질 수 있습니다.</div>
       <div class="use-title">보건교사에게 특히 유용한 업무</div>
       <ul class="use-list">
-        <li>가정통신문·보건소식지·교직원 안내문 초안 작성과 교정</li>
-        <li>PDF·표·문서 업로드 후 핵심내용 요약과 수업자료 재구성</li>
-        <li>학생참여형 보건수업 아이디어·퀴즈·활동지·평가기준 제작</li>
-        <li>카드뉴스·이미지·웹페이지·웹앱 제작과 반복 업무 체계화</li>
+        <li><b>문서 실무</b>: 가정통신문·보건소식지·교직원 안내문·회의자료의 초안 작성과 표현 교정</li>
+        <li><b>자료 분석</b>: PDF·표·문서 업로드 후 핵심내용 요약, 비교표 제작, 보건수업용 재구성</li>
+        <li><b>수업 설계</b>: 학생참여형 보건수업 아이디어·퀴즈·활동지·평가기준·수업지도안 제작</li>
+        <li><b>콘텐츠 제작</b>: 카드뉴스·이미지·웹페이지·웹앱·간단한 자동화·코딩 실습</li>
+        <li><b>심화 활용</b>: Deep Research와 고급 추론을 활용한 교육자료 조사·근거 정리·프로젝트 기획</li>
       </ul>
       <a class="price-link" href="https://chatgpt.com/ko-KR/pricing/" target="_blank" rel="noopener noreferrer">ChatGPT 공식 요금제 확인 ↗</a>
     </article>
@@ -564,18 +617,38 @@ body{font-size:18px;line-height:1.78;letter-spacing:-.012em;background:linear-gr
     </article>
 
     <article class="price-card tool-claude">
+      <div class="plan-ribbon">Claude 개인 요금제 상세</div>
       <div class="price-brand"><div class="price-logo"><img src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%20aria-hidden%3D%22true%22%3E%0A%20%20%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%2260%22%20height%3D%2260%22%20rx%3D%2218%22%20fill%3D%22%23fff8f2%22/%3E%0A%20%20%3Cg%20fill%3D%22%23d97745%22%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2232%22%20cy%3D%2214%22%20rx%3D%224.1%22%20ry%3D%228.8%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2232%22%20cy%3D%2250%22%20rx%3D%224.1%22%20ry%3D%228.8%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2214%22%20cy%3D%2232%22%20rx%3D%228.8%22%20ry%3D%224.1%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2250%22%20cy%3D%2232%22%20rx%3D%228.8%22%20ry%3D%224.1%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2219.3%22%20cy%3D%2219.3%22%20rx%3D%224.1%22%20ry%3D%228.2%22%20transform%3D%22rotate%28-45%2019.3%2019.3%29%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2244.7%22%20cy%3D%2244.7%22%20rx%3D%224.1%22%20ry%3D%228.2%22%20transform%3D%22rotate%28-45%2044.7%2044.7%29%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2244.7%22%20cy%3D%2219.3%22%20rx%3D%228.2%22%20ry%3D%224.1%22%20transform%3D%22rotate%28-45%2044.7%2019.3%29%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2219.3%22%20cy%3D%2244.7%22%20rx%3D%228.2%22%20ry%3D%224.1%22%20transform%3D%22rotate%28-45%2019.3%2044.7%29%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%228.5%22%20fill%3D%22%23f4b18f%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E" alt="Claude 로고" loading="lazy"></div><div><h3>Claude</h3><small>Anthropic</small></div></div>
-      <div class="plan-list">
-        <div class="plan-row"><strong>Free</strong><span>US$0</span></div>
-        <div class="plan-row recommended"><strong>Pro</strong><span>개인 유료 기본</span></div>
-        <div class="plan-row"><strong>Max</strong><span>상위 개인 요금제</span></div>
+      <div class="google-plan-summary">
+        <div class="google-plan-item free">
+          <div class="gp-top"><strong>Free</strong><span class="gp-price">US$0</span></div>
+          <p>기본 Claude를 무료로 사용합니다. 간단한 글쓰기·요약·문서 이해·질문 응답을 제한된 사용량으로 활용할 수 있습니다.</p>
+          <span class="gp-fit">간단한 문서 요약·표현 다듬기·입문 실습</span>
+        </div>
+        <div class="google-plan-item pro recommended-plan">
+          <div class="gp-top"><strong>Pro</strong><span class="gp-price">US$20/월 · US$200/년</span></div>
+          <p>무료 서비스보다 세션당 최소 5배 이상의 사용량, 혼잡 시간 우선 접근, 새 기능 조기 접근, Claude Code·Cowork 접근 등을 제공합니다.</p>
+          <span class="gp-fit">긴 문서·수업자료·행정문서를 자주 다루는 교사</span>
+        </div>
+        <div class="google-plan-item ultra">
+          <div class="gp-top"><strong>Max 5x</strong><span class="gp-price">US$100/월</span></div>
+          <p>Pro보다 약 5배 높은 사용량을 제공하며, 더 긴 작업과 반복적인 문서 분석·작성·코딩을 자주 수행하는 사용자를 위한 상위 개인 요금제입니다.</p>
+          <span class="gp-fit">대량 문서 분석·장시간 작업·빈번한 Claude 활용</span>
+        </div>
+        <div class="google-plan-item ultra">
+          <div class="gp-top"><strong>Max 20x</strong><span class="gp-price">US$200/월</span></div>
+          <p>Pro보다 약 20배 높은 사용량을 제공해 하루 종일 Claude와 협업하거나 대규모 문서·코딩·프로젝트 작업을 수행하는 사용자에게 적합한 최상위 개인 구간입니다.</p>
+          <span class="gp-fit">고강도 연구·콘텐츠 제작·장시간 협업 중심</span>
+        </div>
       </div>
+      <div class="google-clarity-note"><b>Claude 요금제 이용 참고</b><br>Claude Pro·Max 구독은 웹·데스크톱·모바일의 Claude 사용을 위한 개인 구독입니다. <b>Claude API와 Console 사용료는 별도</b>이며 개인 구독에 포함되지 않습니다. 조직용으로는 Team·Enterprise 플랜이 별도로 제공됩니다.</div>
       <div class="use-title">보건교사에게 특히 유용한 업무</div>
       <ul class="use-list">
-        <li>긴 교육자료·회의자료·정책문서의 구조 분석과 핵심 요약</li>
-        <li>가정통신문·보건자료 문장을 자연스럽고 읽기 쉽게 다듬기</li>
-        <li>여러 자료의 공통점·차이점 비교와 표·체크리스트 정리</li>
-        <li>Artifacts·코딩을 활용한 간단한 교육용 프로토타입 제작</li>
+        <li><b>긴 문서 읽기</b>: 교육자료·회의자료·정책문서·연수자료를 구조화하고 핵심만 요약</li>
+        <li><b>문장 다듬기</b>: 가정통신문·보건자료를 학부모·학생이 이해하기 쉬운 문장으로 변환</li>
+        <li><b>비교·정리</b>: 여러 자료의 공통점·차이점을 비교하고 표·체크리스트·의사결정 항목으로 재구성</li>
+        <li><b>수업자료 재구성</b>: 긴 설명자료를 학년별 수준에 맞는 활동지·질문·토론자료로 변환</li>
+        <li><b>Artifacts·코딩</b>: 교육용 간단 웹페이지·도구·프로토타입 제작과 코드 수정</li>
       </ul>
       <a class="price-link" href="https://claude.com/ko/pricing" target="_blank" rel="noopener noreferrer">Claude 공식 요금제 확인 ↗</a>
     </article>
