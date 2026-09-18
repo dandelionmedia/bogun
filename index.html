@@ -819,6 +819,17 @@ button:focus-visible,a:focus-visible,input:focus-visible{
   box-sizing:border-box;
 }
 
+/* v24 desktop hero title on a single line */
+@media (min-width:1200px){
+  .hero h1{
+    white-space:nowrap;
+    max-width:none;
+    font-size:clamp(42px,2.5vw,48px);
+    line-height:1.08;
+    letter-spacing:-.055em;
+  }
+}
+
 </style>
 </head>
 <body>
