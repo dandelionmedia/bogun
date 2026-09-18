@@ -1059,6 +1059,427 @@ button:focus-visible,a:focus-visible,input:focus-visible{
   .slide-go-btn{padding:6px 9px}
 }
 
+/* v27 final cross-device stability pass */
+html,body{max-width:100%;overflow-x:hidden}
+.main,.content,.section,.prompt-grid,.prompt-card,.ai-tools-grid,.pricing-grid-main,
+.slide-viewer-section,.slide-viewer-shell,.slide-stage{min-width:0}
+.prompt-card,.ai-tool-card,.price-card{max-width:100%}
+pre.prompt{tab-size:2}
+input,button,a{font-family:inherit}
+@media(max-width:820px){
+  .sidebar{max-width:92vw}
+  .instructor-wrap{max-width:100%}
+  .prompt-card{width:100%}
+  .card-top{overflow:visible}
+  .prompt{width:100%;overflow-x:hidden}
+  .price-card,.ai-tool-card{width:100%}
+  .slide-viewer-shell{width:100%;overflow:hidden}
+}
+@media(max-width:480px){
+  .hero-meta{align-items:stretch}
+  .pill{max-width:100%}
+  .padlet-hero{max-width:100%}
+  .searchbox{min-width:0}
+  .searchbox input{min-width:0}
+}
+
+/* v28 premium readability & visual refinement */
+:root{
+  --navy:#123459;
+  --navy-2:#0d2745;
+  --blue:#1b70c9;
+  --blue-2:#2f8fe0;
+  --mint:#eaf8f3;
+  --mint-2:#1e9a78;
+  --gold:#d6ae55;
+  --ink:#20384f;
+  --muted:#6b8093;
+  --line:#dce8f0;
+  --paper:#ffffff;
+  --soft:#f6fafc;
+  --shadow-premium:0 14px 38px rgba(19,62,94,.09);
+  --shadow-premium-hover:0 22px 52px rgba(19,62,94,.14);
+}
+
+/* global typography */
+body{
+  color:var(--ink);
+  font-size:18px;
+  line-height:1.82;
+  letter-spacing:-.014em;
+  background:
+    radial-gradient(circle at 88% 4%,rgba(76,161,216,.08),transparent 28%),
+    radial-gradient(circle at 9% 82%,rgba(39,163,126,.06),transparent 26%),
+    linear-gradient(180deg,#f8fbfd 0%,#ffffff 30%,#f7fbf9 100%);
+}
+h1,h2,h3,strong,b{letter-spacing:-.035em}
+p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
+
+/* sidebar */
+.sidebar{
+  border-right:1px solid #e2ecf2;
+  box-shadow:10px 0 34px rgba(23,67,99,.055);
+}
+.brand{
+  padding-bottom:18px;
+}
+.brand small{
+  color:#2c7c69;
+  letter-spacing:.01em;
+}
+.brand h2{
+  font-size:24px;
+  letter-spacing:-.045em;
+}
+.toc{
+  gap:7px;
+}
+.toc a{
+  position:relative;
+  padding:11px 13px 11px 15px;
+  border-radius:13px;
+  font-size:14.2px;
+  line-height:1.45;
+  color:#405d76;
+  transition:.18s ease;
+}
+.toc a:hover{
+  transform:translateX(2px);
+  background:linear-gradient(135deg,#f1f8fd,#eefaf6);
+  border-color:#d5e7ef;
+}
+.toc a.active{
+  color:#155f9d;
+  background:linear-gradient(135deg,#edf7ff,#eefbf6);
+  border-color:#cfe5ef;
+  box-shadow:inset 4px 0 0 #1c987b,0 7px 18px rgba(15,90,145,.06);
+}
+
+/* hero */
+.hero{
+  background:
+    radial-gradient(circle at 76% 16%,rgba(89,157,220,.22),transparent 35%),
+    radial-gradient(circle at 98% 100%,rgba(45,161,128,.18),transparent 33%),
+    linear-gradient(125deg,#162f57 0%,#315693 56%,#4e8bad 100%);
+  box-shadow:inset 0 -1px 0 rgba(255,255,255,.18);
+}
+.hero-kicker{
+  border:1px solid rgba(255,255,255,.28);
+  background:rgba(255,255,255,.11);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 8px 20px rgba(4,27,52,.12);
+}
+.hero h1{
+  text-shadow:0 3px 16px rgba(0,23,45,.18);
+}
+.hero p{
+  color:rgba(255,255,255,.92);
+  font-weight:500;
+}
+.pill{
+  border:1px solid rgba(255,255,255,.45);
+  background:rgba(255,255,255,.96);
+  color:#274b70;
+  box-shadow:0 10px 25px rgba(4,37,69,.12);
+}
+
+/* Padlet */
+.padlet-hero{
+  border-color:rgba(255,255,255,.34);
+  background:linear-gradient(135deg,rgba(255,255,255,.17),rgba(255,255,255,.08));
+  box-shadow:0 16px 38px rgba(3,33,61,.18);
+}
+.padlet-btn{
+  background:linear-gradient(135deg,#ff5e72,#f77e63 48%,#8168e8);
+  box-shadow:0 11px 28px rgba(103,64,173,.34);
+}
+
+/* sticky search */
+.search-wrap{
+  background:rgba(255,255,255,.93);
+  backdrop-filter:blur(18px) saturate(1.1);
+  box-shadow:0 8px 25px rgba(21,62,92,.055);
+}
+.searchbox input{
+  border:1.5px solid #c7dce9;
+  background:#fff;
+  min-height:52px;
+  font-size:16px;
+  box-shadow:0 8px 24px rgba(23,75,112,.055);
+}
+.searchbox input:focus{
+  border-color:#3a8bcf;
+  box-shadow:0 0 0 4px rgba(27,112,201,.09),0 10px 26px rgba(23,75,112,.07);
+}
+.search-count{
+  padding:8px 11px;
+  border-radius:999px;
+  background:#eef6fb;
+  border:1px solid #dbeaf3;
+  color:#577087;
+  font-weight:850;
+}
+
+/* quick flow and notices */
+.quickflow{
+  gap:12px;
+}
+.flow{
+  border:1px solid #d9e7ef;
+  border-radius:17px;
+  background:linear-gradient(180deg,#fff,#f9fcfe);
+  box-shadow:0 8px 22px rgba(32,89,124,.045);
+}
+.flow b{
+  color:#1769b3;
+}
+.notice{
+  border:1px solid #cfe8df;
+  border-left:5px solid #1f9a79;
+  background:linear-gradient(135deg,#f4fbff,#f2fcf8);
+  color:#3e5c70;
+  box-shadow:0 8px 22px rgba(23,76,110,.045);
+}
+
+/* section titles */
+.section-head{
+  position:relative;
+}
+.num,.slide-viewer-badge{
+  background:linear-gradient(135deg,#176fc2,#249d7f);
+  box-shadow:0 10px 24px rgba(11,102,195,.19);
+}
+.section h2,.slide-viewer-head h2{
+  color:#17385c;
+  font-weight:950;
+  letter-spacing:-.045em;
+}
+.section-desc,.slide-viewer-head p{
+  color:#6d8193;
+}
+.section+.section{
+  border-top:1px solid #e7eff4;
+}
+
+/* prompt cards */
+.prompt-grid{
+  gap:22px;
+}
+.prompt-card{
+  border:1px solid #d7e5ed;
+  border-radius:22px;
+  background:#fff;
+  box-shadow:var(--shadow-premium);
+  transition:.2s transform,.2s box-shadow,.2s border-color;
+}
+.prompt-card:hover{
+  transform:translateY(-2px);
+  border-color:#c8dce8;
+  box-shadow:var(--shadow-premium-hover);
+}
+.card-top{
+  padding-top:20px;
+  padding-bottom:16px;
+  background:
+    linear-gradient(180deg,#ffffff 0%,#fbfdff 100%);
+}
+.prompt-card h3{
+  color:#173b60;
+  font-weight:950;
+  font-size:22px;
+}
+.card-note{
+  color:#718598;
+}
+.tag{
+  border:1px solid #d7e7f3;
+  background:#eef7ff;
+  color:#2d6695;
+}
+.tag.mint{
+  border-color:#d5eadf;
+  background:#edf9f4;
+  color:#23745f;
+}
+.tag.yellow{
+  border-color:#f0dfab;
+  background:#fff8df;
+  color:#7a6217;
+}
+.prompt{
+  color:#203d59;
+  background:
+    linear-gradient(180deg,#f9fbfd,#f7fafc);
+  border-top:1px solid #edf2f6;
+  font-size:16.6px;
+  line-height:1.9;
+  padding-top:22px;
+  padding-bottom:24px;
+}
+.prompt::-webkit-scrollbar{width:10px}
+.prompt::-webkit-scrollbar-track{background:#edf3f7}
+.prompt::-webkit-scrollbar-thumb{
+  background:#b7c9d7;
+  border-radius:99px;
+  border:2px solid #edf3f7;
+}
+.copy-btn{
+  background:linear-gradient(135deg,#176fc2,#1c9679);
+  box-shadow:0 9px 22px rgba(24,109,169,.22);
+  min-height:40px;
+}
+.copy-btn:hover{
+  box-shadow:0 13px 28px rgba(24,109,169,.28);
+}
+
+/* AI tool cards */
+.ai-tool-card{
+  border:1px solid #d7e6ee;
+  background:linear-gradient(180deg,#fff 0%,#fbfeff 100%);
+  box-shadow:var(--shadow-premium);
+}
+.ai-tool-card:hover{
+  box-shadow:var(--shadow-premium-hover);
+}
+.ai-tool-name{
+  color:#163a5e;
+  font-weight:950;
+}
+.ai-tool-desc{
+  color:#526c81;
+  line-height:1.72;
+}
+.ai-tool-use{
+  border-radius:15px;
+  background:linear-gradient(135deg,#f4f9fd,#f3fbf7);
+  border:1px solid #dceae7;
+}
+.ai-tool-link{
+  background:linear-gradient(135deg,#176fc2,#1b987b);
+}
+
+/* pricing */
+.pricing-intro,.decision-guide{
+  border-color:#d6e7ef;
+  box-shadow:0 10px 28px rgba(18,69,105,.055);
+}
+.price-card{
+  border:1px solid #d8e6ee;
+  box-shadow:var(--shadow-premium);
+}
+.price-card:hover{
+  box-shadow:var(--shadow-premium-hover);
+}
+.google-featured{
+  border-color:#acdcca;
+  box-shadow:0 18px 44px rgba(15,121,91,.11);
+}
+.google-plan-item{
+  border-color:#dce8ef;
+  box-shadow:0 4px 12px rgba(20,70,100,.025);
+}
+.google-plan-item.recommended-plan{
+  background:linear-gradient(135deg,#f2fdf9,#f5faff);
+}
+.google-clarity-note{
+  border-color:#ebdba5;
+  background:#fffaf0;
+}
+
+/* lecture slide viewer */
+.slide-viewer-shell{
+  border:1px solid #d5e4ec;
+  background:linear-gradient(180deg,#fff,#f8fbfd);
+  box-shadow:0 20px 50px rgba(17,65,101,.11);
+}
+.slide-stage{
+  border-color:#cbdde7;
+  background:#0e2238;
+}
+.slide-nav-btn{
+  background:linear-gradient(135deg,#176fc2,#1c9278);
+}
+.slide-page-jump{
+  background:#f5f9fc;
+}
+
+/* footer */
+.footer{
+  color:#6c8193;
+}
+.footer b{color:#285b7d}
+
+/* tablet refinements */
+@media (min-width:821px) and (max-width:1180px){
+  body{font-size:17.5px}
+  .prompt-card h3{font-size:21px}
+  .prompt{font-size:16.2px}
+}
+
+/* mobile refinements */
+@media(max-width:820px){
+  body{
+    font-size:16.5px;
+    line-height:1.72;
+  }
+  .mobilebar{
+    background:rgba(255,255,255,.97);
+    box-shadow:0 6px 18px rgba(20,65,95,.06);
+  }
+  .hero{
+    padding-top:30px;
+    padding-bottom:24px;
+  }
+  .hero h1{
+    font-weight:950;
+    letter-spacing:-.05em;
+  }
+  .hero p{
+    font-size:15.4px;
+  }
+  .pill{
+    font-weight:850;
+  }
+  .searchbox input{
+    font-size:16px;
+  }
+  .section h2,.slide-viewer-head h2{
+    font-weight:950;
+  }
+  .prompt-card{
+    border-radius:18px;
+    box-shadow:0 10px 28px rgba(19,62,94,.075);
+  }
+  .prompt-card:hover{
+    transform:none;
+  }
+  .card-top{
+    padding:16px 15px 15px;
+  }
+  .prompt-card h3{
+    font-size:19px;
+  }
+  .prompt{
+    font-size:15.3px;
+    line-height:1.8;
+    padding:17px 15px 20px;
+  }
+  .copy-btn{
+    min-height:42px;
+  }
+  .ai-tool-card,.price-card{
+    box-shadow:0 10px 26px rgba(19,62,94,.07);
+  }
+}
+
+/* small phone legibility */
+@media(max-width:420px){
+  body{font-size:16px}
+  .hero h1{font-size:27px}
+  .section h2,.slide-viewer-head h2{font-size:21px}
+  .prompt-card h3{font-size:18px}
+  .prompt{font-size:15px;line-height:1.78}
+}
+
 </style>
 </head>
 <body>
@@ -1382,7 +1803,7 @@ button:focus-visible,a:focus-visible,input:focus-visible{
 [결과 형식]
 [표 / 문서 / 체크리스트 / 수업안 / 카드뉴스 구성 / 웹페이지 구조] 형태로 작성해줘.
 
-초안을 만든 뒤 마지막에 "교사가 반드시 확인할 항목"을 5개 이내로 따로 정리해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button><button class="mini-btn" onclick="window.print()">인쇄</button></div></article>
+초안을 만든 뒤 마지막에 "교사가 반드시 확인할 항목"을 5개 이내로 따로 정리해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="AI 첫 결과 수정 학교 문서 보건교사 검수"><div class="card-top"><div class="tags"><span class="tag">슬라이드 19</span><span class="tag yellow">수정 대화</span></div><h3>첫 결과를 학교 문서에 맞게 다듬는 수정 프롬프트</h3></div><pre class="prompt">방금 작성한 초안을 그대로 사용하지 않고 학교 현장용 문서로 다듬어줘.
 
 다음 기준으로 다시 수정해줘.
