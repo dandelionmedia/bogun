@@ -1521,6 +1521,101 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
   .input-example-box{padding:14px 15px 16px}
   .input-example-item{grid-template-columns:1fr;gap:2px;font-size:13px}
 }
+
+
+/* vNext: mobile/tablet floating TOC button on scroll */
+@media (max-width:1024px){
+  .main{margin-left:0!important}
+  .mobilebar{
+    display:flex!important;
+    position:sticky!important;
+    top:0;
+    z-index:80;
+    height:62px;
+    align-items:center;
+    gap:10px;
+    padding:0 14px;
+    background:rgba(255,255,255,.97);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+    box-shadow:0 5px 18px rgba(26,69,101,.055);
+    transition:background .22s ease, box-shadow .22s ease, border-color .22s ease, backdrop-filter .22s ease;
+  }
+  .mobilebar .mobile-title{
+    transition:opacity .2s ease,visibility .2s ease;
+  }
+  .menu-btn{
+    flex:0 0 auto;
+    transition:opacity .2s ease,transform .2s ease,box-shadow .2s ease,filter .2s ease;
+  }
+  .mobilebar.is-floating{
+    background:transparent!important;
+    border-bottom-color:transparent!important;
+    box-shadow:none!important;
+    backdrop-filter:none!important;
+    -webkit-backdrop-filter:none!important;
+    pointer-events:none;
+  }
+  .mobilebar.is-floating .mobile-title{
+    opacity:0;
+    visibility:hidden;
+  }
+  .mobilebar.is-floating .menu-btn{
+    pointer-events:auto;
+    opacity:.64;
+    transform:scale(.92);
+    box-shadow:0 7px 18px rgba(12,96,165,.14);
+  }
+  .mobilebar.is-floating .menu-btn:hover,
+  .mobilebar.is-floating .menu-btn:focus-visible,
+  .mobilebar.is-floating.menu-open .menu-btn{
+    opacity:1;
+    transform:scale(1);
+    filter:brightness(1.03);
+  }
+  .sidebar{
+    transform:translateX(-105%)!important;
+    transition:.25s!important;
+    width:min(88vw,380px)!important;
+    z-index:100!important;
+  }
+  .sidebar.open{transform:none!important}
+  .overlay{
+    display:block!important;
+    position:fixed;
+    inset:0;
+    background:rgba(6,31,51,.35);
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+    z-index:90;
+    opacity:0;
+    pointer-events:none;
+    transition:.2s;
+  }
+  .overlay.show{opacity:1;pointer-events:auto}
+  .search-wrap{top:62px}
+}
+
+@media (max-width:820px){
+  .mobilebar.is-floating .menu-btn{opacity:.62}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .mobilebar,.mobilebar .mobile-title,.menu-btn{transition:none!important}
+}
+
+/* v-search: cross-device search navigation */
+.prompt-card{scroll-margin-top:150px}
+.prompt-card.search-focus{
+  border-color:#168f78!important;
+  box-shadow:0 0 0 4px rgba(22,143,120,.16),0 22px 52px rgba(18,82,128,.16)!important;
+  animation:searchPulse 1.15s ease 1;
+}
+.prompt-card.search-focus .card-top{background:linear-gradient(135deg,#eff9ff 0%,#effcf6 100%)}
+@keyframes searchPulse{0%,100%{transform:translateY(0)}45%{transform:translateY(-3px)}}
+@media(max-width:1024px){.prompt-card{scroll-margin-top:138px}}
+@media(prefers-reduced-motion:reduce){.prompt-card.search-focus{animation:none}}
 </style>
 </head>
 <body>
@@ -3499,12 +3594,68 @@ const cards=[...document.querySelectorAll('.prompt-card')];
 const search=document.getElementById('searchInput');
 const count=document.getElementById('searchCount');
 const empty=document.getElementById('emptyState');
-function doSearch(){
- const q=search.value.trim().toLowerCase(); let visible=0;
- cards.forEach(c=>{const hay=(c.dataset.title+' '+c.innerText).toLowerCase(); const ok=!q||hay.includes(q); c.classList.toggle('hide',!ok); if(ok)visible++;});
- count.textContent=q?`${visible}개 찾음`:'전체 보기'; empty.classList.toggle('show',visible===0);
+function normalizeSearchText(str=''){
+ return str.toLowerCase().replace(/\s+/g,' ').trim();
 }
-search.addEventListener('input',doSearch);
+function getMatchedCards(){
+ const q=normalizeSearchText(search.value);
+ if(!q) return cards.filter(c=>!c.classList.contains('hide'));
+ const terms=q.split(' ').filter(Boolean);
+ return cards.filter(c=>{
+   const hay=normalizeSearchText((c.dataset.title||'')+' '+c.innerText);
+   return terms.every(term=>hay.includes(term));
+ });
+}
+function clearSearchFocus(){
+ cards.forEach(c=>c.classList.remove('search-focus'));
+}
+function goToSearchResult(card){
+ if(!card) return;
+ clearSearchFocus();
+ card.classList.add('search-focus');
+ const stickySearch=document.querySelector('.search-wrap');
+ const mobileHeader=document.querySelector('.mobilebar');
+ const searchH=stickySearch ? stickySearch.getBoundingClientRect().height : 0;
+ const mobileH=(window.innerWidth<=1024 && mobileHeader && !mobileHeader.classList.contains('is-floating')) ? mobileHeader.getBoundingClientRect().height : 0;
+ const offset=Math.max(18, searchH + mobileH + 18);
+ const top=card.getBoundingClientRect().top + window.pageYOffset - offset;
+ window.scrollTo({top:Math.max(0,top),behavior:'smooth'});
+ setTimeout(()=>card.classList.remove('search-focus'),2400);
+}
+function doSearch({move=false}={}){
+ const q=normalizeSearchText(search.value); let visible=0; let first=null;
+ const terms=q.split(' ').filter(Boolean);
+ cards.forEach(c=>{
+   const hay=normalizeSearchText((c.dataset.title||'')+' '+c.innerText);
+   const ok=!q || terms.every(term=>hay.includes(term));
+   c.classList.toggle('hide',!ok);
+   if(ok){ visible++; if(!first) first=c; }
+ });
+ count.textContent=q?`${visible}개 찾음`:'전체 보기';
+ empty.classList.toggle('show',visible===0);
+ if(move && q && first) goToSearchResult(first);
+}
+let searchTimer;
+search.addEventListener('input',()=>{
+ clearTimeout(searchTimer);
+ doSearch();
+ const q=normalizeSearchText(search.value);
+ // 검색 결과가 1개로 좁혀지면 모든 화면에서 해당 카드가 바로 보이도록 이동
+ searchTimer=setTimeout(()=>{
+   const matched=getMatchedCards();
+   if(q && matched.length===1) goToSearchResult(matched[0]);
+ },420);
+});
+search.addEventListener('keydown',e=>{
+ if(e.key==='Enter'){
+   e.preventDefault();
+   clearTimeout(searchTimer);
+   doSearch({move:true});
+   if(window.innerWidth<=1024) search.blur();
+ }
+});
+search.setAttribute('enterkeyhint','search');
+search.setAttribute('aria-label','실습 프롬프트 검색. 검색어 입력 후 Enter를 누르면 첫 결과로 이동합니다.');
 
 document.querySelectorAll('.copy-btn').forEach(btn=>btn.addEventListener('click',async()=>{
  const text=btn.closest('.prompt-card').querySelector('.prompt').innerText;
@@ -3517,9 +3668,32 @@ window.addEventListener('scroll',()=>back.classList.toggle('show',window.scrollY
 back.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 
 const side=document.getElementById('sidebar'), overlay=document.getElementById('overlay'), menu=document.getElementById('menuBtn');
-function closeMenu(){side.classList.remove('open');overlay.classList.remove('show')}
-menu.addEventListener('click',()=>{side.classList.toggle('open');overlay.classList.toggle('show')}); overlay.addEventListener('click',closeMenu);
-document.querySelectorAll('#toc a').forEach(a=>a.addEventListener('click',()=>{if(innerWidth<=820)closeMenu()}));
+const mobileBar=document.querySelector('.mobilebar');
+function closeMenu(){
+  side.classList.remove('open');
+  overlay.classList.remove('show');
+  if(mobileBar) mobileBar.classList.remove('menu-open');
+  menu.setAttribute('aria-expanded','false');
+}
+function syncFloatingMenu(){
+  if(!mobileBar) return;
+  const isMobileTablet=window.innerWidth<=1024;
+  mobileBar.classList.toggle('is-floating',isMobileTablet && window.scrollY>72);
+  if(!isMobileTablet) closeMenu();
+}
+menu.setAttribute('aria-expanded','false');
+menu.addEventListener('click',()=>{
+  const willOpen=!side.classList.contains('open');
+  side.classList.toggle('open',willOpen);
+  overlay.classList.toggle('show',willOpen);
+  if(mobileBar) mobileBar.classList.toggle('menu-open',willOpen);
+  menu.setAttribute('aria-expanded',willOpen?'true':'false');
+});
+overlay.addEventListener('click',closeMenu);
+document.querySelectorAll('#toc a').forEach(a=>a.addEventListener('click',()=>{if(innerWidth<=1024)closeMenu()}));
+window.addEventListener('scroll',syncFloatingMenu,{passive:true});
+window.addEventListener('resize',syncFloatingMenu,{passive:true});
+syncFloatingMenu();
 
 const sections=[...document.querySelectorAll('.section')]; const links=[...document.querySelectorAll('#toc a')];
 const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-25% 0px -65% 0px'});
