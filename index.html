@@ -1480,6 +1480,47 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
   .prompt{font-size:15px;line-height:1.78}
 }
 
+
+/* ===== 실습 입력 예시 안내 박스 ===== */
+.input-example-box{
+  margin:0;
+  padding:16px 20px 18px;
+  background:linear-gradient(135deg,#fffaf0 0%,#fffdf8 55%,#f6fbff 100%);
+  border-top:1px solid #eadfbd;
+  border-bottom:1px solid #e2eaf0;
+}
+.input-example-title{
+  display:flex;align-items:center;gap:8px;
+  margin:0 0 10px;
+  color:#6f5612;
+  font-size:14px;font-weight:950;
+}
+.input-example-title:before{
+  content:"✍";display:grid;place-items:center;
+  width:25px;height:25px;border-radius:8px;
+  background:#fff0b8;
+}
+.input-example-help{
+  margin:-2px 0 10px;
+  color:#6d7f8f;font-size:12.8px;line-height:1.55;
+}
+.input-example-list{
+  display:grid;grid-template-columns:1fr;gap:7px;
+}
+.input-example-item{
+  display:grid;grid-template-columns:minmax(120px, .42fr) minmax(0,1fr);
+  gap:10px;align-items:start;
+  padding:8px 10px;border-radius:11px;
+  background:rgba(255,255,255,.88);
+  border:1px solid #ece6d3;
+  font-size:13.5px;line-height:1.55;
+}
+.input-example-item b{color:#3d5871;font-weight:900}
+.input-example-item span{color:#36536c}
+@media(max-width:820px){
+  .input-example-box{padding:14px 15px 16px}
+  .input-example-item{grid-template-columns:1fr;gap:2px;font-size:13px}
+}
 </style>
 </head>
 <body>
@@ -1515,21 +1556,16 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 <h1>2026년도 학생참여형 보건교육 역량강화 직무연수</h1>
 <p>강의 슬라이드 흐름에 맞춰 문서 → 이미지 → 영상 → 음악 → 웹페이지를 직접 만들어보고, 첨부 실습용 프롬프트까지 카테고리별로 함께 활용하는 실습 페이지입니다.</p>
 <div class="hero-meta"><span class="pill">📅 2026.09.19</span><span class="pill">⏰ 13:30–16:30 · 3시간</span><span class="pill">👩‍⚕️ 초·중·고·특수학교 보건교육 담당교원</span><span class="pill">🧪 실습 80% 중심</span></div>
-<div class="padlet-hero" aria-label="패들렛 스터디 게시판 바로가기">
-  <div class="padlet-logo-wrap">
-    <img src="https://padlet.com/favicon.ico" alt="Padlet 공식 로고" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
-    <span class="padlet-logo-fallback" aria-hidden="true">P</span>
-  </div>
-  <div class="padlet-copy">
-    <div class="padlet-title">패들렛스터디게시판</div>
-    <p class="padlet-sub">연수 실습 결과와 아이디어를 함께 공유하는 게시판입니다.</p>
-  </div>
-  <a class="padlet-btn"
-     href="https://padlet.com/yu_ssam/56"
-     target="_blank"
-     rel="noopener noreferrer"
-     aria-label="패들렛 스터디 게시판 새창으로 열기"
-     onclick="var w=window.open(this.href,'_blank'); if(!w){window.location.href=this.href;} return false;">
+<div aria-label="패들렛 스터디 게시판 바로가기" class="padlet-hero">
+<div class="padlet-logo-wrap">
+<img alt="Padlet 공식 로고" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" src="https://padlet.com/favicon.ico"/>
+<span aria-hidden="true" class="padlet-logo-fallback">P</span>
+</div>
+<div class="padlet-copy">
+<div class="padlet-title">패들렛스터디게시판</div>
+<p class="padlet-sub">연수 실습 결과와 아이디어를 함께 공유하는 게시판입니다.</p>
+</div>
+<a aria-label="패들렛 스터디 게시판 새창으로 열기" class="padlet-btn" href="https://padlet.com/yu_ssam/56" onclick="var w=window.open(this.href,'_blank'); if(!w){window.location.href=this.href;} return false;" rel="noopener noreferrer" target="_blank">
     패들렛 바로가기 ↗
   </a>
 </div>
@@ -1537,246 +1573,233 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 <div class="search-wrap">
 <div class="searchbox"><input aria-label="프롬프트 검색" id="searchInput" placeholder="프롬프트 제목·키워드 검색 (예: 감염병, 지도안, 카드뉴스, 보건음악, 웹페이지)" type="search"/><span class="search-count" id="searchCount">전체 보기</span></div>
 </div>
-
 <div class="content">
-<section class="slide-viewer-section" id="slides" aria-label="강의슬라이드 뷰어">
-  <div class="slide-viewer-head">
-    <div class="slide-viewer-title-wrap">
-      <div class="slide-viewer-badge">▶</div>
-      <div>
-        <h2>강의슬라이드 보기</h2>
-        <p>첨부 강의자료 73장을 16:9 화면으로 보면서 연수를 진행할 수 있습니다. 이전·다음 버튼 또는 페이지 번호로 원하는 슬라이드로 이동하세요.</p>
-      </div>
-    </div>
-  </div>
-  <div class="slide-viewer-shell">
-    <div class="slide-stage">
-      <img id="slideImage" alt="강의슬라이드 1페이지" decoding="async">
-      <div class="slide-counter-overlay" id="slideCounter">1 / 73</div>
-    </div>
-    <div class="slide-controls">
-      <button class="slide-nav-btn" id="slidePrev" type="button" aria-label="이전 슬라이드">← 이전</button>
-      <div class="slide-page-jump">
-        <label for="slidePageInput">페이지</label>
-        <input class="slide-page-input" id="slidePageInput" type="number" min="1" max="73" value="1" inputmode="numeric" aria-label="이동할 슬라이드 페이지 번호">
-        <span>/ 73</span>
-        <button class="slide-go-btn" id="slideGo" type="button">이동</button>
-      </div>
-      <button class="slide-nav-btn" id="slideNext" type="button" aria-label="다음 슬라이드">다음 →</button>
-    </div>
-    <p class="slide-viewer-tip">PC에서는 ← → 방향키로도 슬라이드를 넘길 수 있습니다.</p>
-  </div>
+<section aria-label="강의슬라이드 뷰어" class="slide-viewer-section" id="slides">
+<div class="slide-viewer-head">
+<div class="slide-viewer-title-wrap">
+<div class="slide-viewer-badge">▶</div>
+<div>
+<h2>강의슬라이드 보기</h2>
+<p>첨부 강의자료 73장을 16:9 화면으로 보면서 연수를 진행할 수 있습니다. 이전·다음 버튼 또는 페이지 번호로 원하는 슬라이드로 이동하세요.</p>
+</div>
+</div>
+</div>
+<div class="slide-viewer-shell">
+<div class="slide-stage">
+<img alt="강의슬라이드 1페이지" decoding="async" id="slideImage"/>
+<div class="slide-counter-overlay" id="slideCounter">1 / 73</div>
+</div>
+<div class="slide-controls">
+<button aria-label="이전 슬라이드" class="slide-nav-btn" id="slidePrev" type="button">← 이전</button>
+<div class="slide-page-jump">
+<label for="slidePageInput">페이지</label>
+<input aria-label="이동할 슬라이드 페이지 번호" class="slide-page-input" id="slidePageInput" inputmode="numeric" max="73" min="1" type="number" value="1"/>
+<span>/ 73</span>
+<button class="slide-go-btn" id="slideGo" type="button">이동</button>
+</div>
+<button aria-label="다음 슬라이드" class="slide-nav-btn" id="slideNext" type="button">다음 →</button>
+</div>
+<p class="slide-viewer-tip">PC에서는 ← → 방향키로도 슬라이드를 넘길 수 있습니다.</p>
+</div>
 </section>
 <div aria-label="실습 흐름" class="quickflow"><div class="flow"><b>①</b>생각</div><div class="flow"><b>②</b>프롬프트</div><div class="flow"><b>③</b>생성</div><div class="flow"><b>④</b>검토</div><div class="flow"><b>⑤</b>수정</div><div class="flow"><b>⑥</b>활용</div></div>
 <div class="notice"><strong>실습 원칙:</strong> 학생 이름·연락처·건강정보·상담내용 등 개인정보는 그대로 입력하지 않습니다. 질병·약물·응급처치·법령·수치·학교정책은 반드시 학교 지침과 최신 공식자료로 다시 확인하고, 최종 게시·배포 전에는 보건교사가 직접 검수합니다.</div>
 <section class="section" id="tools">
 <div class="section-head"><div class="num">AI</div><div><h2>AI도구툴 · 수업 실습 바로가기</h2><p class="section-desc">연수에서 바로 활용하는 생성형 AI·영상 제작 도구를 한곳에 모았습니다. 로고 또는 버튼을 눌러 새 창에서 서비스를 열 수 있습니다.</p></div></div>
 <div class="ai-tools-grid">
-
 <article class="ai-tool-card">
-  <div class="ai-tool-head">
-    <div class="ai-tool-logo"><img src="https://chatgpt.com/favicon.ico" alt="ChatGPT 공식 로고" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="ai-tool-fallback">GPT</span></div>
-    <div><h3 class="ai-tool-name">ChatGPT</h3><div class="ai-tool-brand">OpenAI · 생성형 AI</div></div>
-  </div>
-  <p class="ai-tool-desc">대화형 AI를 활용해 학교 보건업무 문서, 수업 아이디어, 프롬프트, 이미지, 웹페이지·코드 등을 빠르게 기획하고 제작할 수 있습니다.</p>
-  <div class="ai-tool-services"><span>문서 작성·요약</span><span>파일·자료 분석</span><span>이미지 생성</span><span>웹앱·코딩</span><span>아이디어·기획</span></div>
-  <div class="ai-tool-use"><div class="ai-tool-use-title">보건교사에게 특히 유용한 업무</div><ul>
-    <li><b>문서 실무</b>: 가정통신문·보건소식지·교직원 안내문·회의자료의 초안 작성과 표현 교정</li>
-    <li><b>자료 분석</b>: PDF·표·문서 업로드 후 핵심내용 요약, 비교표 제작, 보건수업용 재구성</li>
-    <li><b>수업 설계</b>: 학생참여형 보건수업 아이디어·퀴즈·활동지·평가기준·수업지도안 제작</li>
-    <li><b>콘텐츠 제작</b>: 카드뉴스·이미지·웹페이지·웹앱·간단한 자동화·코딩 실습</li>
-    <li><b>심화 활용</b>: Deep Research와 고급 추론을 활용한 교육자료 조사·근거 정리·프로젝트 기획</li>
-  </ul></div>
-  <a class="ai-tool-link" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT 바로가기 ↗</a>
+<div class="ai-tool-head">
+<div class="ai-tool-logo"><img alt="ChatGPT 공식 로고" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" src="https://chatgpt.com/favicon.ico"/><span class="ai-tool-fallback">GPT</span></div>
+<div><h3 class="ai-tool-name">ChatGPT</h3><div class="ai-tool-brand">OpenAI · 생성형 AI</div></div>
+</div>
+<p class="ai-tool-desc">대화형 AI를 활용해 학교 보건업무 문서, 수업 아이디어, 프롬프트, 이미지, 웹페이지·코드 등을 빠르게 기획하고 제작할 수 있습니다.</p>
+<div class="ai-tool-services"><span>문서 작성·요약</span><span>파일·자료 분석</span><span>이미지 생성</span><span>웹앱·코딩</span><span>아이디어·기획</span></div>
+<div class="ai-tool-use"><div class="ai-tool-use-title">보건교사에게 특히 유용한 업무</div><ul>
+<li><b>문서 실무</b>: 가정통신문·보건소식지·교직원 안내문·회의자료의 초안 작성과 표현 교정</li>
+<li><b>자료 분석</b>: PDF·표·문서 업로드 후 핵심내용 요약, 비교표 제작, 보건수업용 재구성</li>
+<li><b>수업 설계</b>: 학생참여형 보건수업 아이디어·퀴즈·활동지·평가기준·수업지도안 제작</li>
+<li><b>콘텐츠 제작</b>: 카드뉴스·이미지·웹페이지·웹앱·간단한 자동화·코딩 실습</li>
+<li><b>심화 활용</b>: Deep Research와 고급 추론을 활용한 교육자료 조사·근거 정리·프로젝트 기획</li>
+</ul></div>
+<a class="ai-tool-link" href="https://chatgpt.com/" rel="noopener noreferrer" target="_blank">ChatGPT 바로가기 ↗</a>
 </article>
-
 <article class="ai-tool-card">
-  <div class="ai-tool-head">
-    <div class="ai-tool-logo"><img src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%20aria-hidden%3D%22true%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22g1%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%231a73e8%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2245%25%22%20stop-color%3D%22%237b61ff%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2272%25%22%20stop-color%3D%22%2334a853%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23fbbc04%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22s%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%222%22%20stdDeviation%3D%222%22%20flood-color%3D%22%237b61ff%22%20flood-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%2260%22%20height%3D%2260%22%20rx%3D%2218%22%20fill%3D%22%23ffffff%22/%3E%0A%20%20%3Cg%20filter%3D%22url%28%23s%29%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M32%209c1.8%2010.6%205.4%2016.2%2010.5%2021.5C47.8%2035.6%2053.4%2039.2%2064%2041c-10.6%201.8-16.2%205.4-21.5%2010.5C37.4%2056.6%2033.8%2062.2%2032%2072.8%2030.2%2062.2%2026.6%2056.6%2021.5%2051.5%2016.2%2046.4%2010.6%2042.8%200%2041c10.6-1.8%2016.2-5.4%2021.5-10.5C26.6%2025.2%2030.2%2019.6%2032%209z%22%20transform%3D%22translate%280%20-9%29%22%20fill%3D%22url%28%23g1%29%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%226.2%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.95%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E" alt="Google Gemini 공식 로고" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="ai-tool-fallback">G</span></div>
-    <div><h3 class="ai-tool-name">Google Gemini</h3><div class="ai-tool-brand">Google · 생성형 AI</div></div>
-  </div>
-  <p class="ai-tool-desc">텍스트·이미지·파일을 바탕으로 보건교육 자료를 만들고, Canvas를 활용한 웹앱 실습과 다양한 생성형 AI 작업을 진행할 수 있습니다.</p>
-  <div class="ai-tool-services"><span>문서·수업자료</span><span>이미지·파일 이해</span><span>Canvas 웹앱</span><span>아이디어·조사</span><span>교육용 음악 실습</span></div>
-  <div class="ai-tool-use"><div class="ai-tool-use-title">보건교사에게 특히 유용한 업무</div><ul>
-    <li><b>Gemini Canvas</b>: 보건수업 퀴즈·체크리스트·보건실 웹앱 프로토타입 제작</li>
-    <li><b>Deep Research</b>: 보건교육 주제 조사, 근거자료 탐색, 수업자료 구조화</li>
-    <li><b>Google Workspace 연계</b>: Gmail·Docs·Drive 중심 공지문·회의자료·업무문서 작성 보조</li>
-    <li><b>창작 기능</b>: 보건교육 이미지·음악·영상 아이디어 및 Flow 연계 콘텐츠 제작</li>
-  </ul></div>
-  <a class="ai-tool-link" href="https://gemini.google.com/app" target="_blank" rel="noopener noreferrer">Gemini 바로가기 ↗</a>
+<div class="ai-tool-head">
+<div class="ai-tool-logo"><img alt="Google Gemini 공식 로고" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%20aria-hidden%3D%22true%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22g1%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%231a73e8%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2245%25%22%20stop-color%3D%22%237b61ff%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2272%25%22%20stop-color%3D%22%2334a853%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23fbbc04%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22s%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%222%22%20stdDeviation%3D%222%22%20flood-color%3D%22%237b61ff%22%20flood-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%2260%22%20height%3D%2260%22%20rx%3D%2218%22%20fill%3D%22%23ffffff%22/%3E%0A%20%20%3Cg%20filter%3D%22url%28%23s%29%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M32%209c1.8%2010.6%205.4%2016.2%2010.5%2021.5C47.8%2035.6%2053.4%2039.2%2064%2041c-10.6%201.8-16.2%205.4-21.5%2010.5C37.4%2056.6%2033.8%2062.2%2032%2072.8%2030.2%2062.2%2026.6%2056.6%2021.5%2051.5%2016.2%2046.4%2010.6%2042.8%200%2041c10.6-1.8%2016.2-5.4%2021.5-10.5C26.6%2025.2%2030.2%2019.6%2032%209z%22%20transform%3D%22translate%280%20-9%29%22%20fill%3D%22url%28%23g1%29%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%226.2%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.95%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E"/><span class="ai-tool-fallback">G</span></div>
+<div><h3 class="ai-tool-name">Google Gemini</h3><div class="ai-tool-brand">Google · 생성형 AI</div></div>
+</div>
+<p class="ai-tool-desc">텍스트·이미지·파일을 바탕으로 보건교육 자료를 만들고, Canvas를 활용한 웹앱 실습과 다양한 생성형 AI 작업을 진행할 수 있습니다.</p>
+<div class="ai-tool-services"><span>문서·수업자료</span><span>이미지·파일 이해</span><span>Canvas 웹앱</span><span>아이디어·조사</span><span>교육용 음악 실습</span></div>
+<div class="ai-tool-use"><div class="ai-tool-use-title">보건교사에게 특히 유용한 업무</div><ul>
+<li><b>Gemini Canvas</b>: 보건수업 퀴즈·체크리스트·보건실 웹앱 프로토타입 제작</li>
+<li><b>Deep Research</b>: 보건교육 주제 조사, 근거자료 탐색, 수업자료 구조화</li>
+<li><b>Google Workspace 연계</b>: Gmail·Docs·Drive 중심 공지문·회의자료·업무문서 작성 보조</li>
+<li><b>창작 기능</b>: 보건교육 이미지·음악·영상 아이디어 및 Flow 연계 콘텐츠 제작</li>
+</ul></div>
+<a class="ai-tool-link" href="https://gemini.google.com/app" rel="noopener noreferrer" target="_blank">Gemini 바로가기 ↗</a>
 </article>
-
 <article class="ai-tool-card">
-  <div class="ai-tool-head">
-    <div class="ai-tool-logo"><img src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%20aria-hidden%3D%22true%22%3E%0A%20%20%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%2260%22%20height%3D%2260%22%20rx%3D%2218%22%20fill%3D%22%23fff8f2%22/%3E%0A%20%20%3Cg%20fill%3D%22%23d97745%22%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2232%22%20cy%3D%2214%22%20rx%3D%224.1%22%20ry%3D%228.8%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2232%22%20cy%3D%2250%22%20rx%3D%224.1%22%20ry%3D%228.8%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2214%22%20cy%3D%2232%22%20rx%3D%228.8%22%20ry%3D%224.1%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2250%22%20cy%3D%2232%22%20rx%3D%228.8%22%20ry%3D%224.1%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2219.3%22%20cy%3D%2219.3%22%20rx%3D%224.1%22%20ry%3D%228.2%22%20transform%3D%22rotate%28-45%2019.3%2019.3%29%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2244.7%22%20cy%3D%2244.7%22%20rx%3D%224.1%22%20ry%3D%228.2%22%20transform%3D%22rotate%28-45%2044.7%2044.7%29%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2244.7%22%20cy%3D%2219.3%22%20rx%3D%228.2%22%20ry%3D%224.1%22%20transform%3D%22rotate%28-45%2044.7%2019.3%29%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2219.3%22%20cy%3D%2244.7%22%20rx%3D%228.2%22%20ry%3D%224.1%22%20transform%3D%22rotate%28-45%2019.3%2044.7%29%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%228.5%22%20fill%3D%22%23f4b18f%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E" alt="Claude 공식 로고" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="ai-tool-fallback">C</span></div>
-    <div><h3 class="ai-tool-name">Claude</h3><div class="ai-tool-brand">Anthropic · 생성형 AI</div></div>
-  </div>
-  <p class="ai-tool-desc">긴 문서의 내용을 읽고 정리하거나 글을 다듬고, 코드·프로토타입을 제작하는 데 활용하기 좋은 생성형 AI 서비스입니다.</p>
-  <div class="ai-tool-services"><span>긴 문서 분석</span><span>글쓰기·교정</span><span>요약·구조화</span><span>코딩</span><span>Artifacts 제작</span></div>
-  <div class="ai-tool-use"><div class="ai-tool-use-title">보건교사에게 특히 유용한 업무</div><ul>
-    <li><b>긴 문서 읽기</b>: 교육자료·회의자료·정책문서·연수자료를 구조화하고 핵심만 요약</li>
-    <li><b>문장 다듬기</b>: 가정통신문·보건자료를 학부모·학생이 이해하기 쉬운 문장으로 변환</li>
-    <li><b>비교·정리</b>: 여러 자료의 공통점·차이점을 비교하고 표·체크리스트·의사결정 항목으로 재구성</li>
-    <li><b>수업자료 재구성</b>: 긴 설명자료를 학년별 수준에 맞는 활동지·질문·토론자료로 변환</li>
-    <li><b>Artifacts·코딩</b>: 교육용 간단 웹페이지·도구·프로토타입 제작과 코드 수정</li>
-  </ul></div>
-  <a class="ai-tool-link" href="https://claude.ai" target="_blank" rel="noopener noreferrer">Claude 바로가기 ↗</a>
+<div class="ai-tool-head">
+<div class="ai-tool-logo"><img alt="Claude 공식 로고" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%20aria-hidden%3D%22true%22%3E%0A%20%20%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%2260%22%20height%3D%2260%22%20rx%3D%2218%22%20fill%3D%22%23fff8f2%22/%3E%0A%20%20%3Cg%20fill%3D%22%23d97745%22%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2232%22%20cy%3D%2214%22%20rx%3D%224.1%22%20ry%3D%228.8%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2232%22%20cy%3D%2250%22%20rx%3D%224.1%22%20ry%3D%228.8%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2214%22%20cy%3D%2232%22%20rx%3D%228.8%22%20ry%3D%224.1%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2250%22%20cy%3D%2232%22%20rx%3D%228.8%22%20ry%3D%224.1%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2219.3%22%20cy%3D%2219.3%22%20rx%3D%224.1%22%20ry%3D%228.2%22%20transform%3D%22rotate%28-45%2019.3%2019.3%29%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2244.7%22%20cy%3D%2244.7%22%20rx%3D%224.1%22%20ry%3D%228.2%22%20transform%3D%22rotate%28-45%2044.7%2044.7%29%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2244.7%22%20cy%3D%2219.3%22%20rx%3D%228.2%22%20ry%3D%224.1%22%20transform%3D%22rotate%28-45%2044.7%2019.3%29%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2219.3%22%20cy%3D%2244.7%22%20rx%3D%228.2%22%20ry%3D%224.1%22%20transform%3D%22rotate%28-45%2019.3%2044.7%29%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%228.5%22%20fill%3D%22%23f4b18f%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E"/><span class="ai-tool-fallback">C</span></div>
+<div><h3 class="ai-tool-name">Claude</h3><div class="ai-tool-brand">Anthropic · 생성형 AI</div></div>
+</div>
+<p class="ai-tool-desc">긴 문서의 내용을 읽고 정리하거나 글을 다듬고, 코드·프로토타입을 제작하는 데 활용하기 좋은 생성형 AI 서비스입니다.</p>
+<div class="ai-tool-services"><span>긴 문서 분석</span><span>글쓰기·교정</span><span>요약·구조화</span><span>코딩</span><span>Artifacts 제작</span></div>
+<div class="ai-tool-use"><div class="ai-tool-use-title">보건교사에게 특히 유용한 업무</div><ul>
+<li><b>긴 문서 읽기</b>: 교육자료·회의자료·정책문서·연수자료를 구조화하고 핵심만 요약</li>
+<li><b>문장 다듬기</b>: 가정통신문·보건자료를 학부모·학생이 이해하기 쉬운 문장으로 변환</li>
+<li><b>비교·정리</b>: 여러 자료의 공통점·차이점을 비교하고 표·체크리스트·의사결정 항목으로 재구성</li>
+<li><b>수업자료 재구성</b>: 긴 설명자료를 학년별 수준에 맞는 활동지·질문·토론자료로 변환</li>
+<li><b>Artifacts·코딩</b>: 교육용 간단 웹페이지·도구·프로토타입 제작과 코드 수정</li>
+</ul></div>
+<a class="ai-tool-link" href="https://claude.ai" rel="noopener noreferrer" target="_blank">Claude 바로가기 ↗</a>
 </article>
-
 <article class="ai-tool-card">
-  <div class="ai-tool-head">
-    <div class="ai-tool-logo"><img src="https://flow.google.com/favicon.ico" alt="Google Flow 공식 로고" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="ai-tool-fallback">F</span></div>
-    <div><h3 class="ai-tool-name">Google Flow</h3><div class="ai-tool-brand">Google · AI 영상 제작</div></div>
-  </div>
-  <p class="ai-tool-desc">프롬프트를 바탕으로 영상 장면을 기획·생성하고 이미지와 영상 소재를 연결해 보건교육용 짧은 영상 콘텐츠를 제작할 때 활용할 수 있습니다.</p>
-  <div class="ai-tool-services"><span>AI 영상 생성</span><span>장면·샷 제작</span><span>이미지 기반 영상</span><span>스토리보드 실습</span><span>보건 캠페인 영상</span></div>
-  <div class="ai-tool-use"><div class="ai-tool-use-title">보건교사에게 특히 유용한 업무</div><ul>
-    <li><b>보건 캠페인 영상</b>: 손씻기·감염병 예방·마음건강·응급처치 등 핵심 행동을 짧은 영상으로 제작</li>
-    <li><b>수업 도입 영상</b>: 보건수업 시작 전 학생의 관심을 끌 수 있는 10~30초 장면·상황 영상 제작</li>
-    <li><b>이미지 기반 영상</b>: 포스터·카드뉴스·캐릭터 이미지를 움직이는 영상 콘텐츠로 확장</li>
-    <li><b>스토리보드 실습</b>: 장면별 카메라·행동·분위기를 정리해 학생 참여형 영상 프로젝트 기획</li>
-    <li><b>SNS·학교행사 홍보</b>: 보건의 날·건강주간·학교 캠페인용 짧은 세로형 홍보영상 제작</li>
-  </ul></div>
-  <a class="ai-tool-link" href="https://flow.google.com/" target="_blank" rel="noopener noreferrer">Google Flow 바로가기 ↗</a>
+<div class="ai-tool-head">
+<div class="ai-tool-logo"><img alt="Google Flow 공식 로고" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" src="https://flow.google.com/favicon.ico"/><span class="ai-tool-fallback">F</span></div>
+<div><h3 class="ai-tool-name">Google Flow</h3><div class="ai-tool-brand">Google · AI 영상 제작</div></div>
+</div>
+<p class="ai-tool-desc">프롬프트를 바탕으로 영상 장면을 기획·생성하고 이미지와 영상 소재를 연결해 보건교육용 짧은 영상 콘텐츠를 제작할 때 활용할 수 있습니다.</p>
+<div class="ai-tool-services"><span>AI 영상 생성</span><span>장면·샷 제작</span><span>이미지 기반 영상</span><span>스토리보드 실습</span><span>보건 캠페인 영상</span></div>
+<div class="ai-tool-use"><div class="ai-tool-use-title">보건교사에게 특히 유용한 업무</div><ul>
+<li><b>보건 캠페인 영상</b>: 손씻기·감염병 예방·마음건강·응급처치 등 핵심 행동을 짧은 영상으로 제작</li>
+<li><b>수업 도입 영상</b>: 보건수업 시작 전 학생의 관심을 끌 수 있는 10~30초 장면·상황 영상 제작</li>
+<li><b>이미지 기반 영상</b>: 포스터·카드뉴스·캐릭터 이미지를 움직이는 영상 콘텐츠로 확장</li>
+<li><b>스토리보드 실습</b>: 장면별 카메라·행동·분위기를 정리해 학생 참여형 영상 프로젝트 기획</li>
+<li><b>SNS·학교행사 홍보</b>: 보건의 날·건강주간·학교 캠페인용 짧은 세로형 홍보영상 제작</li>
+</ul></div>
+<a class="ai-tool-link" href="https://flow.google.com/" rel="noopener noreferrer" target="_blank">Google Flow 바로가기 ↗</a>
 </article>
-
 <article class="ai-tool-card wide">
-  <div class="ai-tool-head">
-    <div class="ai-tool-logo"><img src="https://vstory.io/favicon.ico" alt="vStory AI 공식 로고" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="ai-tool-fallback">V</span></div>
-    <div><h3 class="ai-tool-name">vStory AI</h3><div class="ai-tool-brand">AI 영상 콘텐츠 제작</div></div>
-  </div>
-  <p class="ai-tool-desc">사진과 스토리 아이디어를 활용해 AI 영상 콘텐츠를 제작할 수 있는 서비스입니다. 학생 참여형 보건교육 영상, 건강 캠페인 영상, 스토리형 홍보영상 실습에 활용할 수 있습니다.</p>
-  <div class="ai-tool-services"><span>사진 기반 AI 영상</span><span>스토리 영상 제작</span><span>보건교육 홍보영상</span><span>학생 참여형 콘텐츠</span><span>짧은 영상 콘텐츠</span></div>
-  <div class="ai-tool-use"><div class="ai-tool-use-title">보건교사에게 특히 유용한 업무</div><ul>
-    <li><b>보건교육 스토리 영상</b>: 건강습관·감염병 예방·마음건강 메시지를 이야기형 영상으로 구성</li>
-    <li><b>사진 기반 영상</b>: 학교 행사·보건교육 활동 사진을 활용해 짧은 기록·홍보영상으로 제작</li>
-    <li><b>학생 참여형 콘텐츠</b>: 학생이 만든 스토리·캐릭터·장면 아이디어를 연결해 프로젝트 결과물 제작</li>
-    <li><b>나레이션 영상</b>: 장면 설명과 음성을 결합해 학부모 안내·학생 교육용 콘텐츠 제작</li>
-    <li><b>짧은 캠페인 영상</b>: 카드뉴스·이미지 자료를 20~30초 보건 캠페인 영상으로 확장</li>
-  </ul></div>
-  <a class="ai-tool-link" href="https://vstory.io/ko/" target="_blank" rel="noopener noreferrer">vStory AI 바로가기 ↗</a>
+<div class="ai-tool-head">
+<div class="ai-tool-logo"><img alt="vStory AI 공식 로고" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" src="https://vstory.io/favicon.ico"/><span class="ai-tool-fallback">V</span></div>
+<div><h3 class="ai-tool-name">vStory AI</h3><div class="ai-tool-brand">AI 영상 콘텐츠 제작</div></div>
+</div>
+<p class="ai-tool-desc">사진과 스토리 아이디어를 활용해 AI 영상 콘텐츠를 제작할 수 있는 서비스입니다. 학생 참여형 보건교육 영상, 건강 캠페인 영상, 스토리형 홍보영상 실습에 활용할 수 있습니다.</p>
+<div class="ai-tool-services"><span>사진 기반 AI 영상</span><span>스토리 영상 제작</span><span>보건교육 홍보영상</span><span>학생 참여형 콘텐츠</span><span>짧은 영상 콘텐츠</span></div>
+<div class="ai-tool-use"><div class="ai-tool-use-title">보건교사에게 특히 유용한 업무</div><ul>
+<li><b>보건교육 스토리 영상</b>: 건강습관·감염병 예방·마음건강 메시지를 이야기형 영상으로 구성</li>
+<li><b>사진 기반 영상</b>: 학교 행사·보건교육 활동 사진을 활용해 짧은 기록·홍보영상으로 제작</li>
+<li><b>학생 참여형 콘텐츠</b>: 학생이 만든 스토리·캐릭터·장면 아이디어를 연결해 프로젝트 결과물 제작</li>
+<li><b>나레이션 영상</b>: 장면 설명과 음성을 결합해 학부모 안내·학생 교육용 콘텐츠 제작</li>
+<li><b>짧은 캠페인 영상</b>: 카드뉴스·이미지 자료를 20~30초 보건 캠페인 영상으로 확장</li>
+</ul></div>
+<a class="ai-tool-link" href="https://vstory.io/ko/" rel="noopener noreferrer" target="_blank">vStory AI 바로가기 ↗</a>
 </article>
 </div>
 <div class="ai-tools-note"><strong>활용 안내:</strong> 서비스별 제공 기능과 사용 가능 범위는 계정·요금제·지역·업데이트에 따라 달라질 수 있습니다. 연수 실습 전 로그인 상태와 이용 가능한 기능을 확인해 주세요.</div>
-
 <div class="pricing-wrap" id="pricing">
-  <div class="pricing-intro premium-panel">
-    <div class="badge">AI</div>
-    <div>
-      <h3>ChatGPT · Google Gemini · Claude 요금제 & 보건교사 활용</h3>
-      <p>2026년 9월 공식 요금제 페이지를 기준으로 연수 현장에서 한눈에 비교할 수 있도록 정리했습니다. 실제 결제금액·스토리지·제공 기능은 계정, 국가, 프로모션, 학교/교육청 관리계정 정책에 따라 달라질 수 있으므로 <b>가입 직전 공식 결제 화면을 최종 확인</b>하세요.</p>
-    </div>
-  </div>
-
-  <div class="pricing-grid pricing-grid-main">
-    <article class="price-card tool-chatgpt">
-      <div class="plan-ribbon">ChatGPT 개인 요금제 상세</div>
-      <div class="price-brand"><div class="price-logo"><img src="https://chatgpt.com/favicon.ico" alt="ChatGPT 로고" loading="lazy"></div><div><h3>ChatGPT</h3><small>OpenAI</small></div></div>
-      <div class="google-plan-summary">
-        <div class="google-plan-item free">
-          <div class="gp-top"><strong>Free</strong><span class="gp-price">US$0</span></div>
-          <p>기본 ChatGPT를 무료로 사용합니다. 웹 검색, 파일 업로드, 이미지 생성, 데이터 분석 등 주요 기능을 제한된 사용량으로 체험할 수 있습니다.</p>
-          <span class="gp-fit">가벼운 질문·문서 초안·AI 입문 실습</span>
-        </div>
-        <div class="google-plan-item plus">
-          <div class="gp-top"><strong>Go</strong><span class="gp-price">US$8/월*</span></div>
-          <p>Free보다 메시지·파일 업로드·이미지 생성·데이터 분석 한도가 확대되는 저가형 개인 요금제입니다. 국가에 따라 현지 가격이 적용될 수 있습니다.</p>
-          <span class="gp-fit">가벼운 업무를 자주 쓰는 교사·입문 사용자</span>
-        </div>
-        <div class="google-plan-item pro recommended-plan">
-          <div class="gp-top"><strong>Plus</strong><span class="gp-price">US$20/월</span></div>
-          <p>Free보다 높은 모델·도구 사용 한도와 우선 접근을 제공하며, 파일 분석·이미지 제작·Deep Research·고급 추론 등 실무 활용 범위가 넓어집니다.</p>
-          <span class="gp-fit">보건교사 개인 실무·수업자료 제작에 가장 범용적</span>
-        </div>
-        <div class="google-plan-item ultra">
-          <div class="gp-top"><strong>Pro 5X</strong><span class="gp-price">US$100/월</span></div>
-          <p>Plus보다 약 5배 높은 사용량 구간으로, Pro 모델·Codex·Deep Research·이미지 생성·메모리·파일 업로드 등 고급 기능을 더 넉넉하게 사용합니다.</p>
-          <span class="gp-fit">고강도 자료 제작·코딩·연구·콘텐츠 생산 중심</span>
-        </div>
-        <div class="google-plan-item ultra">
-          <div class="gp-top"><strong>Pro 20X</strong><span class="gp-price">US$200/월</span></div>
-          <p>Plus 대비 약 20배 높은 사용량 구간입니다. 다만 2026년 9월 10일부터 신규 가입·업그레이드는 일시 중지되어 기존 구독자만 계속 이용할 수 있습니다.</p>
-          <span class="gp-fit">매우 높은 사용량이 필요한 전문 사용자</span>
-        </div>
-      </div>
-      <div class="google-clarity-note"><b>학교·기관 이용 참고</b><br>개인용 외에 ChatGPT Business·Enterprise·Edu 계열도 있습니다. 학교나 교육기관에서 조직 단위로 도입할 경우 개인 요금제보다 보안·관리·계정 운영 정책을 함께 검토하는 것이 좋습니다. 실제 한국 결제금액은 환율·세금·결제 플랫폼에 따라 달라질 수 있습니다.</div>
-      <a class="price-link" href="https://chatgpt.com/ko-KR/pricing/" target="_blank" rel="noopener noreferrer">ChatGPT 공식 요금제 확인 ↗</a>
-    </article>
-
-    <article class="price-card google-featured tool-gemini">
-      <div class="plan-ribbon">Google AI 요금제 상세</div>
-      <div class="price-brand"><div class="price-logo"><img src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%20aria-hidden%3D%22true%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22g1%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%231a73e8%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2245%25%22%20stop-color%3D%22%237b61ff%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2272%25%22%20stop-color%3D%22%2334a853%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23fbbc04%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22s%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%222%22%20stdDeviation%3D%222%22%20flood-color%3D%22%237b61ff%22%20flood-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%2260%22%20height%3D%2260%22%20rx%3D%2218%22%20fill%3D%22%23ffffff%22/%3E%0A%20%20%3Cg%20filter%3D%22url%28%23s%29%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M32%209c1.8%2010.6%205.4%2016.2%2010.5%2021.5C47.8%2035.6%2053.4%2039.2%2064%2041c-10.6%201.8-16.2%205.4-21.5%2010.5C37.4%2056.6%2033.8%2062.2%2032%2072.8%2030.2%2062.2%2026.6%2056.6%2021.5%2051.5%2016.2%2046.4%2010.6%2042.8%200%2041c10.6-1.8%2016.2-5.4%2021.5-10.5C26.6%2025.2%2030.2%2019.6%2032%209z%22%20transform%3D%22translate%280%20-9%29%22%20fill%3D%22url%28%23g1%29%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%226.2%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.95%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E" alt="Google Gemini 로고" loading="lazy"></div><div><h3>Google Gemini</h3><small>Google AI · Google One</small></div></div>
-      <div class="google-plan-summary">
-        <div class="google-plan-item free">
-          <div class="gp-top"><strong>무료</strong><span class="gp-price">₩0</span></div>
-          <p>기본 Gemini 사용 · 무료 Google 계정 스토리지 15GB</p>
-          <span class="gp-fit">가벼운 질문·초안 작성</span>
-        </div>
-        <div class="google-plan-item plus">
-          <div class="gp-top"><strong>Google AI Plus</strong><span class="gp-price">US$9.99/월*</span></div>
-          <p>비구독자 대비 약 2× 사용량 · Gemini, Flow, Gmail의 Gemini, Gemini Notebook 등 추가 이용</p>
-          <span class="gp-fit">수업자료·이미지·간단한 영상/창작 실습</span>
-        </div>
-        <div class="google-plan-item pro recommended-plan">
-          <div class="gp-top"><strong>Google AI Pro</strong><span class="gp-price">US$19.99/월*</span></div>
-          <p>5TB · 비구독자 대비 약 4× 사용량 · Pro 모델·Deep Research·Flow·Docs/Gmail/Vids의 Gemini 등 확장 이용</p>
-          <span class="gp-fit">보건교사 실무·연수에서 가장 범용적인 유료 구간</span>
-        </div>
-        <div class="google-plan-item ultra">
-          <div class="gp-top"><strong>Google AI Ultra</strong><span class="gp-price">고급 요금제</span></div>
-          <p>20TB부터 · Pro 대비 더 높은 사용 한도 · Deep Think, Flow 등 고급 생성 기능에 더 높은 접근</p>
-          <span class="gp-fit">대량 생성·고급 영상/AI 제작 중심 사용자</span>
-        </div>
-      </div>
-      <div class="google-clarity-note"><b>가격·용량 표기 안내</b><br>2026년 9월 Google의 한국어 공식 페이지는 노출 경로·계정에 따라 일부 요금제의 저장용량·가격 표기가 다르게 보일 수 있습니다. 현재 Google One 요금제 페이지에는 AI Plus <b>US$9.99/월</b>, AI Pro <b>US$19.99/월</b>이 표시되며, Google AI 전용 페이지에는 Plus 400GB·Pro 5TB·Ultra 20TB부터로 안내되는 화면도 있습니다. 따라서 실제 가입 시 본인 계정의 최종 결제 화면을 기준으로 확인하세요.</div>
-      <div class="official-links">
-        <a class="price-link" href="https://one.google.com/about/google-ai-plans/" target="_blank" rel="noopener noreferrer">Google AI 요금제 상세 ↗</a>
-        <a class="price-link secondary" href="https://one.google.com/about/plans?hl=ko" target="_blank" rel="noopener noreferrer">Google One 가격 확인 ↗</a>
-      </div>
-    </article>
-
-    <article class="price-card tool-claude">
-      <div class="plan-ribbon">Claude 개인 요금제 상세</div>
-      <div class="price-brand"><div class="price-logo"><img src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%20aria-hidden%3D%22true%22%3E%0A%20%20%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%2260%22%20height%3D%2260%22%20rx%3D%2218%22%20fill%3D%22%23fff8f2%22/%3E%0A%20%20%3Cg%20fill%3D%22%23d97745%22%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2232%22%20cy%3D%2214%22%20rx%3D%224.1%22%20ry%3D%228.8%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2232%22%20cy%3D%2250%22%20rx%3D%224.1%22%20ry%3D%228.8%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2214%22%20cy%3D%2232%22%20rx%3D%228.8%22%20ry%3D%224.1%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2250%22%20cy%3D%2232%22%20rx%3D%228.8%22%20ry%3D%224.1%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2219.3%22%20cy%3D%2219.3%22%20rx%3D%224.1%22%20ry%3D%228.2%22%20transform%3D%22rotate%28-45%2019.3%2019.3%29%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2244.7%22%20cy%3D%2244.7%22%20rx%3D%224.1%22%20ry%3D%228.2%22%20transform%3D%22rotate%28-45%2044.7%2044.7%29%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2244.7%22%20cy%3D%2219.3%22%20rx%3D%228.2%22%20ry%3D%224.1%22%20transform%3D%22rotate%28-45%2044.7%2019.3%29%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2219.3%22%20cy%3D%2244.7%22%20rx%3D%228.2%22%20ry%3D%224.1%22%20transform%3D%22rotate%28-45%2019.3%2044.7%29%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%228.5%22%20fill%3D%22%23f4b18f%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E" alt="Claude 로고" loading="lazy"></div><div><h3>Claude</h3><small>Anthropic</small></div></div>
-      <div class="google-plan-summary">
-        <div class="google-plan-item free">
-          <div class="gp-top"><strong>Free</strong><span class="gp-price">US$0</span></div>
-          <p>기본 Claude를 무료로 사용합니다. 간단한 글쓰기·요약·문서 이해·질문 응답을 제한된 사용량으로 활용할 수 있습니다.</p>
-          <span class="gp-fit">간단한 문서 요약·표현 다듬기·입문 실습</span>
-        </div>
-        <div class="google-plan-item pro recommended-plan">
-          <div class="gp-top"><strong>Pro</strong><span class="gp-price">US$20/월 · US$200/년</span></div>
-          <p>무료 서비스보다 세션당 최소 5배 이상의 사용량, 혼잡 시간 우선 접근, 새 기능 조기 접근, Claude Code·Cowork 접근 등을 제공합니다.</p>
-          <span class="gp-fit">긴 문서·수업자료·행정문서를 자주 다루는 교사</span>
-        </div>
-        <div class="google-plan-item ultra">
-          <div class="gp-top"><strong>Max 5x</strong><span class="gp-price">US$100/월</span></div>
-          <p>Pro보다 약 5배 높은 사용량을 제공하며, 더 긴 작업과 반복적인 문서 분석·작성·코딩을 자주 수행하는 사용자를 위한 상위 개인 요금제입니다.</p>
-          <span class="gp-fit">대량 문서 분석·장시간 작업·빈번한 Claude 활용</span>
-        </div>
-        <div class="google-plan-item ultra">
-          <div class="gp-top"><strong>Max 20x</strong><span class="gp-price">US$200/월</span></div>
-          <p>Pro보다 약 20배 높은 사용량을 제공해 하루 종일 Claude와 협업하거나 대규모 문서·코딩·프로젝트 작업을 수행하는 사용자에게 적합한 최상위 개인 구간입니다.</p>
-          <span class="gp-fit">고강도 연구·콘텐츠 제작·장시간 협업 중심</span>
-        </div>
-      </div>
-      <div class="google-clarity-note"><b>Claude 요금제 이용 참고</b><br>Claude Pro·Max 구독은 웹·데스크톱·모바일의 Claude 사용을 위한 개인 구독입니다. <b>Claude API와 Console 사용료는 별도</b>이며 개인 구독에 포함되지 않습니다. 조직용으로는 Team·Enterprise 플랜이 별도로 제공됩니다.</div>
-      <a class="price-link" href="https://claude.com/ko/pricing" target="_blank" rel="noopener noreferrer">Claude 공식 요금제 확인 ↗</a>
-    </article>
-  </div>
-
-  <div class="decision-guide">
-    <div class="decision-title"><span>✓</span><div><b>보건교사 실무 선택 가이드</b><p>도구 자체보다 “내가 자주 하는 업무”에 맞춰 선택하세요.</p></div></div>
-    <div class="teacher-guide">
-      <div><b>문서·수업·이미지·웹까지 폭넓게</b><p>ChatGPT는 한 도구 안에서 문서 작성, 파일 분석, 이미지 제작, 웹앱·코딩 실습을 폭넓게 연결하기 좋습니다.</p></div>
-      <div><b>Google Workspace + Canvas 중심</b><p>Gemini는 Gmail·Docs·Drive 환경과 연결해 업무 흐름을 만들고, Canvas·Deep Research·Flow 등 Google 생태계 실습을 이어가기 좋습니다.</p></div>
-      <div><b>긴 문서 읽기·구조화 중심</b><p>Claude는 긴 문서와 복잡한 문장을 읽고 구조화하거나, 초안을 자연스럽게 다듬고 비교·정리하는 업무에 활용하기 좋습니다.</p></div>
-    </div>
-  </div>
-
-  <div class="privacy-alert"><strong>보건교사 AI 활용 주의:</strong> 학생 이름, 학번, 연락처, 진단명, 투약정보, 상담내용 등 개인을 식별할 수 있는 학생 건강정보를 개인용 생성형 AI 서비스에 그대로 입력하지 마세요. 비식별화·가상 사례를 우선 사용하고, 학교·교육청의 개인정보·정보보안 정책과 승인된 계정/서비스 범위를 반드시 확인한 뒤 활용하세요. AI가 작성한 의학·응급·약물·감염병 정보는 보건당국·교육부·학교 지침 등 최신 공식자료로 재확인하고 최종 판단은 담당 교원이 수행합니다.</div>
-</div></div>
-</section>
+<div class="pricing-intro premium-panel">
+<div class="badge">AI</div>
+<div>
+<h3>ChatGPT · Google Gemini · Claude 요금제 &amp; 보건교사 활용</h3>
+<p>2026년 9월 공식 요금제 페이지를 기준으로 연수 현장에서 한눈에 비교할 수 있도록 정리했습니다. 실제 결제금액·스토리지·제공 기능은 계정, 국가, 프로모션, 학교/교육청 관리계정 정책에 따라 달라질 수 있으므로 <b>가입 직전 공식 결제 화면을 최종 확인</b>하세요.</p>
+</div>
+</div>
+<div class="pricing-grid pricing-grid-main">
+<article class="price-card tool-chatgpt">
+<div class="plan-ribbon">ChatGPT 개인 요금제 상세</div>
+<div class="price-brand"><div class="price-logo"><img alt="ChatGPT 로고" loading="lazy" src="https://chatgpt.com/favicon.ico"/></div><div><h3>ChatGPT</h3><small>OpenAI</small></div></div>
+<div class="google-plan-summary">
+<div class="google-plan-item free">
+<div class="gp-top"><strong>Free</strong><span class="gp-price">US$0</span></div>
+<p>기본 ChatGPT를 무료로 사용합니다. 웹 검색, 파일 업로드, 이미지 생성, 데이터 분석 등 주요 기능을 제한된 사용량으로 체험할 수 있습니다.</p>
+<span class="gp-fit">가벼운 질문·문서 초안·AI 입문 실습</span>
+</div>
+<div class="google-plan-item plus">
+<div class="gp-top"><strong>Go</strong><span class="gp-price">US$8/월*</span></div>
+<p>Free보다 메시지·파일 업로드·이미지 생성·데이터 분석 한도가 확대되는 저가형 개인 요금제입니다. 국가에 따라 현지 가격이 적용될 수 있습니다.</p>
+<span class="gp-fit">가벼운 업무를 자주 쓰는 교사·입문 사용자</span>
+</div>
+<div class="google-plan-item pro recommended-plan">
+<div class="gp-top"><strong>Plus</strong><span class="gp-price">US$20/월</span></div>
+<p>Free보다 높은 모델·도구 사용 한도와 우선 접근을 제공하며, 파일 분석·이미지 제작·Deep Research·고급 추론 등 실무 활용 범위가 넓어집니다.</p>
+<span class="gp-fit">보건교사 개인 실무·수업자료 제작에 가장 범용적</span>
+</div>
+<div class="google-plan-item ultra">
+<div class="gp-top"><strong>Pro 5X</strong><span class="gp-price">US$100/월</span></div>
+<p>Plus보다 약 5배 높은 사용량 구간으로, Pro 모델·Codex·Deep Research·이미지 생성·메모리·파일 업로드 등 고급 기능을 더 넉넉하게 사용합니다.</p>
+<span class="gp-fit">고강도 자료 제작·코딩·연구·콘텐츠 생산 중심</span>
+</div>
+<div class="google-plan-item ultra">
+<div class="gp-top"><strong>Pro 20X</strong><span class="gp-price">US$200/월</span></div>
+<p>Plus 대비 약 20배 높은 사용량 구간입니다. 다만 2026년 9월 10일부터 신규 가입·업그레이드는 일시 중지되어 기존 구독자만 계속 이용할 수 있습니다.</p>
+<span class="gp-fit">매우 높은 사용량이 필요한 전문 사용자</span>
+</div>
+</div>
+<div class="google-clarity-note"><b>학교·기관 이용 참고</b><br/>개인용 외에 ChatGPT Business·Enterprise·Edu 계열도 있습니다. 학교나 교육기관에서 조직 단위로 도입할 경우 개인 요금제보다 보안·관리·계정 운영 정책을 함께 검토하는 것이 좋습니다. 실제 한국 결제금액은 환율·세금·결제 플랫폼에 따라 달라질 수 있습니다.</div>
+<a class="price-link" href="https://chatgpt.com/ko-KR/pricing/" rel="noopener noreferrer" target="_blank">ChatGPT 공식 요금제 확인 ↗</a>
+</article>
+<article class="price-card google-featured tool-gemini">
+<div class="plan-ribbon">Google AI 요금제 상세</div>
+<div class="price-brand"><div class="price-logo"><img alt="Google Gemini 로고" loading="lazy" src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%20aria-hidden%3D%22true%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22g1%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%231a73e8%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2245%25%22%20stop-color%3D%22%237b61ff%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2272%25%22%20stop-color%3D%22%2334a853%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23fbbc04%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22s%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%3E%0A%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%222%22%20stdDeviation%3D%222%22%20flood-color%3D%22%237b61ff%22%20flood-opacity%3D%220.18%22/%3E%0A%20%20%20%20%3C/filter%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%2260%22%20height%3D%2260%22%20rx%3D%2218%22%20fill%3D%22%23ffffff%22/%3E%0A%20%20%3Cg%20filter%3D%22url%28%23s%29%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M32%209c1.8%2010.6%205.4%2016.2%2010.5%2021.5C47.8%2035.6%2053.4%2039.2%2064%2041c-10.6%201.8-16.2%205.4-21.5%2010.5C37.4%2056.6%2033.8%2062.2%2032%2072.8%2030.2%2062.2%2026.6%2056.6%2021.5%2051.5%2016.2%2046.4%2010.6%2042.8%200%2041c10.6-1.8%2016.2-5.4%2021.5-10.5C26.6%2025.2%2030.2%2019.6%2032%209z%22%20transform%3D%22translate%280%20-9%29%22%20fill%3D%22url%28%23g1%29%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%226.2%22%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.95%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E"/></div><div><h3>Google Gemini</h3><small>Google AI · Google One</small></div></div>
+<div class="google-plan-summary">
+<div class="google-plan-item free">
+<div class="gp-top"><strong>무료</strong><span class="gp-price">₩0</span></div>
+<p>기본 Gemini 사용 · 무료 Google 계정 스토리지 15GB</p>
+<span class="gp-fit">가벼운 질문·초안 작성</span>
+</div>
+<div class="google-plan-item plus">
+<div class="gp-top"><strong>Google AI Plus</strong><span class="gp-price">US$9.99/월*</span></div>
+<p>비구독자 대비 약 2× 사용량 · Gemini, Flow, Gmail의 Gemini, Gemini Notebook 등 추가 이용</p>
+<span class="gp-fit">수업자료·이미지·간단한 영상/창작 실습</span>
+</div>
+<div class="google-plan-item pro recommended-plan">
+<div class="gp-top"><strong>Google AI Pro</strong><span class="gp-price">US$19.99/월*</span></div>
+<p>5TB · 비구독자 대비 약 4× 사용량 · Pro 모델·Deep Research·Flow·Docs/Gmail/Vids의 Gemini 등 확장 이용</p>
+<span class="gp-fit">보건교사 실무·연수에서 가장 범용적인 유료 구간</span>
+</div>
+<div class="google-plan-item ultra">
+<div class="gp-top"><strong>Google AI Ultra</strong><span class="gp-price">고급 요금제</span></div>
+<p>20TB부터 · Pro 대비 더 높은 사용 한도 · Deep Think, Flow 등 고급 생성 기능에 더 높은 접근</p>
+<span class="gp-fit">대량 생성·고급 영상/AI 제작 중심 사용자</span>
+</div>
+</div>
+<div class="google-clarity-note"><b>가격·용량 표기 안내</b><br/>2026년 9월 Google의 한국어 공식 페이지는 노출 경로·계정에 따라 일부 요금제의 저장용량·가격 표기가 다르게 보일 수 있습니다. 현재 Google One 요금제 페이지에는 AI Plus <b>US$9.99/월</b>, AI Pro <b>US$19.99/월</b>이 표시되며, Google AI 전용 페이지에는 Plus 400GB·Pro 5TB·Ultra 20TB부터로 안내되는 화면도 있습니다. 따라서 실제 가입 시 본인 계정의 최종 결제 화면을 기준으로 확인하세요.</div>
+<div class="official-links">
+<a class="price-link" href="https://one.google.com/about/google-ai-plans/" rel="noopener noreferrer" target="_blank">Google AI 요금제 상세 ↗</a>
+<a class="price-link secondary" href="https://one.google.com/about/plans?hl=ko" rel="noopener noreferrer" target="_blank">Google One 가격 확인 ↗</a>
+</div>
+</article>
+<article class="price-card tool-claude">
+<div class="plan-ribbon">Claude 개인 요금제 상세</div>
+<div class="price-brand"><div class="price-logo"><img alt="Claude 로고" loading="lazy" src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%20aria-hidden%3D%22true%22%3E%0A%20%20%3Crect%20x%3D%222%22%20y%3D%222%22%20width%3D%2260%22%20height%3D%2260%22%20rx%3D%2218%22%20fill%3D%22%23fff8f2%22/%3E%0A%20%20%3Cg%20fill%3D%22%23d97745%22%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2232%22%20cy%3D%2214%22%20rx%3D%224.1%22%20ry%3D%228.8%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2232%22%20cy%3D%2250%22%20rx%3D%224.1%22%20ry%3D%228.8%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2214%22%20cy%3D%2232%22%20rx%3D%228.8%22%20ry%3D%224.1%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2250%22%20cy%3D%2232%22%20rx%3D%228.8%22%20ry%3D%224.1%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2219.3%22%20cy%3D%2219.3%22%20rx%3D%224.1%22%20ry%3D%228.2%22%20transform%3D%22rotate%28-45%2019.3%2019.3%29%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2244.7%22%20cy%3D%2244.7%22%20rx%3D%224.1%22%20ry%3D%228.2%22%20transform%3D%22rotate%28-45%2044.7%2044.7%29%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2244.7%22%20cy%3D%2219.3%22%20rx%3D%228.2%22%20ry%3D%224.1%22%20transform%3D%22rotate%28-45%2044.7%2019.3%29%22/%3E%0A%20%20%20%20%3Cellipse%20cx%3D%2219.3%22%20cy%3D%2244.7%22%20rx%3D%228.2%22%20ry%3D%224.1%22%20transform%3D%22rotate%28-45%2019.3%2044.7%29%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%228.5%22%20fill%3D%22%23f4b18f%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E"/></div><div><h3>Claude</h3><small>Anthropic</small></div></div>
+<div class="google-plan-summary">
+<div class="google-plan-item free">
+<div class="gp-top"><strong>Free</strong><span class="gp-price">US$0</span></div>
+<p>기본 Claude를 무료로 사용합니다. 간단한 글쓰기·요약·문서 이해·질문 응답을 제한된 사용량으로 활용할 수 있습니다.</p>
+<span class="gp-fit">간단한 문서 요약·표현 다듬기·입문 실습</span>
+</div>
+<div class="google-plan-item pro recommended-plan">
+<div class="gp-top"><strong>Pro</strong><span class="gp-price">US$20/월 · US$200/년</span></div>
+<p>무료 서비스보다 세션당 최소 5배 이상의 사용량, 혼잡 시간 우선 접근, 새 기능 조기 접근, Claude Code·Cowork 접근 등을 제공합니다.</p>
+<span class="gp-fit">긴 문서·수업자료·행정문서를 자주 다루는 교사</span>
+</div>
+<div class="google-plan-item ultra">
+<div class="gp-top"><strong>Max 5x</strong><span class="gp-price">US$100/월</span></div>
+<p>Pro보다 약 5배 높은 사용량을 제공하며, 더 긴 작업과 반복적인 문서 분석·작성·코딩을 자주 수행하는 사용자를 위한 상위 개인 요금제입니다.</p>
+<span class="gp-fit">대량 문서 분석·장시간 작업·빈번한 Claude 활용</span>
+</div>
+<div class="google-plan-item ultra">
+<div class="gp-top"><strong>Max 20x</strong><span class="gp-price">US$200/월</span></div>
+<p>Pro보다 약 20배 높은 사용량을 제공해 하루 종일 Claude와 협업하거나 대규모 문서·코딩·프로젝트 작업을 수행하는 사용자에게 적합한 최상위 개인 구간입니다.</p>
+<span class="gp-fit">고강도 연구·콘텐츠 제작·장시간 협업 중심</span>
+</div>
+</div>
+<div class="google-clarity-note"><b>Claude 요금제 이용 참고</b><br/>Claude Pro·Max 구독은 웹·데스크톱·모바일의 Claude 사용을 위한 개인 구독입니다. <b>Claude API와 Console 사용료는 별도</b>이며 개인 구독에 포함되지 않습니다. 조직용으로는 Team·Enterprise 플랜이 별도로 제공됩니다.</div>
+<a class="price-link" href="https://claude.com/ko/pricing" rel="noopener noreferrer" target="_blank">Claude 공식 요금제 확인 ↗</a>
+</article>
+</div>
+<div class="decision-guide">
+<div class="decision-title"><span>✓</span><div><b>보건교사 실무 선택 가이드</b><p>도구 자체보다 “내가 자주 하는 업무”에 맞춰 선택하세요.</p></div></div>
+<div class="teacher-guide">
+<div><b>문서·수업·이미지·웹까지 폭넓게</b><p>ChatGPT는 한 도구 안에서 문서 작성, 파일 분석, 이미지 제작, 웹앱·코딩 실습을 폭넓게 연결하기 좋습니다.</p></div>
+<div><b>Google Workspace + Canvas 중심</b><p>Gemini는 Gmail·Docs·Drive 환경과 연결해 업무 흐름을 만들고, Canvas·Deep Research·Flow 등 Google 생태계 실습을 이어가기 좋습니다.</p></div>
+<div><b>긴 문서 읽기·구조화 중심</b><p>Claude는 긴 문서와 복잡한 문장을 읽고 구조화하거나, 초안을 자연스럽게 다듬고 비교·정리하는 업무에 활용하기 좋습니다.</p></div>
+</div>
+</div>
+<div class="privacy-alert"><strong>보건교사 AI 활용 주의:</strong> 학생 이름, 학번, 연락처, 진단명, 투약정보, 상담내용 등 개인을 식별할 수 있는 학생 건강정보를 개인용 생성형 AI 서비스에 그대로 입력하지 마세요. 비식별화·가상 사례를 우선 사용하고, 학교·교육청의 개인정보·정보보안 정책과 승인된 계정/서비스 범위를 반드시 확인한 뒤 활용하세요. AI가 작성한 의학·응급·약물·감염병 정보는 보건당국·교육부·학교 지침 등 최신 공식자료로 재확인하고 최종 판단은 담당 교원이 수행합니다.</div>
+</div></section></div>
 <section class="section" id="s1"><div class="section-head"><div class="num">01</div><div><h2>보건교사와 AI · 좋은 프롬프트</h2><p class="section-desc">강의 슬라이드 16–18 + 첨부 기초실습: 좋은 질문 구조와 실제 한 문장 프롬프트 연습</p></div></div>
 <div class="prompt-grid">
 <article class="prompt-card featured" data-title="좋은 프롬프트 6요소 기본 템플릿 역할 목적 맥락 조건 형식"><div class="card-top"><div class="tags"><span class="tag">슬라이드 16–18</span><span class="tag mint">기본 공식</span></div><h3>좋은 프롬프트 6요소 기본 템플릿</h3><div class="card-note">역할 → 목적 → 맥락 → 구체적 지시 → 조건 → 결과 형식</div></div><pre class="prompt">너는 [역할/전문성]을 가진 전문가야.
@@ -1803,7 +1826,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 [결과 형식]
 [표 / 문서 / 체크리스트 / 수업안 / 카드뉴스 구성 / 웹페이지 구조] 형태로 작성해줘.
 
-초안을 만든 뒤 마지막에 "교사가 반드시 확인할 항목"을 5개 이내로 따로 정리해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+초안을 만든 뒤 마지막에 "교사가 반드시 확인할 항목"을 5개 이내로 따로 정리해줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[역할/전문성]</b><span>예: 대한민국 학교 보건교육과 학생참여형 수업 설계 경험이 풍부한 보건교사</span></div><div class="input-example-item"><b>[결과물/업무 목적]</b><span>예: 학부모에게 배포할 인플루엔자 예방 가정통신문</span></div><div class="input-example-item"><b>[초등/중등/고등/특수학교, 학년 또는 대상]</b><span>예: 중학교 1학년</span></div><div class="input-example-item"><b>[학교·보건실·수업 상황]</b><span>예: 환절기 이후 호흡기 증상을 호소하는 학생이 늘어난 상황</span></div><div class="input-example-item"><b>[구체적으로 입력]</b><span>예: 학생들이 기침 예절과 손 씻기를 알고 있지만 실제 실천율이 낮음</span></div><div class="input-example-item"><b>[핵심 내용]</b><span>예: 손 씻기, 기침 예절, 필요한 상황에서 마스크 활용, 환기, 충분한 휴식</span></div><div class="input-example-item"><b>[표 / 문서 / 체크리스트 / 수업안 / 카드뉴스 구성 / 웹페이지 구조]</b><span>예: 문서</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="AI 첫 결과 수정 학교 문서 보건교사 검수"><div class="card-top"><div class="tags"><span class="tag">슬라이드 19</span><span class="tag yellow">수정 대화</span></div><h3>첫 결과를 학교 문서에 맞게 다듬는 수정 프롬프트</h3></div><pre class="prompt">방금 작성한 초안을 그대로 사용하지 않고 학교 현장용 문서로 다듬어줘.
 
 다음 기준으로 다시 수정해줘.
@@ -1813,7 +1836,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 4. 학교에서 확정하지 않은 의료·법률·정책 내용을 단정하지 말고 "확인 필요"라고 표시해줘.
 5. 핵심 행동수칙은 표 또는 체크리스트로 다시 정리해줘.
 6. 학교명·날짜·연락처처럼 사용자가 직접 넣어야 하는 부분은 [학교명], [날짜], [연락처]처럼 표시해줘.
-7. 마지막에 교사가 최종 검수해야 할 항목을 5개 이내로 제시해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+7. 마지막에 교사가 최종 검수해야 할 항목을 5개 이내로 제시해줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[학교명]</b><span>예: 한빛중학교</span></div><div class="input-example-item"><b>[날짜]</b><span>예: 2026년 9월 19일</span></div><div class="input-example-item"><b>[연락처]</b><span>예: 학교 대표전화 또는 보건실 연락처</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="기초실습 · 좋은 프롬프트 작성공식 학교급·대상·주제·형식을 한 문장에 넣는 기초 연습 기초 실습 첨부 실습 프롬프트"><div class="card-top"><div class="tags"><span class="tag">첨부 기초실습</span><span class="tag mint">기초 실습</span></div><h3>기초실습 · 좋은 프롬프트 작성공식</h3><div class="card-note">학교급·대상·주제·형식을 한 문장에 넣는 기초 연습</div><div class="source-note">✓ 첨부 문서 원문 기반</div></div><pre class="prompt">당신은 초등학교 보건교사입니다. 5학년 학부모 대상 손씻기 예방 가정통신문을 A4 1페이지, 번호매기기 형식으로 작성해주세요</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article></div>
 </section>
 <section class="section" id="s2"><div class="section-head"><div class="num">02</div><div><h2>AI를 활용한 보건문서 · 가정통신문</h2><p class="section-desc">슬라이드 22–27 + 첨부 기초실습: 문서 설계 → 감염병 예방 가정통신문 → 수정 프롬프트</p></div></div>
@@ -1837,7 +1860,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 3. 공포를 유발하거나 낙인을 만들 수 있는 표현은 사용하지 말아줘.
 4. 의학적 수치, 격리·등교중지 기준, 법령·정책은 임의로 만들지 말고 최신 공식 지침 확인이 필요한 부분에 [공식자료 확인 필요]라고 표시해줘.
 5. 학교명·담당자·연락처·발송일은 임의 작성하지 말고 [학교명], [담당자], [연락처], [날짜]로 남겨줘.
-6. 마지막에 "교사 최종 확인 체크리스트"를 5개 항목으로 제시해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+6. 마지막에 "교사 최종 확인 체크리스트"를 5개 항목으로 제시해줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[초등학교/중학교/고등학교/특수학교]</b><span>예: 중학교</span></div><div class="input-example-item"><b>[학교급/학년]</b><span>예: 중학교 1학년</span></div><div class="input-example-item"><b>[감염병 또는 건강 주제]</b><span>예: 인플루엔자 예방</span></div><div class="input-example-item"><b>[예: 중학교 1학년]</b><span>예: 중학교 1학년</span></div><div class="input-example-item"><b>[예: 인플루엔자 예방]</b><span>예: 인플루엔자 예방</span></div><div class="input-example-item"><b>[예: 환절기 이후 호흡기 증상 학생이 증가하고 있음]</b><span>예: 환절기 이후 호흡기 증상 학생이 증가하고 있음</span></div><div class="input-example-item"><b>[예: 손 씻기, 기침 예절, 마스크가 필요한 상황, 충분한 휴식]</b><span>예: 손 씻기, 기침 예절, 마스크가 필요한 상황, 충분한 휴식</span></div><div class="input-example-item"><b>[예: 등교 전 건강상태 확인, 증상 시 진료 및 학교 연락]</b><span>예: 등교 전 건강상태 확인, 증상 시 진료 및 학교 연락</span></div><div class="input-example-item"><b>[예: 보건실 이용, 결석·출석 관련 확인 경로]</b><span>예: 보건실 이용, 결석·출석 관련 확인 경로</span></div><div class="input-example-item"><b>[공식자료 확인 필요]</b><span>예: 학교의 최신 지침·공문·내부 기준을 확인한 뒤 입력</span></div><div class="input-example-item"><b>[학교명]</b><span>예: 한빛중학교</span></div><div class="input-example-item"><b>[담당자]</b><span>예: 보건교사 김○○</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="학부모 읽기 쉽게 문장 줄이기 불안 표현 수정"><div class="card-top"><div class="tags"><span class="tag">슬라이드 27</span><span class="tag yellow">수정</span></div><h3>가정통신문을 한 번 더 다듬기</h3></div><pre class="prompt">방금 만든 가정통신문을 학교 배포용으로 한 번 더 다듬어줘.
 
 - 전체 문장을 약 20% 더 짧게 줄여줘.
@@ -1860,7 +1883,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 - 불필요한 의학적 단정 금지
 - 보호자가 확인해야 할 위험 신호는 "학교 기준과 의료기관 안내를 확인"하도록 표현
 - 사실 / 권고 / 확인 필요 내용을 구분하여 작성
-- 300~500자 내외의 정중하고 명료한 안내문으로 작성</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+- 300~500자 내외의 정중하고 명료한 안내문으로 작성</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[예: 체육활동 중 어지럼증을 호소하여 보건실 안정 후 보호자 인계]</b><span>예: 체육활동 중 어지럼증을 호소하여 보건실 안정 후 보호자 인계</span></div><div class="input-example-item"><b>[보호자]</b><span>예: 해당 학생의 보호자</span></div><div class="input-example-item"><b>[사실만 입력]</b><span>예: 보건실에서 안정을 취하게 하고 보호자에게 연락함</span></div><div class="input-example-item"><b>[관찰이 필요한 증상 / 병원 진료 권고 여부 / 학교 연락 방법]</b><span>예: 증상이 지속되거나 악화되는지 관찰하고 필요 시 의료기관 안내 확인</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="첨부 실습 ① 감염병 예방 가정통신문 제작 학교급과 감염병명을 바꿔 바로 사용할 수 있는 문서 실습 문서 실습 첨부 실습 프롬프트"><div class="card-top"><div class="tags"><span class="tag">첨부 기초실습</span><span class="tag mint">문서 실습</span></div><h3>첨부 실습 ① 감염병 예방 가정통신문 제작</h3><div class="card-note">학교급과 감염병명을 바꿔 바로 사용할 수 있는 문서 실습</div><div class="source-note">✓ 첨부 문서 원문 기반</div></div><pre class="prompt">실습 ① 감염병 예방 가정통신문 제작 프롬프트
 - 당신은 [학교급: 초등학교/중학교/고등학교] 보건교사입니다.
 학부모님께 발송할 가정통신문을 작성해 주세요.
@@ -1874,7 +1897,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 - 정중하고 따뜻한 존댓말체로 작성
 - 소제목과 번호 매기기로 학부모가 한눈에 이해할 수 있게 구성
 - 분량은 A4 1페이지 이내(약 700~900자)
-- 마지막 줄에 '20xx년 x월 x일 [학교명] 보건교사 [이름]' 형식의 발신 문구 포함</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article></div>
+- 마지막 줄에 '20xx년 x월 x일 [학교명] 보건교사 [이름]' 형식의 발신 문구 포함</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[학교급: 초등학교/중학교/고등학교]</b><span>예: 중학교</span></div><div class="input-example-item"><b>[주제]</b><span>예: 올바른 응급처치 기본원칙</span></div><div class="input-example-item"><b>[독감 / 노로바이러스 / 수족구병 등 감염병명]</b><span>예: 인플루엔자</span></div><div class="input-example-item"><b>[학교명]</b><span>예: 한빛중학교</span></div><div class="input-example-item"><b>[이름]</b><span>예: 보건교사 김○○</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article></div>
 </section>
 <section class="section" id="s3"><div class="section-head"><div class="num">03</div><div><h2>학생참여형 보건교육 지도안 만들기</h2><p class="section-desc">슬라이드 28–30 + 첨부 기초실습: 학생참여형 수업 설계 → 교수학습 계획안 → 형성평가</p></div></div>
 <div class="prompt-grid">
@@ -1897,7 +1920,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 5. 정답 맞히기보다 학생이 이유를 설명하거나 실제 행동을 선택하도록 설계해줘.
 6. 의료·법률·정책 내용은 최신 공식자료 확인이 필요한 지점을 표시해줘.
 7. 특수교육대상 학생 또는 다양한 학습 수준을 고려한 참여 대안 2가지를 포함해줘.
-8. 마지막에 수업 후 바로 사용할 수 있는 형성평가 질문 3개와 학생 자기점검 문장 2개를 제시해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+8. 마지막에 수업 후 바로 사용할 수 있는 형성평가 질문 3개와 학생 자기점검 문장 2개를 제시해줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[예: 중학교 1학년]</b><span>예: 중학교 1학년</span></div><div class="input-example-item"><b>[예: 올바른 응급처치 기본원칙 / 디지털 성폭력 예방 / 감염병 예방 / 마음건강]</b><span>예: 올바른 응급처치 기본원칙 / 디지털 성폭력 예방 / 감염병 예방 / 마음건강</span></div><div class="input-example-item"><b>[예: 45분]</b><span>예: 45분</span></div><div class="input-example-item"><b>[예: 발표 참여도는 높지만 보건용어 이해 수준은 다양함]</b><span>예: 발표 참여도는 높지만 보건용어 이해 수준은 다양함</span></div><div class="input-example-item"><b>[1~2개]</b><span>예: ① 응급상황에서 먼저 확인해야 할 기본원칙을 2가지 이상 설명할 수 있다. ② 상황카드를 보고 안전한 행동을 선택할 수 있다.</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="학생 참여활동 토의 선택 카드 상황카드"><div class="card-top"><div class="tags"><span class="tag">슬라이드 29</span><span class="tag yellow">활동 설계</span></div><h3>설명식 수업을 참여형 활동으로 바꾸기</h3></div><pre class="prompt">다음 보건교육 내용을 교사 설명 중심이 아니라 학생 참여 중심으로 다시 설계해줘.
 
 기존 설명 내용: [붙여넣기]
@@ -1910,7 +1933,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 - 움직임이 가능한 활동 1개, 자리에서 할 수 있는 활동 1개 제안
 - 발표를 원하지 않는 학생도 참여할 수 있는 대안 포함
 - 교사가 정리할 핵심 메시지 3문장
-- 활동 중 민감정보 공개나 학생 낙인이 생기지 않도록 주의사항 포함</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+- 활동 중 민감정보 공개나 학생 낙인이 생기지 않도록 주의사항 포함</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[붙여넣기]</b><span>예: 손 씻기는 감염병 예방의 기본입니다. 흐르는 물에 손을 적시고 비누를 사용하여 손바닥, 손등, 손가락 사이, 엄지, 손톱 밑을 꼼꼼히 씻습니다. 외출 후, 화장실 사용 후, 식사 전에는 반드시 손을 씻도록 지도합니다.</span></div><div class="input-example-item"><b>[10분/15분/20분]</b><span>예: 15분</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="보건교육 형성평가 질문 루브릭"><div class="card-top"><div class="tags"><span class="tag mint">평가</span></div><h3>수업 후 형성평가·자기점검 만들기</h3></div><pre class="prompt">다음 보건교육 수업의 학습목표를 실제 행동으로 확인할 수 있는 형성평가를 만들어줘.
 
 학년: [입력]
@@ -1935,7 +1958,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 3. 교수학습자료 및 매체 목록
 4. 형성평가 방법 및 평가 문항 예시 2개
 5. 유의사항(안전지도, 개별지도가 필요한 학생 배려 등)
-[형식] 표(테이블) 형식으로 정리하고, 실제 교실에서 바로 쓸 수 있는 구체적인 문구로 작성해 주세요.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article></div>
+[형식] 표(테이블) 형식으로 정리하고, 실제 교실에서 바로 쓸 수 있는 구체적인 문구로 작성해 주세요.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[대상]</b><span>예: 중학교 1학년 학생 28명</span></div><div class="input-example-item"><b>[학년 / 학급 / 인원]</b><span>예: 중학교 1학년</span></div><div class="input-example-item"><b>[주제]</b><span>예: 올바른 응급처치 기본원칙</span></div><div class="input-example-item"><b>[예: 올바른 손씻기와 개인위생 / 흡연·음주 예방 / 스마트폰 과의존 예방 등]</b><span>예: 올바른 손씻기와 개인위생 / 흡연·음주 예방 / 스마트폰 과의존 예방 등</span></div><div class="input-example-item"><b>[차시]</b><span>예: 1차시</span></div><div class="input-example-item"><b>[40분 1차시]</b><span>예: 45분 1차시</span></div><div class="input-example-item"><b>[포함 항목]</b><span>예: 학습목표, 도입·전개·정리 활동, 교사 발문, 학생 활동, 준비물, 유의점, 형성평가</span></div><div class="input-example-item"><b>[형식]</b><span>예: 표 형식</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article></div>
 </section>
 <section class="section" id="s4"><div class="section-head"><div class="num">04</div><div><h2>학교보건위원회 · 안내문 · 보건실 이용수칙</h2><p class="section-desc">슬라이드 31–34 + 첨부 기초실습: 학교보건위원회 → 식품알레르기·응급처치 → 보건실 이용수칙</p></div></div>
 <div class="prompt-grid">
@@ -1957,7 +1980,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 - 원문에 없는 숫자·일정·결정사항을 만들어내지 말 것
 - 개인정보와 학생 식별정보는 삭제하거나 비식별화할 것
 - 확인되지 않은 내용에는 [확인 필요] 표시
-- 마지막에 "회의 전 추가 확인자료" 목록을 따로 제시</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+- 마지막에 "회의 전 추가 확인자료" 목록을 따로 제시</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[원문 메모]</b><span>예: 1학기 보건실 이용 학생이 증가함. 주요 방문 사유는 두통·복통·찰과상 순. 2학기에는 감염병 예방교육과 응급처치 교육을 강화할 필요가 있음. 학생 건강검진 미수검자 안내와 교직원 협조가 필요함.</span></div><div class="input-example-item"><b>[여기에 회의 메모 또는 자료를 붙여넣기]</b><span>예: 1학기 보건실 이용 현황, 학생 건강검진 진행 상황, 감염병 예방교육 계획, 응급상황 대응체계 점검, 2학기 보건교육 운영 계획을 논의함.</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="식품알레르기 응급처치 안내문 학생 학부모 학교 가정 협조"><div class="card-top"><div class="tags"><span class="tag">슬라이드 32</span><span class="tag yellow">안전 안내</span></div><h3>식품알레르기·응급처치 안내문</h3></div><pre class="prompt">너는 학교 보건교사야. [초/중/고/특수학교] 학생과 학부모에게 제공할 "식품알레르기 안전 안내문" 초안을 작성해줘.
 
 반드시 포함할 범주:
@@ -1971,7 +1994,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 - 특정 학생의 알레르기 정보나 개인 건강정보는 포함하지 말 것
 - 약물 사용량·의료행위·응급처치 절차를 임의로 단정하지 말 것
 - 119 신고 등 긴급 도움 요청이 필요한 상황은 학교의 공식 응급 대응 절차 및 최신 공신력 있는 지침을 확인하도록 안내
-- 최종 배포 전 보건교사가 확인해야 할 의료정보 5개를 별도 체크리스트로 제시</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+- 최종 배포 전 보건교사가 확인해야 할 의료정보 5개를 별도 체크리스트로 제시</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[초/중/고/특수학교]</b><span>예: 중</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="보건실 이용수칙 학생 눈높이 규칙"><div class="card-top"><div class="tags"><span class="tag">슬라이드 33</span><span class="tag mint">학생 안내</span></div><h3>딱딱한 보건실 규정을 학생이 이해하는 이용수칙으로 바꾸기</h3></div><pre class="prompt">다음 학교 보건실 규정을 학생이 바로 이해하고 실천할 수 있는 "행동 문장"으로 바꿔줘.
 
 학교급: [초등/중등/고등/특수학교]
@@ -1983,7 +2006,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 - 예: 선생님께 알리기 / 조용히 이동하기 / 차례 지키기 / 증상을 정확히 말하기 / 치료 후 안내에 따라 생활 복귀하기
 - 훈계·낙인·비난 표현 금지
 - 특수교육대상 학생도 이해할 수 있도록 쉬운 말 버전 추가
-- 게시판용 큰 제목 1개와 한 줄 슬로건 1개 제안</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+- 게시판용 큰 제목 1개와 한 줄 슬로건 1개 제안</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[초등/중등/고등/특수학교]</b><span>예: 중등</span></div><div class="input-example-item"><b>[붙여넣기]</b><span>예: 보건실 방문 전 담임 또는 교과교사에게 알리고 방문합니다. 응급상황을 제외하고 쉬는 시간을 이용합니다. 보건실에서는 다른 학생의 휴식을 방해하지 않도록 조용히 합니다. 약품은 보건교사의 안내 없이 임의로 사용하지 않습니다.</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="첨부 실습 ③ 학교보건위원회 회의자료 제작 회의 핵심 요약과 안건을 공문서 톤으로 구조화 회의 실무 첨부 실습 프롬프트"><div class="card-top"><div class="tags"><span class="tag">첨부 기초실습</span><span class="tag mint">회의 실무</span></div><h3>첨부 실습 ③ 학교보건위원회 회의자료 제작</h3><div class="card-note">회의 핵심 요약과 안건을 공문서 톤으로 구조화</div><div class="source-note">✓ 첨부 문서 원문 기반</div></div><pre class="prompt">당신은 학교보건위원회 실무를 담당하는 보건교사입니다. 이번 학기 학교보건위원회 안건 보고자료를 작성해 주세요.
 [회의 목적] [예: 1학기 정기 학교보건위원회]
 [안건]
@@ -1994,7 +2017,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 - 개조식(불릿포인트) 보고서 형식
 - 통계·수치가 들어갈 자리는 [ ]로 남겨 제가 직접 채울 수 있도록 표시
 - 참석자가 빠르게 파악할 수 있도록 핵심 요약 3줄을 맨 앞에 배치
-- 공문서 톤앤매너(객관적이고 간결한 문장)로 작성</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article><article class="prompt-card" data-title="첨부 실습 ④ 식품알레르기 · 응급처치 안내문 제작 학부모·담임교사용 안전 안내문 실습 안전 안내 첨부 실습 프롬프트"><div class="card-top"><div class="tags"><span class="tag">첨부 기초실습</span><span class="tag mint">안전 안내</span></div><h3>첨부 실습 ④ 식품알레르기 · 응급처치 안내문 제작</h3><div class="card-note">학부모·담임교사용 안전 안내문 실습</div><div class="source-note">✓ 첨부 문서 원문 기반</div></div><pre class="prompt">당신은 학교 보건교사입니다. 학부모와 담임교사에게 배포할 [식품알레르기 대응] 안내문을 작성해 주세요.
+- 공문서 톤앤매너(객관적이고 간결한 문장)로 작성</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[회의 목적]</b><span>예: 학생이 보고 바로 한 가지 이상 실천하도록 안내</span></div><div class="input-example-item"><b>[예: 1학기 정기 학교보건위원회]</b><span>예: 1학기 정기 학교보건위원회</span></div><div class="input-example-item"><b>[안건]</b><span>예: 1학기 학생 건강관리 현황 및 2학기 보건교육 운영 계획</span></div><div class="input-example-item"><b>[1학기 보건실 이용 현황 요약]</b><span>예: 1학기 보건실 이용은 월별로 꾸준히 발생했으며, 주요 방문 사유는 두통·복통·경미한 외상 등이었습니다. 세부 수치는 학교 집계자료를 기준으로 제시합니다.</span></div><div class="input-example-item"><b>[건강검진 및 신체발달 결과 요약]</b><span>예: 건강검진 및 신체발달 결과는 학교 보유 집계자료를 기준으로 요약하고, 개인을 식별할 수 있는 정보는 제외합니다. 추가 관리가 필요한 영역은 보호자 안내 및 상담 절차와 연계합니다.</span></div><div class="input-example-item"><b>[향후 보건교육 계획 안내]</b><span>예: 2학기에는 감염병 예방, 응급처치, 디지털 건강, 마음건강을 중심으로 학생 참여형 보건교육을 운영합니다.</span></div><div class="input-example-item"><b>[ ]</b><span>예: 기타 논의사항: 교내 응급상황 대응체계 점검 및 교직원 협조사항</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article><article class="prompt-card" data-title="첨부 실습 ④ 식품알레르기 · 응급처치 안내문 제작 학부모·담임교사용 안전 안내문 실습 안전 안내 첨부 실습 프롬프트"><div class="card-top"><div class="tags"><span class="tag">첨부 기초실습</span><span class="tag mint">안전 안내</span></div><h3>첨부 실습 ④ 식품알레르기 · 응급처치 안내문 제작</h3><div class="card-note">학부모·담임교사용 안전 안내문 실습</div><div class="source-note">✓ 첨부 문서 원문 기반</div></div><pre class="prompt">당신은 학교 보건교사입니다. 학부모와 담임교사에게 배포할 [식품알레르기 대응] 안내문을 작성해 주세요.
 [대상 학생 상황] [예: 땅콩 알레르기 학생의 급식·현장체험학습 시 대응 방법]
 [포함 내용]
 1. 알레르기 유발 요인과 학교 내 관리 원칙
@@ -2004,7 +2027,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 [작성 조건]
 - 응급상황 대처 순서는 번호를 매겨 한눈에 보이도록
 - 비전문가도 당황하지 않고 따라할 수 있는 쉬운 문장
-- A4 1페이지 분량</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article><article class="prompt-card" data-title="첨부 실습 ⑤ 보건실 이용수칙 안내문 제작 학생 눈높이의 짧고 친근한 행동 중심 이용수칙 학생 안내 첨부 실습 프롬프트"><div class="card-top"><div class="tags"><span class="tag">첨부 기초실습</span><span class="tag mint">학생 안내</span></div><h3>첨부 실습 ⑤ 보건실 이용수칙 안내문 제작</h3><div class="card-note">학생 눈높이의 짧고 친근한 행동 중심 이용수칙</div><div class="source-note">✓ 첨부 문서 원문 기반</div></div><pre class="prompt">당신은 학생들에게 친근하게 다가가는 보건교사입니다. [초등학생/중학생/고등학생] 눈높이에 맞춘 '보건실 이용수칙' 안내문을 작성해 주세요.
+- A4 1페이지 분량</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[식품알레르기 대응]</b><span>예: 식품알레르기 학생의 안전한 학교생활을 위한 급식·체험학습 대응 안내</span></div><div class="input-example-item"><b>[대상 학생 상황]</b><span>예: 중학교 1학년 학생 28명</span></div><div class="input-example-item"><b>[예: 땅콩 알레르기 학생의 급식·현장체험학습 시 대응 방법]</b><span>예: 땅콩 알레르기 학생의 급식·현장체험학습 시 대응 방법</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article><article class="prompt-card" data-title="첨부 실습 ⑤ 보건실 이용수칙 안내문 제작 학생 눈높이의 짧고 친근한 행동 중심 이용수칙 학생 안내 첨부 실습 프롬프트"><div class="card-top"><div class="tags"><span class="tag">첨부 기초실습</span><span class="tag mint">학생 안내</span></div><h3>첨부 실습 ⑤ 보건실 이용수칙 안내문 제작</h3><div class="card-note">학생 눈높이의 짧고 친근한 행동 중심 이용수칙</div><div class="source-note">✓ 첨부 문서 원문 기반</div></div><pre class="prompt">당신은 학생들에게 친근하게 다가가는 보건교사입니다. [초등학생/중학생/고등학생] 눈높이에 맞춘 '보건실 이용수칙' 안내문을 작성해 주세요.
 [포함 내용]
 1. 보건실을 이용할 수 있는 경우 (예시 3~4가지)
 2. 보건실 이용 시 지켜야 할 예절과 절차
@@ -2012,7 +2035,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 [작성 조건]
 - 학생이 쉽게 읽고 기억할 수 있는 짧고 친근한 문장
 - 이모지나 재미있는 표현을 적절히 활용해도 좋음
-- 교실 게시용으로 항목별 구분이 잘 보이도록 구성</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article></div>
+- 교실 게시용으로 항목별 구분이 잘 보이도록 구성</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[초등학생/중학생/고등학생]</b><span>예: 중학생</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article></div>
 </section>
 <section class="section" id="s5"><div class="section-head"><div class="num">05</div><div><h2>생성형 AI로 보건 이미지 콘텐츠 제작</h2><p class="section-desc">슬라이드 35–45 + 첨부 기초실습: 카드뉴스 → 이미지 프롬프트 → 학교 보건행사 포스터</p></div></div>
 <div class="prompt-grid">
@@ -2041,7 +2064,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 - 학교급에 맞는 표현
 - 의학적 사실은 과장하지 않기
 - 이미지에는 복잡한 배경과 과도한 텍스트를 피하기
-- 마지막 장은 실천을 촉구하는 긍정적인 마무리</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+- 마지막 장은 실천을 촉구하는 긍정적인 마무리</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[예: 중학생]</b><span>예: 중학생</span></div><div class="input-example-item"><b>[예: 감염병 예방수칙 5가지]</b><span>예: 감염병 예방수칙 5가지</span></div><div class="input-example-item"><b>[1:1 또는 4:5]</b><span>예: 1:1 정사각형</span></div><div class="input-example-item"><b>[원하는 핵심 행동 예시]</b><span>예: ① 흐르는 물과 비누로 손 씻기 ② 기침할 때 옷소매로 가리기 ③ 아플 때 필요한 상황에서 마스크 활용하기 ④ 교실 창문을 열어 주기적으로 환기하기 ⑤ 충분히 자고 규칙적으로 식사하기</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="이미지 생성 프롬프트 기본 공식 카드뉴스 포스터"><div class="card-top"><div class="tags"><span class="tag">슬라이드 40–41</span><span class="tag yellow">이미지 생성</span></div><h3>보건 이미지 생성 프롬프트 기본 공식</h3></div><pre class="prompt">다음 조건으로 학교 보건교육용 이미지를 만들어줘.
 
 - 주제/장면: [한 장면의 핵심 행동]
@@ -2053,7 +2076,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 - 비율: [1:1 / 4:5 / 16:9]
 - 피해야 할 요소: 과도하게 복잡한 배경, 공포스러운 의료 표현, 잘못된 신체·손 모양, 워터마크, 로고, 불필요한 텍스트
 
-학교 게시물과 수업자료에 사용하기 쉽게 시선이 먼저 핵심 행동으로 가는 구도로 제작해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+학교 게시물과 수업자료에 사용하기 쉽게 시선이 먼저 핵심 행동으로 가는 구도로 제작해줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[한 장면의 핵심 행동]</b><span>예: 중학생이 세면대에서 비누로 손바닥과 손등을 꼼꼼히 씻는 장면</span></div><div class="input-example-item"><b>[예: 대한민국 중학생 2명]</b><span>예: 대한민국 중학생 2명</span></div><div class="input-example-item"><b>[예: 정면 상반신, 손 씻기 행동이 잘 보이게]</b><span>예: 정면 상반신, 손 씻기 행동이 잘 보이게</span></div><div class="input-example-item"><b>[1:1 / 4:5 / 16:9]</b><span>예: 4:5</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="손씻기 카드뉴스 이미지 프롬프트"><div class="card-top"><div class="tags"><span class="tag">슬라이드 41</span><span class="tag mint">예시</span></div><h3>손 씻기 카드뉴스 이미지 예시</h3></div><pre class="prompt">대한민국 중학생 남녀 2명이 학교 세면대에서 비누로 손을 씻는 장면을 교육용 카드뉴스 이미지로 만들어줘.
 
 - 비율: 1:1 정사각형
@@ -2086,7 +2109,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 - 블루·화이트·민트/그린 중심
 - 과도한 공포·혐오 이미지 금지
 - 중요한 보건정보는 이미지 생성 후 별도 검수하도록 안내
-- 임의의 로고·QR코드·연락처를 만들지 말 것</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+- 임의의 로고·QR코드·연락처를 만들지 말 것</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[행사/캠페인]</b><span>예: 학생 건강 캠페인</span></div><div class="input-example-item"><b>[마음건강 / 금연 / 손씻기 / 감염병 예방 / 약물 오남용 예방 등]</b><span>예: 금연</span></div><div class="input-example-item"><b>[학생/학부모/교직원]</b><span>예: 학부모</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="첨부 실습 · 올바른 손씻기 6장 카드뉴스 초등 전학년 대상 카드뉴스 구성 및 그림 아이디어 실습 카드뉴스 첨부 실습 프롬프트"><div class="card-top"><div class="tags"><span class="tag">첨부 기초실습</span><span class="tag mint">카드뉴스</span></div><h3>첨부 실습 · 올바른 손씻기 6장 카드뉴스</h3><div class="card-note">초등 전학년 대상 카드뉴스 구성 및 그림 아이디어 실습</div><div class="source-note">✓ 첨부 문서 원문 기반</div></div><pre class="prompt">너는 마루초등학교 보건교사야. 초등학교 전학년 학생 대상으로 '올바른 손씻기' 카드뉴스를 만들어줘. 조건: - 총 6장 구성 - 손씻기 6단계를 쉽게 설명 - 감기·독감 예방 중요성 포함 - 귀여운 표현 사용 - 학생들이 따라하고 싶게 구성 - 카드별 그림 아이디어 포함 - 내가 첨부한 캐릭터도 같이 넣을수 있게 해줘</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article><article class="prompt-card" data-title="첨부 실습 · 카드뉴스 이미지 만들기 1:1 SNS 카드뉴스 이미지 생성용 프롬프트 이미지 생성 첨부 실습 프롬프트"><div class="card-top"><div class="tags"><span class="tag">첨부 기초실습</span><span class="tag mint">이미지 생성</span></div><h3>첨부 실습 · 카드뉴스 이미지 만들기</h3><div class="card-note">1:1 SNS 카드뉴스 이미지 생성용 프롬프트</div><div class="source-note">✓ 첨부 문서 원문 기반</div></div><pre class="prompt">다음 조건에 맞는 카드뉴스용 이미지를 만들어 주세요.
 [주제] [예: 여름철 식중독 예방 수칙]
 [대상] [초등학생 학부모 / 중고등학생]
@@ -2098,7 +2121,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 - 하단에 핵심 수칙 3가지를 짧은 문구로 삽입: '① [문구1] ② [문구2] ③ [문구3]'
 - 학교 로고나 실제 인물 사진은 넣지 않기
 - 텍스트는 한글로 정확하게 표기
-[스타일 키워드] flat illustration, pastel color palette, friendly, clean layout, Korean text overlay</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article><article class="prompt-card" data-title="첨부 실습 · 학교 보건행사 홍보 포스터 만들기 세로형 학교 보건행사 홍보 포스터 이미지 실습 포스터 첨부 실습 프롬프트"><div class="card-top"><div class="tags"><span class="tag">첨부 기초실습</span><span class="tag mint">포스터</span></div><h3>첨부 실습 · 학교 보건행사 홍보 포스터 만들기</h3><div class="card-note">세로형 학교 보건행사 홍보 포스터 이미지 실습</div><div class="source-note">✓ 첨부 문서 원문 기반</div></div><pre class="prompt">실습 ② 포스터 만들기
+[스타일 키워드] flat illustration, pastel color palette, friendly, clean layout, Korean text overlay</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[주제]</b><span>예: 올바른 응급처치 기본원칙</span></div><div class="input-example-item"><b>[예: 여름철 식중독 예방 수칙]</b><span>예: 여름철 식중독 예방 수칙</span></div><div class="input-example-item"><b>[대상]</b><span>예: 중학교 1학년 학생 28명</span></div><div class="input-example-item"><b>[초등학생 학부모 / 중고등학생]</b><span>예: 중고등학생</span></div><div class="input-example-item"><b>[형식]</b><span>예: 표 형식</span></div><div class="input-example-item"><b>[디자인 요구사항]</b><span>예: 밝은 아이보리 배경, 딥 네이비 제목, 시안 블루와 민트 포인트, 큰 한글 제목, 둥근 카드형 레이아웃, 모바일에서 읽기 쉬운 구성</span></div><div class="input-example-item"><b>[제목을 여기에 입력]</b><span>예: 감염병 예방수칙 5가지</span></div><div class="input-example-item"><b>[문구1]</b><span>예: 손은 흐르는 물과 비누로 꼼꼼하게 씻어요.</span></div><div class="input-example-item"><b>[문구2]</b><span>예: 손은 흐르는 물과 비누로 꼼꼼하게 씻어요.</span></div><div class="input-example-item"><b>[문구3]</b><span>예: 손은 흐르는 물과 비누로 꼼꼼하게 씻어요.</span></div><div class="input-example-item"><b>[스타일 키워드]</b><span>예: flat illustration, pastel color palette, friendly, clean layout, Korean school health education, high readability</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article><article class="prompt-card" data-title="첨부 실습 · 학교 보건행사 홍보 포스터 만들기 세로형 학교 보건행사 홍보 포스터 이미지 실습 포스터 첨부 실습 프롬프트"><div class="card-top"><div class="tags"><span class="tag">첨부 기초실습</span><span class="tag mint">포스터</span></div><h3>첨부 실습 · 학교 보건행사 홍보 포스터 만들기</h3><div class="card-note">세로형 학교 보건행사 홍보 포스터 이미지 실습</div><div class="source-note">✓ 첨부 문서 원문 기반</div></div><pre class="prompt">실습 ② 포스터 만들기
 
 다음 조건에 맞는 학교 보건행사 홍보 포스터를 만들어 주세요.
 [행사명] [예: 전교생 구강보건교육 캠페인]
@@ -2112,7 +2135,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 · 대상: [대상 학년 / 전교생]
 - 전체 톤: 밝고 활기찬 색감, 학생 시선을 끄는 디자인
 - 텍스트는 모두 정확한 한글로, 오탈자 없이 표기
-[스타일 키워드] Korean poster design, bold typography, flat illustration, vibrant colors, school event poster</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article></div>
+[스타일 키워드] Korean poster design, bold typography, flat illustration, vibrant colors, school event poster</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[행사명]</b><span>예: 학생 건강 캠페인</span></div><div class="input-example-item"><b>[예: 전교생 구강보건교육 캠페인]</b><span>예: 전교생 구강보건교육 캠페인</span></div><div class="input-example-item"><b>[형식]</b><span>예: 표 형식</span></div><div class="input-example-item"><b>[디자인 요구사항]</b><span>예: 세로형 3:4 포스터, 밝은 화이트 배경, 딥 네이비·시안 블루 중심, 따뜻한 노랑 포인트, 학생 캐릭터 2~3명, 행사명과 일시를 가장 크게 표시</span></div><div class="input-example-item"><b>[YYYY년 MM월 DD일 HH:MM]</b><span>예: 2026년 10월 14일 12:30~13:30</span></div><div class="input-example-item"><b>[장소명]</b><span>예: 1학년 3반 교실</span></div><div class="input-example-item"><b>[대상 학년 / 전교생]</b><span>예: 중학교 1학년</span></div><div class="input-example-item"><b>[스타일 키워드]</b><span>예: Korean school event poster, bold typography, flat illustration, clean layout, bright and trustworthy, high readability</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article></div>
 </section>
 <section class="section" id="s6"><div class="section-head"><div class="num">06</div><div><h2>생성형 AI 활용 보건영상 콘텐츠 제작</h2><p class="section-desc">슬라이드 46–58 + 첨부 기초실습: 영상 아이디어 → 캐릭터 → 6장면 스토리보드 → 나레이션 → 캐릭터시트</p></div></div>
 <div class="prompt-grid">
@@ -2131,7 +2154,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 - 위협적·공포스러운 장면 금지
 - 과도한 의료정보보다 행동 변화 중심
 - 학생이 따라 할 수 있는 구체적인 행동 포함
-- 촬영형·이미지형·애니메이션형을 섞어서 제안</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+- 촬영형·이미지형·애니메이션형을 섞어서 제안</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[초등 고학년/중학생/고등학생/특수학교 학생]</b><span>예: 중학교 1학년</span></div><div class="input-example-item"><b>[예: 중학생이 손 씻기 6단계를 기억하고 생활 속에서 실천하게 하기]</b><span>예: 중학생이 손 씻기 6단계를 기억하고 생활 속에서 실천하게 하기</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="보건영상 로그라인 한 문장 주인공 문제 변화 행동"><div class="card-top"><div class="tags"><span class="tag">슬라이드 50</span><span class="tag yellow">로그라인</span></div><h3>영상 전체를 한 문장 로그라인으로 정리</h3></div><pre class="prompt">다음 보건교육 영상 아이디어를 "주인공 + 문제/상황 + 변화/행동"이 모두 들어간 한 문장 로그라인으로 만들어줘.
 
 주제: [입력]
@@ -2161,7 +2184,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 그 다음 1:1 정면 전신 캐릭터 이미지 생성 프롬프트를 작성해줘.
 
 스타일: 교육용 3D/일러스트, 과도한 사실적 묘사보다 학교 교육자료에 어울리는 친근한 표현.
-배경은 단순한 밝은 학교 공간. 장면마다 얼굴·머리·의상·소품이 바뀌지 않도록 고정 요소를 문장으로 명확히 반복해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+배경은 단순한 밝은 학교 공간. 장면마다 얼굴·머리·의상·소품이 바뀌지 않도록 고정 요소를 문장으로 명확히 반복해줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[기본 정보]</b><span>예: 주인공은 대한민국 중학교 1학년 여학생, 14세, 밝고 친근한 인상, 단정한 교복, 어깨 길이 검은 머리, 흰색 운동화, 건강한 생활습관을 실천하는 적극적인 성격</span></div><div class="input-example-item"><b>[학교급]</b><span>예: 중학교</span></div><div class="input-example-item"><b>[학년]</b><span>예: 중학교 1학년</span></div><div class="input-example-item"><b>[교복/체육복/일상복]</b><span>예: 체육복</span></div><div class="input-example-item"><b>[예: 남색 백팩, 물병]</b><span>예: 남색 백팩, 물병</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card full featured" data-title="6장면 스토리보드 장면설명 이미지 나레이션 자막 영상프롬프트"><div class="card-top"><div class="tags"><span class="tag">슬라이드 53–56</span><span class="tag mint">스토리보드</span></div><h3>20~30초 보건영상 6장면 스토리보드</h3></div><pre class="prompt">너는 학교 보건교육 영상 스토리보드 작가야.
 
 [영상 기본 설정]
@@ -2190,7 +2213,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 - 자막은 내레이션을 그대로 복사하지 말고 핵심어만 짧게
 - 전체 내레이션은 70~100자 안팎을 목표로
 - 마지막 장면은 학생이 바로 할 수 있는 행동을 촉구하는 한 문장
-- 의학정보는 과장하지 말고 검수가 필요한 정보는 [검수 필요]로 표시</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+- 의학정보는 과장하지 말고 검수가 필요한 정보는 [검수 필요]로 표시</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[영상 기본 설정]</b><span>예: 대상 중학생 / 주제 감염병 예방 / 길이 30초 / 비율 16:9 / 분위기 밝고 신뢰감 있는 학교생활 영상 / 핵심 메시지 오늘부터 한 가지씩 실천하자</span></div><div class="input-example-item"><b>[앞에서 만든 캐릭터 바이블 붙여넣기]</b><span>예: 주인공 민지, 14세 중학생, 어깨 길이 검은 머리, 네이비 교복 재킷과 흰 셔츠, 흰 운동화, 밝고 적극적인 성격. 모든 장면에서 동일한 외형과 의상을 유지한다.</span></div><div class="input-example-item"><b>[6장면 구조]</b><span>예: 1장면 등교 후 손 씻기 → 2장면 기침할 때 옷소매로 가리기 → 3장면 몸이 좋지 않을 때 마스크 활용 → 4장면 교실 환기 → 5장면 물 마시고 충분히 쉬기 → 6장면 친구들과 “오늘부터 실천!” 마무리</span></div><div class="input-example-item"><b>[검수 필요]</b><span>예: 학생 안전, 개인정보 노출 여부, 과도한 공포 표현, 잘못된 의학 정보, 장면별 캐릭터 일관성을 마지막에 점검해줘.</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="내레이션 자막 30초 쉬운 표현"><div class="card-top"><div class="tags"><span class="tag">슬라이드 56</span><span class="tag yellow">내레이션</span></div><h3>30초 영상 내레이션·자막 다듬기</h3></div><pre class="prompt">아래 6장면 스토리보드의 내레이션을 학생이 듣기 편하게 다시 다듬어줘.
 
 [스토리보드 붙여넣기]
@@ -2204,7 +2227,7 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 - 화면 자막은 장면당 10~18자 이내 핵심 문구
 - 음성 낭독 시 호흡이 자연스럽도록 문장부호 조정
 
-결과를 "장면 / 내레이션 / 짧은 자막" 표로 정리해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+결과를 "장면 / 내레이션 / 짧은 자막" 표로 정리해줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[스토리보드 붙여넣기]</b><span>예: 1장면 등교 후 손 씻기 / 2장면 기침 예절 / 3장면 필요할 때 마스크 / 4장면 교실 환기 / 5장면 충분한 수면과 수분 섭취 / 6장면 “건강한 학교생활, 오늘부터 함께 실천해요.”</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="첨부 실습 · 보건홍보영상 단계별 기획 마스터 프롬프트 학교 정보 → 스토리 5개 → 캐릭터 → 6장면 → 전체 나레이션 순으로 진행 영상 기획 첨부 실습 프롬프트"><div class="card-top"><div class="tags"><span class="tag">첨부 기초실습</span><span class="tag mint">영상 기획</span></div><h3>첨부 실습 · 보건홍보영상 단계별 기획 마스터 프롬프트</h3><div class="card-note">학교 정보 → 스토리 5개 → 캐릭터 → 6장면 → 전체 나레이션 순으로 진행</div><div class="source-note">✓ 첨부 문서 원문 기반</div></div><pre class="prompt">1.보건홍보영상 기획하기 프롬프트
 - 너는 대한민국 초등학교·중학교·고등학교에서 활용할 수 있는 학교 보건교육 콘텐츠 기획자이자 애니메이션 스토리 작가, 이미지 프롬프트 전문가야.
 나는 학교 보건교사이고, 우리 학교 학생들에게 필요한 보건교육 영상을 AI를 활용해 직접 제작하려고 해.
@@ -2407,7 +2430,7 @@ STEP 6
 내가 각 단계에서 답변하거나 선택해야 하는 경우에는 반드시 질문을 하고, 내 답변을 기다린 다음 다음 단계로 넘어가줘.
 그럼 지금부터 시작해줘.
 먼저 나에게 아래와 같이 질문해줘.
-“소속 학교 이름, 학교급(초등학교·중학교·고등학교), 만들고 싶은 보건교육 영상 주제를 알려주세요.”</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article><article class="prompt-card" data-title="첨부 실습 · 사진 기반 6패널 애니메이션 캐릭터시트 첨부 사진의 인물 특징을 유지한 16:9 캐릭터 레퍼런스 시트 제작 캐릭터 시트 첨부 실습 프롬프트"><div class="card-top"><div class="tags"><span class="tag">첨부 기초실습</span><span class="tag mint">캐릭터 시트</span></div><h3>첨부 실습 · 사진 기반 6패널 애니메이션 캐릭터시트</h3><div class="card-note">첨부 사진의 인물 특징을 유지한 16:9 캐릭터 레퍼런스 시트 제작</div><div class="source-note">✓ 첨부 문서 원문 기반</div></div><pre class="prompt">2.캐릭터시트 프롬프트
+“소속 학교 이름, 학교급(초등학교·중학교·고등학교), 만들고 싶은 보건교육 영상 주제를 알려주세요.”</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[1단계. 학교 정보 입력하기]</b><span>예: 학교 현장 상황에 맞는 구체적인 내용을 입력</span></div><div class="input-example-item"><b>[2단계. 영상 스토리 5개 제안하기]</b><span>예: 감염병 예방을 주제로 학교생활에서 벌어질 수 있는 짧은 이야기 5개를 제안하고, 각 이야기마다 제목·핵심 메시지·20~30초 구성 아이디어를 제시해줘.</span></div><div class="input-example-item"><b>[스토리 제목]</b><span>예: 감염병 예방수칙 5가지</span></div><div class="input-example-item"><b>[3단계. 주인공 캐릭터 만들기]</b><span>예: 선택한 이야기의 주인공 1명을 만들고, 나이·외형·의상·소품·성격을 고정한 캐릭터 바이블과 1:1 정면 이미지 생성 프롬프트를 작성해줘.</span></div><div class="input-example-item"><b>[주인공 캐릭터]</b><span>예: 김민지, 14세 대한민국 중학생, 어깨 길이 검은 머리, 네이비 교복 재킷과 흰 셔츠, 흰 운동화, 밝고 적극적인 성격</span></div><div class="input-example-item"><b>[캐릭터 이미지 생성 프롬프트 작성 조건]</b><span>예: 1:1 정면 전신 또는 바스트샷, 단순한 밝은 배경, 얼굴·헤어스타일·의상·소품이 명확히 보이게, 학교 보건교육용 친근한 3D 애니메이션 스타일, 글자·워터마크 없음</span></div><div class="input-example-item"><b>[4단계. 6장면 스토리보드 만들기]</b><span>예: 30초 영상을 6장면으로 나누고 장면번호 / 화면 내용 / 행동 / 카메라 구도 / 내레이션 / 자막 / 예상시간을 표로 작성해줘.</span></div><div class="input-example-item"><b>[장면별 이미지 생성 프롬프트 작성 조건]</b><span>예: 앞에서 정한 캐릭터 외형과 의상을 모든 장면에서 동일하게 유지하고, 학교 공간과 핵심 행동이 명확하게 보이는 16:9 장면으로 작성해줘. 글자와 워터마크는 넣지 마.</span></div><div class="input-example-item"><b>[5단계. 스토리보드 구성 원칙]</b><span>예: 각 장면은 4~6초, 총 30초 내외로 구성하고 한 장면에는 핵심 행동 하나만 보여줘. 위험하거나 과도한 공포 장면은 피하고 학생이 따라 할 수 있는 행동 중심으로 구성해줘.</span></div><div class="input-example-item"><b>[6단계. 학교 이름 자연스럽게 활용하기]</b><span>예: 보건교사 김○○</span></div><div class="input-example-item"><b>[7단계. 전체 나레이션 대본 모아주기]</b><span>예: 6장면의 나레이션을 시간 순서대로 하나의 30초 대본으로 합치고, 중학생이 듣기 쉬운 짧은 문장으로 다듬어줘.</span></div><div class="input-example-item"><b>[전체 나레이션 대본]</b><span>예: 건강한 학교생활은 작은 습관에서 시작됩니다. 손은 비누로 꼼꼼히 씻고, 기침할 때는 옷소매로 가려요. 몸이 좋지 않을 때는 필요한 상황에서 마스크를 활용하고, 교실은 자주 환기해요. 충분히 쉬고 물도 챙겨 마셔요. 오늘부터 우리 함께 실천해요!</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article><article class="prompt-card" data-title="첨부 실습 · 사진 기반 6패널 애니메이션 캐릭터시트 첨부 사진의 인물 특징을 유지한 16:9 캐릭터 레퍼런스 시트 제작 캐릭터 시트 첨부 실습 프롬프트"><div class="card-top"><div class="tags"><span class="tag">첨부 기초실습</span><span class="tag mint">캐릭터 시트</span></div><h3>첨부 실습 · 사진 기반 6패널 애니메이션 캐릭터시트</h3><div class="card-note">첨부 사진의 인물 특징을 유지한 16:9 캐릭터 레퍼런스 시트 제작</div><div class="source-note">✓ 첨부 문서 원문 기반</div></div><pre class="prompt">2.캐릭터시트 프롬프트
 
 [IMPORTANT] Request for a 6-Panel Animated Character Reference Sheet Based on the Attached Photo
 The attached photo is the master reference for the character I want.
@@ -2553,13 +2576,11 @@ Layout: 6-panel character reference sheet
 Grid: 2 columns × 3 rows
 Background: Pure white
 Style: High-quality modern animation character
-Character Identity: Strongly based on and recognizable from the attached reference photo</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article></div>
+Character Identity: Strongly based on and recognizable from the attached reference photo</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[IMPORTANT]</b><span>예: 업로드한 인물 사진의 얼굴 특징과 헤어스타일을 유지하되, 학교 교육자료에 적합한 친근한 3D 애니메이션 캐릭터로 표현해줘. 6개 패널 모두 동일 인물로 보여야 해.</span></div><div class="input-example-item"><b>[Top Left]</b><span>예: 정면 바스트샷, 자연스럽게 미소 짓는 표정</span></div><div class="input-example-item"><b>[Top Right]</b><span>예: 오른쪽 45도 측면 바스트샷, 설명하는 손동작</span></div><div class="input-example-item"><b>[Middle Left – Tall Panel]</b><span>예: 정면 전신, 바른 자세로 서 있는 모습</span></div><div class="input-example-item"><b>[Middle Right – Tall Panel]</b><span>예: 측면 전신, 한 손으로 안내판을 가리키는 모습</span></div><div class="input-example-item"><b>[Bottom Left]</b><span>예: 기쁜 표정, 엄지손가락을 들어 올린 포즈</span></div><div class="input-example-item"><b>[Bottom Right]</b><span>예: 차분한 표정, 두 손을 모아 설명을 듣는 포즈</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article></div>
 </section>
-
 <section class="section" id="s7"><div class="section-head"><div class="num">07</div><div><h2>보건음악제작 · Google Gemini 음악 만들기</h2><p class="section-desc">2026년 9월 Gemini의 음악 만들기(Lyria 3.5) 실습: 학교급·교육목표·장르·보컬/연주곡·길이를 정하고 보건교육용 노래와 BGM을 직접 제작</p></div></div>
 <div class="notice"><strong>Gemini 음악 실습 팁:</strong> Gemini에서 <b>도구 → 음악 만들기</b>를 선택한 뒤 프롬프트를 붙여넣으세요. 필요에 따라 <b>짧은 트랙/전체 트랙</b>, <b>보컬/연주곡</b>, <b>장르</b>를 선택할 수 있습니다. 보건교육용 가사는 학생의 연령과 학교 맥락에 맞게 쉽고 반복적으로 구성하고, 질병·약물·응급처치 등 정확성이 중요한 내용은 제작 후 보건교사가 공식자료와 다시 대조해 검수합니다.</div>
 <div class="prompt-grid">
-
 <article class="prompt-card full featured" data-title="Gemini 보건음악 마스터 프롬프트 Lyria 학교급 교육목표 장르 보컬 길이"><div class="card-top"><div class="tags"><span class="tag">Gemini 음악 만들기</span><span class="tag mint">마스터 템플릿</span></div><h3>보건교육용 음악 마스터 프롬프트</h3></div><pre class="prompt">학교 보건교육에 사용할 교육용 음악을 만들어 줘.
 
 [교육 대상]
@@ -2586,8 +2607,7 @@ Character Identity: Strongly based on and recognizable from the attached referen
 - 실명, 학교명, 학생 개인정보는 넣지 않기
 - 특정 가수의 목소리나 기존 노래를 모방하지 않기
 
-위 조건에 맞는 독창적인 보건교육 음악을 만들어 줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
-
+위 조건에 맞는 독창적인 보건교육 음악을 만들어 줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[교육 대상]</b><span>예: 중학교 1학년 학생 28명</span></div><div class="input-example-item"><b>[초등학교 / 중학교 / 고등학교 / 특수학교]</b><span>예: 중학교</span></div><div class="input-example-item"><b>[보건교육 주제]</b><span>예: 올바른 응급처치 기본원칙</span></div><div class="input-example-item"><b>[손씻기 / 감염병 예방 / 구강건강 / 수면 / 마음건강 / 디지털 건강 / 성교육 / 응급상황 대처 / 기타]</b><span>예: 환절기 이후 호흡기 증상을 호소하는 학생이 늘어난 상황</span></div><div class="input-example-item"><b>[음악 설정]</b><span>예: 밝고 경쾌한 교육용 팝, 105 BPM 전후, 긍정적이고 친근한 분위기, 30초 내외, 학생 참여형 캠페인 영상 배경음악</span></div><div class="input-example-item"><b>[수업 도입 / 활동 전환 / 쉬는 시간 캠페인 / 방송 / 행사 / 영상 BGM]</b><span>예: 45분</span></div><div class="input-example-item"><b>[밝은 팝 / 댄스팝 / 어쿠스틱 / 힙합 / 동요풍 / 로파이 / 기타]</b><span>예: 댄스팝</span></div><div class="input-example-item"><b>[보컬 있음 / 연주곡]</b><span>예: 연주곡</span></div><div class="input-example-item"><b>[짧은 트랙 / 전체 트랙]</b><span>예: 전체 트랙</span></div><div class="input-example-item"><b>[피아노, 어쿠스틱 기타, 가벼운 드럼 등]</b><span>예: 피아노, 어쿠스틱 기타, 손뼉 소리, 가벼운 드럼, 밝은 벨 사운드</span></div><div class="input-example-item"><b>[가사 조건]</b><span>예: 중학생이 쉽게 따라 부를 수 있는 짧은 문장, “손 씻기·기침 예절·환기” 핵심어 포함, 반복되는 후렴 1개, 공포 표현 없음</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="초등 손씻기 노래 Gemini Lyria 보건음악"><div class="card-top"><div class="tags"><span class="tag">초등학교</span><span class="tag mint">손씻기</span></div><h3>초등학생 손씻기 실천송</h3></div><pre class="prompt">초등학생이 학교에서 즐겁게 따라 부를 수 있는 손씻기 보건교육 노래를 만들어 줘.
 
 - 장르: 밝고 경쾌한 키즈 팝
@@ -2600,7 +2620,6 @@ Character Identity: Strongly based on and recognizable from the attached referen
 - 의학적 진단·치료 내용은 넣지 않기
 
 학생들이 손씻기를 생활습관으로 기억하게 하는 독창적인 교육용 곡으로 만들어 줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
-
 <article class="prompt-card" data-title="감염병 예방 기침예절 환기 손씻기 노래 Gemini"><div class="card-top"><div class="tags"><span class="tag">초·중학교</span><span class="tag mint">감염병 예방</span></div><h3>감염병 예방 건강생활송</h3></div><pre class="prompt">초등 고학년과 중학생이 부담 없이 들을 수 있는 감염병 예방 교육용 음악을 만들어 줘.
 
 - 장르: 밝은 팝 록
@@ -2612,7 +2631,6 @@ Character Identity: Strongly based on and recognizable from the attached referen
 - 과장된 예방 효과나 치료 효과를 단정하지 않기
 
 학교 방송과 보건수업 도입에 사용할 수 있는 독창적인 음악으로 만들어 줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
-
 <article class="prompt-card" data-title="구강건강 양치 칫솔질 노래 Gemini"><div class="card-top"><div class="tags"><span class="tag">초등학교</span><span class="tag yellow">구강건강</span></div><h3>양치습관 구강건강송</h3></div><pre class="prompt">초등학생이 양치습관을 즐겁게 기억할 수 있는 구강건강 교육용 노래를 만들어 줘.
 
 - 장르: 경쾌한 어쿠스틱 팝
@@ -2623,7 +2641,6 @@ Character Identity: Strongly based on and recognizable from the attached referen
 - 치과 치료를 대신하는 표현이나 과도한 효과 보장은 하지 않기
 
 수업 중 1~2번 들으면 학생들이 핵심 습관을 기억할 수 있는 독창적인 곡으로 만들어 줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
-
 <article class="prompt-card" data-title="중학생 수면 건강 스마트폰 음악 Gemini"><div class="card-top"><div class="tags"><span class="tag">중학교</span><span class="tag mint">수면·디지털 건강</span></div><h3>중학생 수면·스마트폰 건강송</h3></div><pre class="prompt">중학생의 수면과 스마트폰 사용 습관을 주제로 한 보건교육 음악을 만들어 줘.
 
 - 장르: 트렌디한 팝 또는 가벼운 힙합
@@ -2635,7 +2652,6 @@ Character Identity: Strongly based on and recognizable from the attached referen
 - 개인의 수면 문제를 진단하거나 치료하는 내용은 넣지 않기
 
 학생이 자기 생활습관을 스스로 돌아보게 하는 독창적인 교육용 음악으로 만들어 줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
-
 <article class="prompt-card" data-title="고등학생 스트레스 마음건강 자기돌봄 노래 Gemini"><div class="card-top"><div class="tags"><span class="tag">고등학교</span><span class="tag mint">마음건강</span></div><h3>스트레스·마음건강 자기돌봄송</h3></div><pre class="prompt">고등학생의 스트레스와 마음건강을 주제로 한 보건교육 음악을 만들어 줘.
 
 - 장르: 따뜻한 인디 팝
@@ -2647,7 +2663,6 @@ Character Identity: Strongly based on and recognizable from the attached referen
 - 학교 보건교육에서 사용할 수 있도록 안전하고 존중하는 언어 사용
 
 학생들이 도움을 요청하는 행동을 자연스럽게 받아들이도록 돕는 독창적인 음악으로 만들어 줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
-
 <article class="prompt-card" data-title="특수학교 쉬운 반복 보건 노래 그림상징 손씻기 Gemini"><div class="card-top"><div class="tags"><span class="tag">특수학교</span><span class="tag yellow">쉬운 표현</span></div><h3>특수학교·통합학급 쉬운 반복형 건강송</h3></div><pre class="prompt">특수학교 또는 통합학급에서 활용할 수 있는 쉬운 보건교육 음악을 만들어 줘.
 
 - 주제: [손씻기 / 물 마시기 / 화장실 이용 후 위생 / 기침예절 / 보건실 이용]
@@ -2659,8 +2674,7 @@ Character Identity: Strongly based on and recognizable from the attached referen
 - 명령조보다 친절한 안내형 문장 사용
 - 감각 과부하를 줄이도록 소리 변화가 지나치게 크거나 복잡하지 않게
 
-학생이 듣고 바로 행동을 따라 해볼 수 있는 단순하고 예측 가능한 독창적인 교육용 음악으로 만들어 줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
-
+학생이 듣고 바로 행동을 따라 해볼 수 있는 단순하고 예측 가능한 독창적인 교육용 음악으로 만들어 줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[손씻기 / 물 마시기 / 화장실 이용 후 위생 / 기침예절 / 보건실 이용]</b><span>예: 물 마시기</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="보건실 이용수칙 학교생활 노래 Gemini"><div class="card-top"><div class="tags"><span class="tag">학교생활</span><span class="tag mint">보건실 이용</span></div><h3>보건실 이용수칙 안내송</h3></div><pre class="prompt">학교 보건실 이용수칙을 학생에게 친근하게 안내하는 짧은 교육용 노래를 만들어 줘.
 
 - 대상: [초등학생 / 중학생 / 고등학생]
@@ -2670,8 +2684,7 @@ Character Identity: Strongly based on and recognizable from the attached referen
 - 학교마다 다른 규정은 구체적으로 단정하지 말고 일반적인 이용 태도 중심
 - 1분 내외로 반복하기 쉬운 구조
 
-학교 방송 또는 새학기 보건교육에서 사용할 수 있는 독창적인 안내송으로 만들어 줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
-
+학교 방송 또는 새학기 보건교육에서 사용할 수 있는 독창적인 안내송으로 만들어 줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[초등학생 / 중학생 / 고등학생]</b><span>예: 중학생</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="식품알레르기 안전 배려 노래 Gemini"><div class="card-top"><div class="tags"><span class="tag">초·중학교</span><span class="tag yellow">알레르기 안전</span></div><h3>식품알레르기 안전·배려송</h3></div><pre class="prompt">학교에서 식품알레르기 안전과 친구 배려를 주제로 한 교육용 음악을 만들어 줘.
 
 - 장르: 밝은 어쿠스틱 팝
@@ -2682,7 +2695,6 @@ Character Identity: Strongly based on and recognizable from the attached referen
 - 후렴에는 "서로 알고, 서로 지켜요"처럼 배려 메시지를 반복
 
 학생들이 안전과 존중을 함께 배울 수 있는 독창적인 교육용 곡으로 만들어 줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
-
 <article class="prompt-card" data-title="사춘기 몸의 변화 성교육 존중 노래 Gemini"><div class="card-top"><div class="tags"><span class="tag">중학교</span><span class="tag mint">성·건강교육</span></div><h3>사춘기 몸의 변화·존중송</h3></div><pre class="prompt">중학생 보건교육에서 사춘기 몸의 변화와 서로에 대한 존중을 다루는 교육용 음악을 만들어 줘.
 
 - 장르: 밝고 세련된 팝
@@ -2693,7 +2705,6 @@ Character Identity: Strongly based on and recognizable from the attached referen
 - 학생이 불편하지 않도록 교육적이고 존중하는 언어 사용
 
 보건수업 도입 또는 정리 활동에 사용할 수 있는 독창적인 교육용 음악으로 만들어 줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
-
 <article class="prompt-card" data-title="건강캠페인 보건주간 학교축제 징글 Gemini"><div class="card-top"><div class="tags"><span class="tag">캠페인</span><span class="tag yellow">징글</span></div><h3>학교 건강캠페인 징글 만들기</h3></div><pre class="prompt">학교 건강캠페인에서 반복 재생할 수 있는 짧고 기억하기 쉬운 보건교육 징글을 만들어 줘.
 
 - 캠페인 주제: [입력]
@@ -2706,8 +2717,7 @@ Character Identity: Strongly based on and recognizable from the attached referen
 - 행사장·교내방송에서 여러 번 들어도 피로하지 않도록 단순한 멜로디와 반복 구조
 - 겁주기보다 "함께 실천"하는 분위기
 
-학생 참여형 캠페인에 어울리는 독창적인 징글로 만들어 줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
-
+학생 참여형 캠페인에 어울리는 독창적인 징글로 만들어 줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[초등 / 중등 / 고등 / 전교생]</b><span>예: 중등</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="보건교육 영상 BGM 연주곡 Gemini Lyria"><div class="card-top"><div class="tags"><span class="tag">영상 제작</span><span class="tag mint">연주곡 BGM</span></div><h3>보건교육 영상용 BGM 만들기</h3></div><pre class="prompt">학교 보건교육 영상에 사용할 가사 없는 배경음악을 만들어 줘.
 
 - 영상 주제: [입력]
@@ -2720,8 +2730,7 @@ Character Identity: Strongly based on and recognizable from the attached referen
 - 시작과 끝은 영상 편집에 사용하기 쉽게 자연스럽게 정리
 - 공포·긴장·의료 드라마 같은 분위기는 피하기
 
-보건교육 설명 영상에 자연스럽게 깔 수 있는 독창적인 연주곡 BGM을 만들어 줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
-
+보건교육 설명 영상에 자연스럽게 깔 수 있는 독창적인 연주곡 BGM을 만들어 줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[초등 / 중등 / 고등 / 특수학교]</b><span>예: 중등</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="기존 보건음악 수정 가사 쉬운 말 후렴 강화 Gemini"><div class="card-top"><div class="tags"><span class="tag">Gemini 음악 만들기</span><span class="tag yellow">2차 수정</span></div><h3>생성된 보건음악 2차 수정 프롬프트</h3></div><pre class="prompt">방금 만든 보건교육 음악의 기본 분위기와 장르는 유지하면서 다음 조건으로 다시 만들어 줘.
 
 [수정 요청]
@@ -2733,10 +2742,8 @@ Character Identity: Strongly based on and recognizable from the attached referen
 - 특정 가수나 기존 노래를 연상시키는 모방은 피하고 독창적으로 만들기
 - 학교 수업과 캠페인에서 사용하기 좋은 밝고 안정적인 마무리로 끝내기
 
-교육용으로 더 명확하고 기억하기 쉬운 버전으로 다시 만들어 줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
-
+교육용으로 더 명확하고 기억하기 쉬운 버전으로 다시 만들어 줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[수정 요청]</b><span>예: 전체 분위기를 조금 더 밝고 경쾌하게 바꾸고, 도입부는 3초 안에 시작해줘. 후렴의 “손 씻고, 가리고, 환기해요” 문장이 더 잘 들리게 반복해줘. 총 길이는 30초 안팎으로 유지해줘.</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 </div></section>
-
 <section class="section" id="s8"><div class="section-head"><div class="num">08</div><div><h2>바이브코딩 활용 보건콘텐츠 웹페이지 제작</h2><p class="section-desc">슬라이드 59–67 흐름 + 첨부 실습가이드: 웹페이지 구조 → Gemini Canvas 12개 실습 → ChatGPT 12개 실습 → 수정·디버깅 → 공개 전 체크</p></div></div>
 <div class="prompt-grid">
 <article class="prompt-card full featured" data-title="우리학교 건강생활 웹페이지 바이브코딩 html css javascript"><div class="card-top"><div class="tags"><span class="tag">실습 · 슬라이드 61–64</span><span class="tag mint">웹페이지</span></div><h3>우리학교 건강생활 웹페이지 만들기</h3></div><pre class="prompt">너는 교육용 웹페이지를 만드는 웹디자이너이자 프론트엔드 개발자야.
@@ -2771,7 +2778,7 @@ Character Identity: Strongly based on and recognizable from the attached referen
 - 의학·응급처치 정보는 예시 문구로 넣고 "학교 및 공식 지침 확인" 안내 표시
 - 임의의 전화번호·학교명·QR코드 생성 금지
 - 접근성을 위해 버튼에 명확한 텍스트와 충분한 대비 사용
-- 모든 코드를 마지막에 하나의 완성된 HTML 코드블록으로 제공</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+- 모든 코드를 마지막에 하나의 완성된 HTML 코드블록으로 제공</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[목표]</b><span>예: 중학생이 학교생활 속 건강습관을 스스로 점검하고 오늘 실천할 행동 1가지를 선택할 수 있는 웹페이지 만들기</span></div><div class="input-example-item"><b>[주제/메뉴]</b><span>예: 올바른 응급처치 기본원칙</span></div><div class="input-example-item"><b>[기능]</b><span>예: 건강습관 5개 카드, 오늘의 실천 선택 버튼, 선택 결과 표시, 다시 선택하기, 인쇄하기, 모바일 반응형 화면</span></div><div class="input-example-item"><b>[안전·품질 조건]</b><span>예: 개인정보를 입력받지 않기, 의학적 진단 기능 넣지 않기, 학생 눈높이의 쉬운 표현 사용, 키보드로도 조작 가능, 모바일과 PC 모두 잘 보이게 만들기</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="AI 웹페이지 수정 대화 제목 간격 아이콘 모바일 맨위"><div class="card-top"><div class="tags"><span class="tag">슬라이드 64</span><span class="tag yellow">코드 수정</span></div><h3>완성된 웹페이지를 대화로 수정하기</h3></div><pre class="prompt">기존 HTML 코드의 내용과 기능은 유지하면서 아래 항목만 수정해줘.
 
 1. 제목 글자를 지금보다 더 크게 하고, 모바일에서는 화면에 맞게 자동 축소해줘.
@@ -2797,7 +2804,7 @@ Character Identity: Strongly based on and recognizable from the attached referen
 - 이미지·폰트·자료의 저작권·초상권 확인이 필요한 부분
 - 접근성: 글자 크기, 대비, 버튼명, 키보드 사용 가능성
 
-마지막에는 교사가 공개 직전 직접 확인할 "최종 10개 체크리스트"를 만들어줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+마지막에는 교사가 공개 직전 직접 확인할 "최종 10개 체크리스트"를 만들어줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[코드 또는 페이지 내용 붙여넣기]</b><span>예: 완성된 HTML 전체 코드를 여기에 붙여넣고, 모바일 화면 깨짐·버튼 작동·맞춤법·개인정보 노출·의학정보 표현·접근성을 점검해줘.</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <div class="subgroup full" id="gemini-canvas-prompts">Gemini Canvas 전용 웹앱 실습 프롬프트</div>
 <div class="notice full" style="margin:0 0 2px"><strong>첨부 실습가이드 반영:</strong> 학교 현장 문제 → 최소 기능 → 1차 제작 → 2차 수정 순서로 실습할 수 있습니다. 실습에서는 실제 학생의 이름·학번·진단명·복용약·상담기록 등 민감정보를 입력하지 않습니다.</div>
 <article class="prompt-card featured" data-title="Gemini Canvas 실습 1. 보건수업 OX·객관식 퀴즈 앱 수업 중 스마트폰·태블릿·교실 화면으로 활용 가능한 즉시형 퀴즈 1차 제작 너는 대한민국 학교 보건교육을 이해하는 웹앱 개발자야. Google Gemini Canvas에서 바로 실행하고 미리볼 수 있는 “보건수업 퀴즈 웹앱”을 만들어줘. [대상] - 초등학교 5~6학년 학생 - 주제: 감염병 예방과 올바른 손 씻기 [필수 기능] 1. 시작 화면에 제목과 “퀴즈 시작” 버튼 2. 총 8문항:"><div class="card-top"><div class="tags"><span class="tag">Gemini Canvas</span><span class="tag mint">1차 제작</span></div><h3>보건수업 OX·객관식 퀴즈 앱 · 1차 제작</h3><div class="card-note">수업 중 스마트폰·태블릿·교실 화면으로 활용 가능한 즉시형 퀴즈</div></div><pre class="prompt">너는 대한민국 학교 보건교육을 이해하는 웹앱 개발자야. Google Gemini Canvas에서 바로 실행하고 미리볼 수 있는 “보건수업 퀴즈 웹앱”을 만들어줘.
@@ -2827,7 +2834,7 @@ Character Identity: Strongly based on and recognizable from the attached referen
 - 외부 데이터베이스와 로그인 없이 동작
 - 가능한 한 하나의 완성된 웹앱으로 만들어 Canvas에서 즉시 미리보기 가능하게 해줘
 - 오류가 없도록 필요한 코드 전체를 작성해줘
-- 문항 내용은 대한민국 학교 보건교육에 적절한 일반적 예방교육 수준으로 작성해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+- 문항 내용은 대한민국 학교 보건교육에 적절한 일반적 예방교육 수준으로 작성해줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[대상]</b><span>예: 중학교 1학년 학생 28명</span></div><div class="input-example-item"><b>[필수 기능]</b><span>예: OX 5문항 + 객관식 5문항, 한 문항씩 표시, 답 선택 후 즉시 정오답과 짧은 해설 표시, 마지막에 점수와 다시 풀기 버튼 제공</span></div><div class="input-example-item"><b>[기술 조건]</b><span>예: HTML·CSS·JavaScript를 한 파일에 작성, 외부 라이브러리 없이 실행, 모바일 반응형, 버튼은 터치하기 쉽게 크게, 정답 데이터는 코드 안에 포함</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="Gemini Canvas 실습 1. 보건수업 OX·객관식 퀴즈 앱 수업 중 스마트폰·태블릿·교실 화면으로 활용 가능한 즉시형 퀴즈 2차 수정 지금 만든 앱의 기능은 그대로 유지하고 다음을 개선해줘. 1. 화면의 모든 한글이 모바일에서 잘리지 않도록 반응형 레이아웃 점검 2. 버튼 크기와 간격을 터치하기 편하게 확대 3. 상단에 “보건교사 실습용” 작은 배지 추가 4. 접근성: 키보드 focus 표시, 충분한 대비, aria-label이 필요한 요소 보완 5."><div class="card-top"><div class="tags"><span class="tag">Gemini Canvas</span><span class="tag mint">2차 수정</span></div><h3>보건수업 OX·객관식 퀴즈 앱 · 2차 수정</h3><div class="card-note">수업 중 스마트폰·태블릿·교실 화면으로 활용 가능한 즉시형 퀴즈</div></div><pre class="prompt">지금 만든 앱의 기능은 그대로 유지하고 다음을 개선해줘.
 1. 화면의 모든 한글이 모바일에서 잘리지 않도록 반응형 레이아웃 점검
 2. 버튼 크기와 간격을 터치하기 편하게 확대
@@ -2862,7 +2869,7 @@ Character Identity: Strongly based on and recognizable from the attached referen
 - 모바일/태블릿 반응형, 큰 터치 버튼
 
 [중요]
-의학적 진단, 처치 세부기술, 약물 사용법을 임의로 제시하지 말고 “교사·보건교사·119 등 적절한 성인과 전문 도움 요청” 중심으로 구성해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+의학적 진단, 처치 세부기술, 약물 사용법을 임의로 제시하지 말고 “교사·보건교사·119 등 적절한 성인과 전문 도움 요청” 중심으로 구성해줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[교육 목적]</b><span>예: 학생이 보고 바로 한 가지 이상 실천하도록 안내</span></div><div class="input-example-item"><b>[대상]</b><span>예: 중학교 1학년 학생 28명</span></div><div class="input-example-item"><b>[시나리오]</b><span>예: 체육시간에 친구가 갑자기 어지럽다고 말하며 운동장에 주저앉았습니다. 주변은 안전하고 친구는 의식이 있으며 대화가 가능합니다. 학생이 가장 먼저 할 행동을 선택하게 해줘.</span></div><div class="input-example-item"><b>[필수 기능]</b><span>예: 상황 제시 → 선택지 3개 → 선택 즉시 피드백 → 다음 상황 버튼 → 마지막에 안전한 대응 원칙 요약</span></div><div class="input-example-item"><b>[중요]</b><span>예: 학생이 직접 진단하거나 치료하도록 안내하지 말고, 주변 안전 확인·교사 또는 보건교사에게 알리기·필요 시 119 등 적절한 도움 요청 중심으로 구성해줘.</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="Gemini Canvas 실습 2. 응급상황 선택형 시나리오 앱 학생이 선택을 통해 안전행동을 학습하는 분기형 시나리오 2차 수정 지금 만든 앱의 기능은 그대로 유지하고 다음을 개선해줘. 1. 화면의 모든 한글이 모바일에서 잘리지 않도록 반응형 레이아웃 점검 2. 버튼 크기와 간격을 터치하기 편하게 확대 3. 상단에 “보건교사 실습용” 작은 배지 추가 4. 접근성: 키보드 focus 표시, 충분한 대비, aria-label이 필요한 요소 보완 5."><div class="card-top"><div class="tags"><span class="tag">Gemini Canvas</span><span class="tag mint">2차 수정</span></div><h3>응급상황 선택형 시나리오 앱 · 2차 수정</h3><div class="card-note">학생이 선택을 통해 안전행동을 학습하는 분기형 시나리오</div></div><pre class="prompt">지금 만든 앱의 기능은 그대로 유지하고 다음을 개선해줘.
 1. 화면의 모든 한글이 모바일에서 잘리지 않도록 반응형 레이아웃 점검
 2. 버튼 크기와 간격을 터치하기 편하게 확대
@@ -2910,7 +2917,7 @@ Character Identity: Strongly based on and recognizable from the attached referen
 - 깜빡이는 요소 금지
 
 [개인정보]
-어떤 개인정보도 수집하거나 저장하지 않도록 해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+어떤 개인정보도 수집하거나 저장하지 않도록 해줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[대상]</b><span>예: 중학교 1학년 학생 28명</span></div><div class="input-example-item"><b>[구성]</b><span>예: 손 씻기 6단계를 큰 그림 카드로 한 단계씩 보여주고, 이전·다음 버튼과 처음부터 다시 보기 버튼을 제공해줘.</span></div><div class="input-example-item"><b>[접근성]</b><span>예: 큰 글자, 높은 명암 대비, 짧고 쉬운 문장, 그림과 문장을 함께 표시, 키보드 조작 가능, 애니메이션 최소화</span></div><div class="input-example-item"><b>[개인정보]</b><span>예: 이름·학번·사진·건강정보를 입력하거나 저장하는 기능은 만들지 말아줘.</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="Gemini Canvas 실습 4. 특수학교용 시각적 위생 순서 앱 읽기 부담을 줄이고 단계별 행동을 크게 보여주는 시각지원 도구 2차 수정 지금 만든 앱의 기능은 그대로 유지하고 다음을 개선해줘. 1. 화면의 모든 한글이 모바일에서 잘리지 않도록 반응형 레이아웃 점검 2. 버튼 크기와 간격을 터치하기 편하게 확대 3. 상단에 “보건교사 실습용” 작은 배지 추가 4. 접근성: 키보드 focus 표시, 충분한 대비, aria-label이 필요한 요소 보완 5."><div class="card-top"><div class="tags"><span class="tag">Gemini Canvas</span><span class="tag mint">2차 수정</span></div><h3>특수학교용 시각적 위생 순서 앱 · 2차 수정</h3><div class="card-note">읽기 부담을 줄이고 단계별 행동을 크게 보여주는 시각지원 도구</div></div><pre class="prompt">지금 만든 앱의 기능은 그대로 유지하고 다음을 개선해줘.
 1. 화면의 모든 한글이 모바일에서 잘리지 않도록 반응형 레이아웃 점검
 2. 버튼 크기와 간격을 터치하기 편하게 확대
@@ -2967,7 +2974,7 @@ Character Identity: Strongly based on and recognizable from the attached referen
 
 [디자인]
 교직원 업무용 대시보드처럼 깔끔하게. 딥 네이비, 시안, 흰색 중심. 표와 그래프의 수치를 텍스트로도 확인할 수 있게 접근성을 고려해줘.
-외부 서버나 데이터베이스는 사용하지 말아줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+외부 서버나 데이터베이스는 사용하지 말아줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[중요]</b><span>예: 실제 학생 개인정보는 사용하지 않고 교육용 가상 데이터만 사용해줘. 모든 수치는 예시 데이터임을 화면에 표시해줘.</span></div><div class="input-example-item"><b>[가상 데이터 항목]</b><span>예: 월, 방문건수, 두통, 복통, 외상, 호흡기 증상, 기타</span></div><div class="input-example-item"><b>[기능]</b><span>예: 월별 방문건수 요약 카드, 방문 사유별 막대그래프, 월별 추이 선그래프, 표 보기, CSV 예시 다운로드, 데이터 초기화</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="Gemini Canvas 실습 7. 보건실 방문 사유 통계 대시보드 합성 데이터를 활용해 보건업무를 시각화하는 교사용 실습 2차 수정 지금 만든 앱의 기능은 그대로 유지하고 다음을 개선해줘. 1. 화면의 모든 한글이 모바일에서 잘리지 않도록 반응형 레이아웃 점검 2. 버튼 크기와 간격을 터치하기 편하게 확대 3. 상단에 “보건교사 실습용” 작은 배지 추가 4. 접근성: 키보드 focus 표시, 충분한 대비, aria-label이 필요한 요소 보완 5."><div class="card-top"><div class="tags"><span class="tag">Gemini Canvas</span><span class="tag mint">2차 수정</span></div><h3>보건실 방문 사유 통계 대시보드 · 2차 수정</h3><div class="card-note">합성 데이터를 활용해 보건업무를 시각화하는 교사용 실습</div></div><pre class="prompt">지금 만든 앱의 기능은 그대로 유지하고 다음을 개선해줘.
 1. 화면의 모든 한글이 모바일에서 잘리지 않도록 반응형 레이아웃 점검
 2. 버튼 크기와 간격을 터치하기 편하게 확대
@@ -3022,7 +3029,7 @@ Character Identity: Strongly based on and recognizable from the attached referen
 5. 브라우저 안에서만 동작하고 서버 전송 금지
 
 [디자인]
-교사용 업무도구 느낌의 카드형 UI, 밝은 배경, 딥 네이비+시안+따뜻한 노랑 포인트, A4 인쇄에도 보기 좋게 만들어줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+교사용 업무도구 느낌의 카드형 UI, 밝은 배경, 딥 네이비+시안+따뜻한 노랑 포인트, A4 인쇄에도 보기 좋게 만들어줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[기능]</b><span>예: 감염병 예방·마음건강·디지털 건강·응급처치 카테고리 버튼, 아이디어 카드 12개, 좋아요 표시, 선택한 아이디어 모아보기, 인쇄하기</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="Gemini Canvas 실습 10. 보건 캠페인 아이디어 보드 건강주간·흡연예방·감염예방 캠페인 기획을 한 화면에서 정리 2차 수정 지금 만든 앱의 기능은 그대로 유지하고 다음을 개선해줘. 1. 화면의 모든 한글이 모바일에서 잘리지 않도록 반응형 레이아웃 점검 2. 버튼 크기와 간격을 터치하기 편하게 확대 3. 상단에 “보건교사 실습용” 작은 배지 추가 4. 접근성: 키보드 focus 표시, 충분한 대비, aria-label이 필요한 요소 보완 5."><div class="card-top"><div class="tags"><span class="tag">Gemini Canvas</span><span class="tag mint">2차 수정</span></div><h3>보건 캠페인 아이디어 보드 · 2차 수정</h3><div class="card-note">건강주간·흡연예방·감염예방 캠페인 기획을 한 화면에서 정리</div></div><pre class="prompt">지금 만든 앱의 기능은 그대로 유지하고 다음을 개선해줘.
 1. 화면의 모든 한글이 모바일에서 잘리지 않도록 반응형 레이아웃 점검
 2. 버튼 크기와 간격을 터치하기 편하게 확대
@@ -3067,7 +3074,7 @@ Character Identity: Strongly based on and recognizable from the attached referen
 <article class="prompt-card" data-title="Gemini Canvas 공통 수정 프롬프트 특수교육 접근성 강화 기능은 유지하되 글자를 더 크게, 버튼을 더 크게, 한 화면의 선택지를 3개 이하로 줄이고, 문장을 짧게 해줘. 색상만으로 상태를 구분하지 말고 아이콘과 텍스트를 함께 표시해줘. 키보드 조작도 가능하게 해줘."><div class="card-top"><div class="tags"><span class="tag">Gemini Canvas</span><span class="tag yellow">공통 수정</span></div><h3>특수교육 접근성 강화</h3></div><pre class="prompt">기능은 유지하되 글자를 더 크게, 버튼을 더 크게, 한 화면의 선택지를 3개 이하로 줄이고, 문장을 짧게 해줘. 색상만으로 상태를 구분하지 말고 아이콘과 텍스트를 함께 표시해줘. 키보드 조작도 가능하게 해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="Gemini Canvas 공통 수정 프롬프트 오류 수정 앱을 처음부터 끝까지 테스트하는 관점에서 코드를 점검해줘. 작동하지 않는 버튼, undefined 오류, 중복 id, 모바일 레이아웃 깨짐, 접근성 문제를 찾아 수정하고 기능이 정상 동작하도록 전체 코드를 정리해줘."><div class="card-top"><div class="tags"><span class="tag">Gemini Canvas</span><span class="tag yellow">공통 수정</span></div><h3>오류 수정</h3></div><pre class="prompt">앱을 처음부터 끝까지 테스트하는 관점에서 코드를 점검해줘. 작동하지 않는 버튼, undefined 오류, 중복 id, 모바일 레이아웃 깨짐, 접근성 문제를 찾아 수정하고 기능이 정상 동작하도록 전체 코드를 정리해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="Gemini Canvas 공통 수정 프롬프트 인쇄 기능 추가 현재 앱에 “인쇄/저장” 버튼을 추가하고 A4 세로 인쇄 시 불필요한 버튼과 배경은 숨기고 핵심 내용만 깨끗하게 출력되도록 print CSS를 추가해줘."><div class="card-top"><div class="tags"><span class="tag">Gemini Canvas</span><span class="tag yellow">공통 수정</span></div><h3>인쇄 기능 추가</h3></div><pre class="prompt">현재 앱에 “인쇄/저장” 버튼을 추가하고 A4 세로 인쇄 시 불필요한 버튼과 배경은 숨기고 핵심 내용만 깨끗하게 출력되도록 print CSS를 추가해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
-<article class="prompt-card" data-title="Gemini Canvas 공통 수정 프롬프트 학교급 변환 현재 앱 구조와 기능은 유지하고 대상만 [고등학교 1학년]으로 바꿔줘. 문항과 예시는 해당 연령 수준에 맞게 수정하되 의료적 진단·처방을 제공하지 않도록 해줘."><div class="card-top"><div class="tags"><span class="tag">Gemini Canvas</span><span class="tag yellow">공통 수정</span></div><h3>학교급 변환</h3></div><pre class="prompt">현재 앱 구조와 기능은 유지하고 대상만 [고등학교 1학년]으로 바꿔줘. 문항과 예시는 해당 연령 수준에 맞게 수정하되 의료적 진단·처방을 제공하지 않도록 해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+<article class="prompt-card" data-title="Gemini Canvas 공통 수정 프롬프트 학교급 변환 현재 앱 구조와 기능은 유지하고 대상만 [고등학교 1학년]으로 바꿔줘. 문항과 예시는 해당 연령 수준에 맞게 수정하되 의료적 진단·처방을 제공하지 않도록 해줘."><div class="card-top"><div class="tags"><span class="tag">Gemini Canvas</span><span class="tag yellow">공통 수정</span></div><h3>학교급 변환</h3></div><pre class="prompt">현재 앱 구조와 기능은 유지하고 대상만 [고등학교 1학년]으로 바꿔줘. 문항과 예시는 해당 연령 수준에 맞게 수정하되 의료적 진단·처방을 제공하지 않도록 해줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[고등학교 1학년]</b><span>예: 중학교 1학년</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <div class="subgroup full" id="chatgpt-webapp-prompts">ChatGPT 전용 웹앱 실습 프롬프트</div>
 <div class="notice full" style="margin:0 0 2px"><strong>ChatGPT 실습:</strong> 요구사항 설명 → 하나의 index.html 코드 생성 → 브라우저 실행 → 오류 수정 → 기능 확장 순서로 진행합니다. 초급 실습은 외부 API·로그인·데이터베이스 없이 브라우저 안에서 작동하는 형태를 기준으로 합니다.</div>
 <article class="prompt-card featured" data-title="ChatGPT 실습 1. 보건수업 미니 퀴즈 HTML 앱 ChatGPT에서 코드를 받아 index.html 한 파일로 실행하는 첫 실습 1차 제작 너는 대한민국 학교 보건교육과 초보 교사를 모두 이해하는 프론트엔드 개발자야. 아래 요구사항을 만족하는 완성형 웹앱을 만들어줘. [목표] 초등학교 5~6학년 대상 “올바른 손 씻기와 감염예방” 미니퀴즈 [개발 방식] - HTML, CSS, JavaScript를 모두 하나의 index.html 파일 안에 작성 - 외부"><div class="card-top"><div class="tags"><span class="tag">ChatGPT</span><span class="tag mint">1차 제작</span></div><h3>보건수업 미니 퀴즈 HTML 앱 · 1차 제작</h3><div class="card-note">ChatGPT에서 코드를 받아 index.html 한 파일로 실행하는 첫 실습</div></div><pre class="prompt">너는 대한민국 학교 보건교육과 초보 교사를 모두 이해하는 프론트엔드 개발자야. 아래 요구사항을 만족하는 완성형 웹앱을 만들어줘.
@@ -3097,7 +3104,7 @@ Character Identity: Strongly based on and recognizable from the attached referen
 [출력 형식]
 1. 먼저 앱 기능을 5줄 이내로 설명
 2. 그 다음 완성된 index.html 코드 전체를 하나의 코드블록에 제공
-3. 마지막에 실행 방법을 Windows 기준 3단계로 설명해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+3. 마지막에 실행 방법을 Windows 기준 3단계로 설명해줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[목표]</b><span>예: 중학교 1학년 학생이 감염병 예방수칙 5가지를 재미있게 복습할 수 있는 10문항 미니 퀴즈 앱 만들기</span></div><div class="input-example-item"><b>[개발 방식]</b><span>예: HTML·CSS·JavaScript를 하나의 HTML 파일에 작성하고 브라우저에서 바로 실행되게 만들기</span></div><div class="input-example-item"><b>[기능]</b><span>예: OX와 객관식 혼합 10문항, 진행률 표시, 정답 선택 후 해설, 최종 점수, 다시 풀기 버튼, 모바일 반응형</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="ChatGPT 실습 1. 보건수업 미니 퀴즈 HTML 앱 ChatGPT에서 코드를 받아 index.html 한 파일로 실행하는 첫 실습 2차 디버깅/개선 아래 코드는 방금 만든 웹앱이야. 기능을 삭제하지 말고 전체를 점검해 수정해줘. - 브라우저에서 오류 없이 실행되는지 확인 - 버튼이 모두 작동하는지 확인 - 모바일 360px 폭에서도 글자와 버튼이 잘리지 않게 수정 - 입력값이 비어 있을 때 사용자에게 친절한 안내 표시 - 색상 대비와 키보드 focus 개선 - 실제"><div class="card-top"><div class="tags"><span class="tag">ChatGPT</span><span class="tag mint">2차 디버깅·개선</span></div><h3>보건수업 미니 퀴즈 HTML 앱 · 2차 디버깅·개선</h3><div class="card-note">ChatGPT에서 코드를 받아 index.html 한 파일로 실행하는 첫 실습</div></div><pre class="prompt">아래 코드는 방금 만든 웹앱이야. 기능을 삭제하지 말고 전체를 점검해 수정해줘.
 - 브라우저에서 오류 없이 실행되는지 확인
 - 버튼이 모두 작동하는지 확인
@@ -3241,7 +3248,7 @@ date,category,grade
 - 예시 CSV 다운로드 버튼
 - “실제 민감정보가 포함된 파일은 이 연습용 앱에 넣지 마세요” 경고 표시
 
-외부 라이브러리 없이 동작하도록 구현하고 사용법도 화면에 보여줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+외부 라이브러리 없이 동작하도록 구현하고 사용법도 화면에 보여줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[CSV 형식]</b><span>예: 표 형식</span></div><div class="input-example-item"><b>[기능]</b><span>예: CSV 파일 불러오기, 월별 방문건수 집계, 방문 사유별 빈도 계산, 결과 표와 그래프 표시, 분석 결과 복사, 초기화 버튼</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="ChatGPT 실습 10. 가상 CSV 보건실 방문 데이터 분석 웹앱 개인식별정보 없는 CSV를 브라우저에서만 분석하는 데이터 실습 2차 디버깅/개선 아래 코드는 방금 만든 웹앱이야. 기능을 삭제하지 말고 전체를 점검해 수정해줘. - 브라우저에서 오류 없이 실행되는지 확인 - 버튼이 모두 작동하는지 확인 - 모바일 360px 폭에서도 글자와 버튼이 잘리지 않게 수정 - 입력값이 비어 있을 때 사용자에게 친절한 안내 표시 - 색상 대비와 키보드 focus 개선 - 실제"><div class="card-top"><div class="tags"><span class="tag">ChatGPT</span><span class="tag mint">2차 디버깅·개선</span></div><h3>가상 CSV 보건실 방문 데이터 분석 웹앱 · 2차 디버깅·개선</h3><div class="card-note">개인식별정보 없는 CSV를 브라우저에서만 분석하는 데이터 실습</div></div><pre class="prompt">아래 코드는 방금 만든 웹앱이야. 기능을 삭제하지 말고 전체를 점검해 수정해줘.
 - 브라우저에서 오류 없이 실행되는지 확인
 - 버튼이 모두 작동하는지 확인
@@ -3291,7 +3298,7 @@ date,category,grade
 <div class="subgroup full">ChatGPT 공통 수정·확장 프롬프트</div>
 <article class="prompt-card" data-title="ChatGPT 공통 수정 프롬프트 한 파일로 다시 정리 현재 웹앱의 모든 기능을 유지하고 HTML, CSS, JavaScript를 외부 파일 없이 하나의 index.html에 합쳐줘. 그대로 저장해 브라우저에서 실행할 수 있는 완성 코드 전체를 한 코드블록으로 제공해줘."><div class="card-top"><div class="tags"><span class="tag">ChatGPT</span><span class="tag yellow">공통 수정</span></div><h3>한 파일로 다시 정리</h3></div><pre class="prompt">현재 웹앱의 모든 기능을 유지하고 HTML, CSS, JavaScript를 외부 파일 없이 하나의 index.html에 합쳐줘. 그대로 저장해 브라우저에서 실행할 수 있는 완성 코드 전체를 한 코드블록으로 제공해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="ChatGPT 공통 수정 프롬프트 초보교사용 주석 추가 기능은 바꾸지 말고 코드의 주요 부분에 한국어 주석을 추가해줘. 특히 HTML 화면구조, CSS 색상/반응형, JavaScript 이벤트와 데이터 부분을 초보 교사도 이해할 수 있게 설명해줘."><div class="card-top"><div class="tags"><span class="tag">ChatGPT</span><span class="tag yellow">공통 수정</span></div><h3>초보교사용 주석 추가</h3></div><pre class="prompt">기능은 바꾸지 말고 코드의 주요 부분에 한국어 주석을 추가해줘. 특히 HTML 화면구조, CSS 색상/반응형, JavaScript 이벤트와 데이터 부분을 초보 교사도 이해할 수 있게 설명해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
-<article class="prompt-card" data-title="ChatGPT 공통 수정 프롬프트 문항만 교체 레이아웃과 기능은 그대로 두고 퀴즈 데이터만 [중학교 2학년 수면과 스마트폰 사용 습관] 주제로 8문항으로 교체해줘. 진단·치료가 아니라 일반적인 건강교육 수준의 내용으로 작성해줘."><div class="card-top"><div class="tags"><span class="tag">ChatGPT</span><span class="tag yellow">공통 수정</span></div><h3>문항만 교체</h3></div><pre class="prompt">레이아웃과 기능은 그대로 두고 퀴즈 데이터만 [중학교 2학년 수면과 스마트폰 사용 습관] 주제로 8문항으로 교체해줘. 진단·치료가 아니라 일반적인 건강교육 수준의 내용으로 작성해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+<article class="prompt-card" data-title="ChatGPT 공통 수정 프롬프트 문항만 교체 레이아웃과 기능은 그대로 두고 퀴즈 데이터만 [중학교 2학년 수면과 스마트폰 사용 습관] 주제로 8문항으로 교체해줘. 진단·치료가 아니라 일반적인 건강교육 수준의 내용으로 작성해줘."><div class="card-top"><div class="tags"><span class="tag">ChatGPT</span><span class="tag yellow">공통 수정</span></div><h3>문항만 교체</h3></div><pre class="prompt">레이아웃과 기능은 그대로 두고 퀴즈 데이터만 [중학교 2학년 수면과 스마트폰 사용 습관] 주제로 8문항으로 교체해줘. 진단·치료가 아니라 일반적인 건강교육 수준의 내용으로 작성해줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[중학교 2학년 수면과 스마트폰 사용 습관]</b><span>예: 중학교 1학년</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="ChatGPT 공통 수정 프롬프트 접근성 점검 이 웹앱을 특수학교와 통합학급에서도 사용하기 쉽게 접근성을 개선해줘. semantic HTML, label, aria-label, 키보드 이동, focus 표시, 고대비, 큰 터치영역을 점검하고 수정된 전체 코드를 제공해줘."><div class="card-top"><div class="tags"><span class="tag">ChatGPT</span><span class="tag yellow">공통 수정</span></div><h3>접근성 점검</h3></div><pre class="prompt">이 웹앱을 특수학교와 통합학급에서도 사용하기 쉽게 접근성을 개선해줘. semantic HTML, label, aria-label, 키보드 이동, focus 표시, 고대비, 큰 터치영역을 점검하고 수정된 전체 코드를 제공해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="ChatGPT 공통 수정 프롬프트 localStorage 제거 현재 앱에서 개인정보나 민감정보가 저장될 가능성을 줄이기 위해 localStorage 기능을 모두 제거하고, 새로고침하면 초기화되는 버전으로 수정해줘."><div class="card-top"><div class="tags"><span class="tag">ChatGPT</span><span class="tag yellow">공통 수정</span></div><h3>localStorage 제거</h3></div><pre class="prompt">현재 앱에서 개인정보나 민감정보가 저장될 가능성을 줄이기 위해 localStorage 기능을 모두 제거하고, 새로고침하면 초기화되는 버전으로 수정해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="ChatGPT 공통 수정 프롬프트 인쇄용 결과화면 현재 웹앱에 인쇄 버튼을 추가해줘. 인쇄할 때는 입력폼과 조작버튼은 숨기고 결과/요약만 A4에 깔끔하게 출력되도록 @media print CSS를 작성해줘."><div class="card-top"><div class="tags"><span class="tag">ChatGPT</span><span class="tag yellow">공통 수정</span></div><h3>인쇄용 결과화면</h3></div><pre class="prompt">현재 웹앱에 인쇄 버튼을 추가해줘. 인쇄할 때는 입력폼과 조작버튼은 숨기고 결과/요약만 A4에 깔끔하게 출력되도록 @media print CSS를 작성해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
@@ -3314,7 +3321,7 @@ date,category,grade
 - 후속 확인 필요 여부
 - 내일 이어서 볼 업무
 
-원문에 없는 사실을 추가하지 말고, 개인 식별 가능성이 있는 표현은 [비식별 필요]로 표시해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+원문에 없는 사실을 추가하지 말고, 개인 식별 가능성이 있는 표현은 [비식별 필요]로 표시해줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[주의]</b><span>예: 학생 이름·학번·전화번호 등 개인 식별정보는 결과에 그대로 표시하지 말고 “학생A”, “보호자A”처럼 비식별화해줘.</span></div><div class="input-example-item"><b>[업무 메모]</b><span>예: 09:10 1학년 학생 두통으로 방문, 휴식 후 교실 복귀. 10:30 체육시간 경미한 찰과상 학생 응급처치. 13:20 보호자와 건강상태 전화 상담. 15:00 보건교육 자료 수정 및 담임교사 전달.</span></div><div class="input-example-item"><b>[붙여넣기]</b><span>예: 09:10 학생A 두통 호소로 방문, 잠시 안정 후 상태 호전되어 교실 복귀. 10:30 학생B 운동 중 무릎 찰과상으로 방문, 기본 처치 후 담임에게 안내. 13:20 보호자A와 학생 건강상태 관련 전화 상담.</span></div><div class="input-example-item"><b>[비식별 필요]</b><span>예: 김○○, 1학년 3반 15번, 보호자 휴대전화번호처럼 개인을 알아볼 수 있는 정보</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="건강상담 학생 대화 질문 비진단"><div class="card-top"><div class="tags"><span class="tag mint">상담</span></div><h3>학생 건강상담 질문 설계</h3></div><pre class="prompt">너는 학생의 존엄과 사생활을 존중하는 학교 보건교사야.
 다음 상황에서 학생에게 사용할 수 있는 열린 질문을 만들어줘.
 
@@ -3328,7 +3335,7 @@ date,category,grade
 - 정서적 어려움이 함께 있을 수 있을 때 사용할 중립적 질문 3개
 - 보호자·담임·전문기관과 협력이 필요할 수 있는 상황을 "교사가 판단할 체크포인트"로 5개 정리
 
-의학적 진단이나 치료 지시를 하지 말고, 응급 여부 판단과 처치는 학교의 공식 절차와 의료 전문지침을 우선하도록 작성해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+의학적 진단이나 치료 지시를 하지 말고, 응급 여부 판단과 처치는 학교의 공식 절차와 의료 전문지침을 우선하도록 작성해줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[예: 반복적으로 두통을 호소하며 보건실을 방문함]</b><span>예: 반복적으로 두통을 호소하며 보건실을 방문함</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="보건실 월간 통계 요약 보고서"><div class="card-top"><div class="tags"><span class="tag mint">통계·보고</span></div><h3>보건실 월간 이용 통계 요약</h3></div><pre class="prompt">너는 학교 보건통계 보고서를 작성하는 실무자야.
 아래의 비식별 집계자료를 바탕으로 월간 보건실 이용 현황을 분석해줘.
 
@@ -3345,7 +3352,7 @@ date,category,grade
 - 상관관계를 원인으로 단정하지 말 것
 - 작은 집단에서 개인이 추정될 수 있는 세부 수치는 합쳐서 표현할 것
 - 수치 계산 과정과 원자료에 없는 해석을 구분할 것
-- 표 1개 + 핵심 요약 5줄 + 실무 제안 3개 형식</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+- 표 1개 + 핵심 요약 5줄 + 실무 제안 3개 형식</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[집계자료 붙여넣기]</b><span>예: 9월 총 방문 128건 / 두통 32건 / 복통 27건 / 외상 25건 / 호흡기 증상 18건 / 기타 26건. 학년별: 1학년 46건, 2학년 43건, 3학년 39건. ※ 교육용 가상 집계자료</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="보건교육 연간계획 월별 주제"><div class="card-top"><div class="tags"><span class="tag mint">교육계획</span></div><h3>학교급별 보건교육 연간 주제 틀 만들기</h3></div><pre class="prompt">너는 대한민국 학교 보건교육 연간계획을 설계하는 보건교사야.
 
 학교급: [초등/중등/고등/특수학교]
@@ -3360,7 +3367,7 @@ date,category,grade
 - 가정 연계 안내자료 아이디어 1개
 - 평가 또는 실천 확인 방법 1개
 
-주의: 법정 의무교육 시간이나 세부 법령 수치는 임의로 확정하지 말고, 최신 교육청·학교 지침 확인이 필요한 항목은 [공식 지침 확인]으로 표시해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+주의: 법정 의무교육 시간이나 세부 법령 수치는 임의로 확정하지 말고, 최신 교육청·학교 지침 확인이 필요한 항목은 [공식 지침 확인]으로 표시해줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[초등/중등/고등/특수학교]</b><span>예: 중등</span></div><div class="input-example-item"><b>[예: 감염병 예방, 디지털 건강, 성건강, 마음건강, 응급처치]</b><span>예: 감염병 예방, 디지털 건강, 성건강, 마음건강, 응급처치</span></div><div class="input-example-item"><b>[공식 지침 확인]</b><span>예: 법정 의무교육 시간, 교육과정 성취기준, 시도교육청 세부 운영지침처럼 최신 공식 문서 확인이 필요한 항목</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="특수학교 특수교육대상 학생 쉬운 글 그림상징 보건교육"><div class="card-top"><div class="tags"><span class="tag mint">특수교육</span></div><h3>특수교육대상 학생용 쉬운 보건자료로 변환</h3></div><pre class="prompt">너는 특수교육 접근성과 보건교육을 함께 이해하는 교사야.
 아래 보건교육 문장을 다양한 이해 수준의 학생이 접근하기 쉽게 바꿔줘.
 
@@ -3375,7 +3382,7 @@ date,category,grade
 5. 말로 답하기 어려운 학생을 위한 가리키기·선택카드 방식
 6. 감각 과부하를 줄일 수 있는 표현·디자인 주의점
 
-학생의 장애 특성을 획일적으로 가정하지 말고, 교사가 개별 학생의 의사소통 방식과 교육계획에 맞게 조정할 수 있도록 선택지를 제시해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+학생의 장애 특성을 획일적으로 가정하지 말고, 교사가 개별 학생의 의사소통 방식과 교육계획에 맞게 조정할 수 있도록 선택지를 제시해줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[원문]</b><span>예: 감염병을 예방하려면 외출 후와 식사 전, 화장실 사용 후에 흐르는 물과 비누로 손을 꼼꼼히 씻습니다. 기침이나 재채기를 할 때는 휴지나 옷소매로 입과 코를 가립니다.</span></div><div class="input-example-item"><b>[붙여넣기]</b><span>예: 감염병을 예방하려면 외출 후와 식사 전, 화장실 사용 후에 흐르는 물과 비누로 손을 꼼꼼히 씻습니다. 기침이나 재채기를 할 때는 휴지나 옷소매로 입과 코를 가립니다.</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="학부모 상담 준비 질문 요약 비식별"><div class="card-top"><div class="tags"><span class="tag mint">학부모 소통</span></div><h3>학부모 상담 전 대화 구조 만들기</h3></div><pre class="prompt">학교 보건교사가 보호자와 전화 또는 대면 상담을 준비하려고 해.
 학생 개인정보는 입력하지 않고 상황만 비식별화해서 제공할게.
 
@@ -3405,7 +3412,7 @@ date,category,grade
 - 의약품 또는 의료기기처럼 별도 관리가 필요한 품목은 표시만 하고 관리기준을 임의로 만들지 말 것
 - 유효기간이 임박한 품목을 확인할 수 있는 체크 열 추가
 - 동일 품목의 명칭이 여러 방식으로 적혀 있으면 통일 후보를 제시
-- 원자료에 없는 수량은 추정하지 말 것</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+- 원자료에 없는 수량은 추정하지 말 것</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[현재 물품 목록 붙여넣기]</b><span>예: 일회용 밴드 8상자 / 멸균 거즈 4상자 / 종이반창고 6개 / 일회용 장갑 3상자 / 체온계 2개 / 냉찜질팩 10개 / 손소독제 5개 / 생리대 7팩</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="보건실 행사 캠페인 운영계획 역할분담"><div class="card-top"><div class="tags"><span class="tag mint">캠페인</span></div><h3>학교 건강캠페인 운영계획 초안</h3></div><pre class="prompt">너는 학생참여형 학교 건강캠페인을 기획하는 보건교사야.
 
 주제: [입력]
@@ -3427,7 +3434,7 @@ date,category,grade
 - 참여 후 간단한 평가 방법
 - 우천 또는 일정 변경 시 대체안
 
-학생이 수동적으로 듣기보다 직접 선택·참여·표현할 수 있게 설계해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+학생이 수동적으로 듣기보다 직접 선택·참여·표현할 수 있게 설계해줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[학생/학부모/교직원]</b><span>예: 학부모</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 </div>
 </section>
 <section class="section" id="s10"><div class="section-head"><div class="num">10</div><div><h2>AI 결과 검수 · 개인정보 · 정확성 점검</h2><p class="section-desc">슬라이드 69–73 핵심: 개인정보 보호, 공식자료 재확인, AI 추정과 사실 구분, 교사의 최종 책임</p></div></div>
@@ -3448,7 +3455,7 @@ date,category,grade
 8. 교사가 최종적으로 직접 판단해야 할 부분
 
 각 항목을 "원문 / 문제점 / 수정 제안 / 확인해야 할 공식자료 종류"로 정리해줘.
-확실하지 않은 것은 아는 척하지 말고 "확인 필요"라고 표시해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+확실하지 않은 것은 아는 척하지 말고 "확인 필요"라고 표시해줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[검수할 내용 붙여넣기]</b><span>예: “독감에 걸리면 반드시 7일 동안 등교하면 안 됩니다. 감염 예방을 위해 모든 학생은 하루 종일 마스크를 써야 합니다.”라는 안내문 초안을 검수해줘. 단정적이거나 최신 지침 확인이 필요한 부분을 찾아 수정 방향을 제안해줘.</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="개인정보 비식별화 학생 건강정보 제거"><div class="card-top"><div class="tags"><span class="tag">슬라이드 69</span><span class="tag yellow">개인정보</span></div><h3>AI 입력 전 개인정보 비식별화 점검</h3></div><pre class="prompt">아래 텍스트를 생성형 AI에 입력해도 되는지 개인정보 관점에서 점검해줘.
 
 [텍스트 붙여넣기]
@@ -3466,7 +3473,7 @@ date,category,grade
 3. 비식별화한 전체 문장
 4. 여전히 재식별 위험이 있는 부분
 
-원문 내용을 임의로 보충하거나 추정하지 말아줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+원문 내용을 임의로 보충하거나 추정하지 말아줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[텍스트 붙여넣기]</b><span>예: 1학년 3반 김민수 학생이 9월 18일 오전 보건실을 방문했고, 보호자 김○○(010-1234-5678)에게 연락함. 평소 복용약에 대한 상담 내용을 기록함.</span></div><div class="input-example-item"><b>[학생A]</b><span>예: 학생A</span></div><div class="input-example-item"><b>[보호자]</b><span>예: 해당 학생의 보호자</span></div><div class="input-example-item"><b>[학년]</b><span>예: 중학교 1학년</span></div><div class="input-example-item"><b>[날짜]</b><span>예: 2026년 9월 19일</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 <article class="prompt-card" data-title="내일부터 바로 해볼 한 가지 실행계획"><div class="card-top"><div class="tags"><span class="tag">슬라이드 72–73</span><span class="tag mint">실행</span></div><h3>내일부터 바로 해볼 한 가지 정하기</h3></div><pre class="prompt">오늘 배운 AI 활용법을 학교 보건업무에 한꺼번에 적용하지 않고 "한 가지 업무"부터 시작하려고 해.
 
 내가 반복해서 하는 업무: [입력]
@@ -3480,11 +3487,10 @@ AI로 도움받고 싶은 부분: [초안/구조화/이미지/영상/웹페이�
 - 내가 직접 검수할 것 3개
 - 완성 후 재사용할 수 있는 템플릿화 방법 1개
 
-실행계획은 너무 크게 잡지 말고, 이번 주 안에 반복 가능한 수준으로 작성해줘.</pre><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
+실행계획은 너무 크게 잡지 말고, 이번 주 안에 반복 가능한 수준으로 작성해줘.</pre><div class="input-example-box"><div class="input-example-title">바로 복사해서 사용할 완성 입력 예시</div><p class="input-example-help">아래 내용은 연수 실습에서 그대로 사용해도 됩니다. 먼저 복사해 실행해 보고, 필요할 때만 학교명·학년·주제 등을 바꿔보세요.</p><div class="input-example-list"><div class="input-example-item"><b>[초안/구조화/이미지/영상/웹페이지]</b><span>예: 구조화</span></div></div></div><div class="card-actions"><button class="copy-btn">프롬프트 한 번에 복사</button></div></article>
 </div>
 </section>
 <div class="empty" id="emptyState">검색 결과가 없습니다. 다른 키워드로 검색해보세요.</div>
-</div>
 <footer class="footer"><b>AI콘텐츠마케팅연구소 유쌤클래스 김유성 강사</b><br/>AI는 초안·아이디어·구조화를 빠르게 돕고, 보건교사는 교육적 판단·의료적 검증·학생 이해·맥락·최종 책임을 담당합니다.</footer>
 </main>
 <button aria-label="맨 위로 이동" class="backtop" id="backTop">↑ 맨위</button>
@@ -3519,7 +3525,6 @@ const sections=[...document.querySelectorAll('.section')]; const links=[...docum
 const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-25% 0px -65% 0px'});
 sections.forEach(s=>obs.observe(s));
 </script>
-
 <script>
 (function(){
   function moveCopyButtonsToTop(){
@@ -3543,7 +3548,6 @@ sections.forEach(s=>obs.observe(s));
   }
 })();
 </script>
-
 <script>
 (() => {
   const slides = [
@@ -3679,6 +3683,5 @@ sections.forEach(s=>obs.observe(s));
   renderSlide(0);
 })();
 </script>
-
 </body>
 </html>
