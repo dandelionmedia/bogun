@@ -326,6 +326,76 @@ button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid rgba(
   .card-top>.copy-btn{width:auto!important;min-width:66px;font-size:11.5px;padding:7px 9px}
   .search-count{display:none}
 }
+
+.pricing-wrap{margin-top:28px;padding-top:28px;border-top:1px solid var(--line)}
+.pricing-intro{display:flex;align-items:flex-start;gap:14px;margin:0 0 18px;padding:18px 20px;border:1px solid #cfe6f6;border-radius:18px;background:linear-gradient(135deg,#f5fbff,#f1fff9);box-shadow:0 10px 26px rgba(13,69,115,.06)}
+.pricing-intro .badge{flex:0 0 auto;display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--mint2));color:white;font-weight:900;box-shadow:0 8px 20px rgba(11,102,195,.18)}
+.pricing-intro h3{margin:0 0 5px;color:var(--navy);font-size:21px}.pricing-intro p{margin:0;color:var(--muted);font-size:15px;line-height:1.65}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.price-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.price-card:before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:linear-gradient(90deg,var(--blue),var(--mint2))}
+.price-brand{display:flex;align-items:center;gap:11px;margin-bottom:14px}.price-logo{width:42px;height:42px;border-radius:12px;border:1px solid var(--line);background:#fff;display:grid;place-items:center;overflow:hidden}.price-logo img{width:28px;height:28px;object-fit:contain}.price-brand h3{font-size:22px;margin:0;color:var(--navy)}
+.plan-list{display:grid;gap:8px;margin:12px 0 16px}.plan-row{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:10px 12px;border-radius:12px;background:#f7fbfe;border:1px solid #e3eef5;font-size:14px}.plan-row strong{color:var(--navy)}.plan-row span{text-align:right;color:#45627a;font-weight:750}
+.price-note{font-size:12.5px;line-height:1.55;color:#6c7f91;margin:7px 0 13px}
+.use-title{font-size:14px;font-weight:900;color:var(--green);margin:16px 0 8px}.use-list{margin:0;padding-left:18px;color:#36536c;font-size:14px;line-height:1.7}.use-list li+li{margin-top:4px}
+.price-link{display:flex;justify-content:center;align-items:center;text-decoration:none;margin-top:16px;padding:11px 14px;border-radius:12px;background:linear-gradient(135deg,#0b66c3,#18a77b);color:white;font-weight:900;font-size:14px;box-shadow:0 8px 18px rgba(11,102,195,.16)}
+.teacher-guide{margin-top:18px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.teacher-guide>div{border:1px solid var(--line);border-radius:16px;background:#fff;padding:16px}.teacher-guide b{display:block;color:var(--navy);margin-bottom:5px}.teacher-guide p{margin:0;font-size:13.5px;color:#526b81;line-height:1.65}
+.privacy-alert{margin-top:16px;padding:15px 17px;border-radius:15px;background:#fff8e6;border:1px solid #f1d691;color:#6b5721;font-size:13.5px;line-height:1.65}
+@media(max-width:1050px){.pricing-grid,.teacher-guide{grid-template-columns:1fr}.price-card{padding:18px}}
+
+
+/* v9 readability & premium polish */
+:root{--paper:#fbfdff;--shadow-soft:0 12px 34px rgba(14,58,91,.08);--shadow-hover:0 20px 48px rgba(14,58,91,.13)}
+body{font-size:18px;line-height:1.78;letter-spacing:-.012em;background:linear-gradient(180deg,#f7fbfe 0%,#ffffff 30%,#f6fcfa 100%)}
+.main{background:transparent}
+.hero{border-bottom:1px solid rgba(255,255,255,.28)}
+.hero p{line-height:1.72;max-width:980px}
+.content{max-width:1320px}
+.section{scroll-margin-top:115px}
+.section h2{font-weight:900}
+.section-desc{max-width:980px}
+.sidebar{background:rgba(255,255,255,.985);box-shadow:10px 0 34px rgba(23,67,99,.06)}
+.toc a{line-height:1.42;padding:11px 13px}
+.toc a.active{box-shadow:inset 3px 0 0 #1a9879,0 5px 14px rgba(15,90,145,.06)}
+
+.pricing-wrap{margin-top:34px;padding-top:34px}
+.premium-panel{padding:22px 24px;border-radius:22px!important;background:linear-gradient(135deg,#f4faff 0%,#effcf7 100%)!important}
+.pricing-intro .badge{width:52px;height:52px;border-radius:16px;font-size:14px;letter-spacing:.04em}
+.pricing-intro h3{font-size:24px;letter-spacing:-.035em;line-height:1.3}
+.pricing-intro p{font-size:15.5px;line-height:1.75}
+.pricing-grid-main{grid-template-columns:minmax(0,.92fr) minmax(0,1.25fr) minmax(0,.92fr);align-items:stretch;gap:20px}
+.price-card{padding:24px;border-radius:24px;box-shadow:var(--shadow-soft);transition:.2s transform,.2s box-shadow,.2s border-color;background:linear-gradient(180deg,#fff 0%,#fcfeff 100%)}
+.price-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:#c5dce8}
+.price-card:before{height:5px}
+.google-featured{border:1.5px solid #9fd8c7;background:linear-gradient(180deg,#ffffff 0%,#f7fffb 100%);box-shadow:0 18px 44px rgba(15,121,91,.12)}
+.google-featured:before{height:6px;background:linear-gradient(90deg,#4285f4,#34a853,#fbbc05,#ea4335)}
+.plan-ribbon{display:inline-flex;padding:6px 10px;border-radius:999px;background:#eaf8f3;color:#157157;font-size:12px;font-weight:900;margin:0 0 12px;border:1px solid #cfeade}
+.price-brand{margin-bottom:17px}.price-brand h3{font-size:24px;letter-spacing:-.03em}.price-brand small{font-size:12px;color:#72879a;font-weight:800}
+.price-logo{width:46px;height:46px;border-radius:14px}.price-logo img{width:30px;height:30px}
+.plan-list{gap:9px}.plan-row{padding:11px 13px;font-size:14.2px;background:#f8fbfd}.plan-row.recommended{background:linear-gradient(135deg,#eef7ff,#edf9f5);border-color:#cfe7df}
+.use-title{font-size:15px;margin:18px 0 9px}.use-list{font-size:14.5px;line-height:1.76;padding-left:20px}.use-list li+li{margin-top:5px}
+.price-link{min-height:45px;border-radius:13px;font-size:14px;box-shadow:0 9px 22px rgba(11,102,195,.16)}
+.price-link.secondary{background:#fff;color:#17639f;border:1px solid #c7ddea;box-shadow:none}
+.official-links{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:16px}.official-links .price-link{margin-top:0;padding:10px 9px}
+.google-plan-summary{display:grid;gap:10px;margin:7px 0 16px}
+.google-plan-item{border:1px solid #dce9f0;border-radius:15px;padding:12px 13px;background:#fff;position:relative}
+.google-plan-item.recommended-plan{border-color:#9ddbc8;background:linear-gradient(135deg,#f4fffb,#f7fbff);box-shadow:0 8px 22px rgba(18,132,100,.07)}
+.google-plan-item.recommended-plan:after{content:"추천";position:absolute;top:10px;right:10px;padding:3px 7px;border-radius:999px;background:#168c70;color:white;font-size:10px;font-weight:900}
+.gp-top{display:flex;justify-content:space-between;gap:10px;align-items:center;padding-right:0}.recommended-plan .gp-top{padding-right:40px}.gp-top strong{font-size:14.5px;color:#153f62}.gp-price{font-size:13px;font-weight:900;color:#176d59;white-space:nowrap}
+.google-plan-item p{margin:5px 0 7px;color:#526b80;font-size:13.2px;line-height:1.6}.gp-fit{display:inline-block;font-size:11.5px;font-weight:850;color:#366d8f;background:#eef7fc;border-radius:999px;padding:4px 8px}
+.google-clarity-note{margin:12px 0 16px;padding:13px 14px;border-radius:14px;background:#fff9e9;border:1px solid #f0dda7;color:#6a5827;font-size:12.8px;line-height:1.68}
+.decision-guide{margin-top:22px;padding:19px;border:1px solid #d4e5ee;border-radius:20px;background:linear-gradient(135deg,#f8fbff,#f4fdf9);box-shadow:0 10px 28px rgba(18,69,105,.05)}
+.decision-title{display:flex;align-items:center;gap:11px;margin-bottom:13px}.decision-title>span{display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,#0b66c3,#18a77b);color:#fff;font-weight:900}.decision-title b{display:block;color:#123e61;font-size:17px}.decision-title p{margin:1px 0 0;color:#687f91;font-size:13px}
+.teacher-guide{margin-top:0}.teacher-guide>div{padding:17px 18px;box-shadow:0 7px 20px rgba(20,70,100,.04)}.teacher-guide b{font-size:14.5px}.teacher-guide p{font-size:13.5px;line-height:1.72}
+.privacy-alert{margin-top:18px;padding:17px 18px;font-size:13.7px;line-height:1.72;border-radius:17px}
+.prompt-card{background:linear-gradient(180deg,#fff,#fcfeff)}
+.prompt-card h3{font-weight:900}
+.prompt{font-size:16.4px;line-height:1.88;color:#1e3b55}
+.card-note{color:#637b8e}
+
+@media(max-width:1120px){.pricing-grid-main{grid-template-columns:1fr}.google-featured{order:-1}.official-links{grid-template-columns:1fr 1fr}}
+@media(max-width:820px){.premium-panel{padding:18px!important}.pricing-intro h3{font-size:21px}.pricing-intro p{font-size:14.5px}.price-card{padding:19px}.official-links{grid-template-columns:1fr}.google-plan-item{padding:12px}.gp-top{align-items:flex-start;flex-direction:column;gap:3px}.recommended-plan .gp-top{padding-right:42px}.gp-price{font-size:12.5px}.prompt{font-size:16px;line-height:1.84}.toc a{font-size:14.5px}}
+
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.prompt-card,.toc a,.copy-btn,.backtop,.sidebar,.overlay{transition:none!important}}
 
 </style>
@@ -339,6 +409,7 @@ button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid rgba(
 <div class="toc-title">☰ 슬라이드 순서 목차</div>
 <nav class="toc" id="toc">
 <a href="#tools">AI도구툴 · 바로가기</a>
+<a href="#pricing">AI 3대 도구 요금제·업무활용</a>
 <a href="#s1">01. AI와 좋은 프롬프트</a>
 <a href="#s2">02. 가정통신문 만들기</a>
 <a href="#s3">03. 보건교육 지도안 만들기</a>
@@ -423,6 +494,103 @@ button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid rgba(
 </article>
 </div>
 <div class="ai-tools-note"><strong>활용 안내:</strong> 서비스별 제공 기능과 사용 가능 범위는 계정·요금제·지역·업데이트에 따라 달라질 수 있습니다. 연수 실습 전 로그인 상태와 이용 가능한 기능을 확인해 주세요.</div>
+
+<div class="pricing-wrap" id="pricing">
+  <div class="pricing-intro premium-panel">
+    <div class="badge">AI</div>
+    <div>
+      <h3>ChatGPT · Google Gemini · Claude 요금제 & 보건교사 활용</h3>
+      <p>2026년 9월 공식 요금제 페이지를 기준으로 연수 현장에서 한눈에 비교할 수 있도록 정리했습니다. 실제 결제금액·스토리지·제공 기능은 계정, 국가, 프로모션, 학교/교육청 관리계정 정책에 따라 달라질 수 있으므로 <b>가입 직전 공식 결제 화면을 최종 확인</b>하세요.</p>
+    </div>
+  </div>
+
+  <div class="pricing-grid pricing-grid-main">
+    <article class="price-card tool-chatgpt">
+      <div class="price-brand"><div class="price-logo"><img src="https://chatgpt.com/favicon.ico" alt="ChatGPT 로고"></div><div><h3>ChatGPT</h3><small>OpenAI</small></div></div>
+      <div class="plan-list">
+        <div class="plan-row"><strong>Free</strong><span>무료</span></div>
+        <div class="plan-row"><strong>Go</strong><span>저가형 유료 · 지역별 표시</span></div>
+        <div class="plan-row recommended"><strong>Plus</strong><span>US$20 / 월</span></div>
+        <div class="plan-row"><strong>Pro</strong><span>상위 개인 요금제</span></div>
+      </div>
+      <div class="use-title">보건교사에게 특히 유용한 업무</div>
+      <ul class="use-list">
+        <li>가정통신문·보건소식지·교직원 안내문 초안 작성과 교정</li>
+        <li>PDF·표·문서 업로드 후 핵심내용 요약과 수업자료 재구성</li>
+        <li>학생참여형 보건수업 아이디어·퀴즈·활동지·평가기준 제작</li>
+        <li>카드뉴스·이미지·웹페이지·웹앱 제작과 반복 업무 체계화</li>
+      </ul>
+      <a class="price-link" href="https://chatgpt.com/ko-KR/pricing/" target="_blank" rel="noopener noreferrer">ChatGPT 공식 요금제 확인 ↗</a>
+    </article>
+
+    <article class="price-card google-featured tool-gemini">
+      <div class="plan-ribbon">Google AI 요금제 상세</div>
+      <div class="price-brand"><div class="price-logo"><img src="https://gemini.google.com/favicon.ico" alt="Google Gemini 로고"></div><div><h3>Google Gemini</h3><small>Google AI · Google One</small></div></div>
+      <div class="google-plan-summary">
+        <div class="google-plan-item free">
+          <div class="gp-top"><strong>무료</strong><span class="gp-price">₩0</span></div>
+          <p>기본 Gemini 사용 · 무료 Google 계정 스토리지 15GB</p>
+          <span class="gp-fit">가벼운 질문·초안 작성</span>
+        </div>
+        <div class="google-plan-item plus">
+          <div class="gp-top"><strong>Google AI Plus</strong><span class="gp-price">US$9.99/월*</span></div>
+          <p>비구독자 대비 약 2× 사용량 · Gemini, Flow, Gmail의 Gemini, Gemini Notebook 등 추가 이용</p>
+          <span class="gp-fit">수업자료·이미지·간단한 영상/창작 실습</span>
+        </div>
+        <div class="google-plan-item pro recommended-plan">
+          <div class="gp-top"><strong>Google AI Pro</strong><span class="gp-price">US$19.99/월*</span></div>
+          <p>5TB · 비구독자 대비 약 4× 사용량 · Pro 모델·Deep Research·Flow·Docs/Gmail/Vids의 Gemini 등 확장 이용</p>
+          <span class="gp-fit">보건교사 실무·연수에서 가장 범용적인 유료 구간</span>
+        </div>
+        <div class="google-plan-item ultra">
+          <div class="gp-top"><strong>Google AI Ultra</strong><span class="gp-price">고급 요금제</span></div>
+          <p>20TB부터 · Pro 대비 더 높은 사용 한도 · Deep Think, Flow 등 고급 생성 기능에 더 높은 접근</p>
+          <span class="gp-fit">대량 생성·고급 영상/AI 제작 중심 사용자</span>
+        </div>
+      </div>
+      <div class="google-clarity-note"><b>가격·용량 표기 안내</b><br>2026년 9월 Google의 한국어 공식 페이지는 노출 경로·계정에 따라 일부 요금제의 저장용량·가격 표기가 다르게 보일 수 있습니다. 현재 Google One 요금제 페이지에는 AI Plus <b>US$9.99/월</b>, AI Pro <b>US$19.99/월</b>이 표시되며, Google AI 전용 페이지에는 Plus 400GB·Pro 5TB·Ultra 20TB부터로 안내되는 화면도 있습니다. 따라서 실제 가입 시 본인 계정의 최종 결제 화면을 기준으로 확인하세요.</div>
+      <div class="use-title">보건교사에게 특히 유용한 업무</div>
+      <ul class="use-list">
+        <li><b>Gemini Canvas</b>: 보건수업 퀴즈·체크리스트·보건실 웹앱 프로토타입 제작</li>
+        <li><b>Deep Research</b>: 보건교육 주제 조사, 근거자료 탐색, 수업자료 구조화</li>
+        <li><b>Google Workspace 연계</b>: Gmail·Docs·Drive 중심 공지문·회의자료·업무문서 작성 보조</li>
+        <li><b>창작 기능</b>: 보건교육 이미지·음악·영상 아이디어 및 Flow 연계 콘텐츠 제작</li>
+      </ul>
+      <div class="official-links">
+        <a class="price-link" href="https://one.google.com/about/google-ai-plans/" target="_blank" rel="noopener noreferrer">Google AI 요금제 상세 ↗</a>
+        <a class="price-link secondary" href="https://one.google.com/about/plans?hl=ko" target="_blank" rel="noopener noreferrer">Google One 가격 확인 ↗</a>
+      </div>
+    </article>
+
+    <article class="price-card tool-claude">
+      <div class="price-brand"><div class="price-logo"><img src="https://claude.ai/favicon.ico" alt="Claude 로고"></div><div><h3>Claude</h3><small>Anthropic</small></div></div>
+      <div class="plan-list">
+        <div class="plan-row"><strong>Free</strong><span>US$0</span></div>
+        <div class="plan-row recommended"><strong>Pro</strong><span>개인 유료 기본</span></div>
+        <div class="plan-row"><strong>Max</strong><span>상위 개인 요금제</span></div>
+      </div>
+      <div class="use-title">보건교사에게 특히 유용한 업무</div>
+      <ul class="use-list">
+        <li>긴 교육자료·회의자료·정책문서의 구조 분석과 핵심 요약</li>
+        <li>가정통신문·보건자료 문장을 자연스럽고 읽기 쉽게 다듬기</li>
+        <li>여러 자료의 공통점·차이점 비교와 표·체크리스트 정리</li>
+        <li>Artifacts·코딩을 활용한 간단한 교육용 프로토타입 제작</li>
+      </ul>
+      <a class="price-link" href="https://claude.com/ko/pricing" target="_blank" rel="noopener noreferrer">Claude 공식 요금제 확인 ↗</a>
+    </article>
+  </div>
+
+  <div class="decision-guide">
+    <div class="decision-title"><span>✓</span><div><b>보건교사 실무 선택 가이드</b><p>도구 자체보다 “내가 자주 하는 업무”에 맞춰 선택하세요.</p></div></div>
+    <div class="teacher-guide">
+      <div><b>문서·수업·이미지·웹까지 폭넓게</b><p>ChatGPT는 한 도구 안에서 문서 작성, 파일 분석, 이미지 제작, 웹앱·코딩 실습을 폭넓게 연결하기 좋습니다.</p></div>
+      <div><b>Google Workspace + Canvas 중심</b><p>Gemini는 Gmail·Docs·Drive 환경과 연결해 업무 흐름을 만들고, Canvas·Deep Research·Flow 등 Google 생태계 실습을 이어가기 좋습니다.</p></div>
+      <div><b>긴 문서 읽기·구조화 중심</b><p>Claude는 긴 문서와 복잡한 문장을 읽고 구조화하거나, 초안을 자연스럽게 다듬고 비교·정리하는 업무에 활용하기 좋습니다.</p></div>
+    </div>
+  </div>
+
+  <div class="privacy-alert"><strong>보건교사 AI 활용 주의:</strong> 학생 이름, 학번, 연락처, 진단명, 투약정보, 상담내용 등 개인을 식별할 수 있는 학생 건강정보를 개인용 생성형 AI 서비스에 그대로 입력하지 마세요. 비식별화·가상 사례를 우선 사용하고, 학교·교육청의 개인정보·정보보안 정책과 승인된 계정/서비스 범위를 반드시 확인한 뒤 활용하세요. AI가 작성한 의학·응급·약물·감염병 정보는 보건당국·교육부·학교 지침 등 최신 공식자료로 재확인하고 최종 판단은 담당 교원이 수행합니다.</div>
+</div></div>
 </section>
 <section class="section" id="s1"><div class="section-head"><div class="num">01</div><div><h2>보건교사와 AI · 좋은 프롬프트</h2><p class="section-desc">강의 슬라이드 16–18 + 첨부 기초실습: 좋은 질문 구조와 실제 한 문장 프롬프트 연습</p></div></div>
 <div class="prompt-grid">
