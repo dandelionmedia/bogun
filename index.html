@@ -830,6 +830,26 @@ button:focus-visible,a:focus-visible,input:focus-visible{
   }
 }
 
+/* v25 mobile Padlet button click reliability */
+.hero:before,
+.hero:after{pointer-events:none!important}
+.padlet-hero{
+  position:relative;
+  z-index:5;
+}
+.padlet-btn{
+  position:relative;
+  z-index:10;
+  pointer-events:auto!important;
+  cursor:pointer;
+}
+@media(max-width:820px){
+  .padlet-btn{
+    display:flex;
+    min-height:50px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -873,7 +893,12 @@ button:focus-visible,a:focus-visible,input:focus-visible{
     <div class="padlet-title">패들렛스터디게시판</div>
     <p class="padlet-sub">연수 실습 결과와 아이디어를 함께 공유하는 게시판입니다.</p>
   </div>
-  <a class="padlet-btn" href="https://padlet.com/yu_ssam/56" target="_blank" rel="noopener noreferrer" aria-label="패들렛 스터디 게시판 새창으로 열기">
+  <a class="padlet-btn"
+     href="https://padlet.com/yu_ssam/56"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="패들렛 스터디 게시판 새창으로 열기"
+     onclick="var w=window.open(this.href,'_blank'); if(!w){window.location.href=this.href;} return false;">
     패들렛 바로가기 ↗
   </a>
 </div>
