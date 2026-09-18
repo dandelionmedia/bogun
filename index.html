@@ -1616,6 +1616,64 @@ p,li,.prompt,.section-desc,.card-note{word-break:keep-all}
 @keyframes searchPulse{0%,100%{transform:translateY(0)}45%{transform:translateY(-3px)}}
 @media(max-width:1024px){.prompt-card{scroll-margin-top:138px}}
 @media(prefers-reduced-motion:reduce){.prompt-card.search-focus{animation:none}}
+
+/* vFinal: reliable floating TOC button for mobile + tablet */
+@media (max-width:1024px){
+  .mobilebar.is-floating{
+    position:fixed!important;
+    left:12px!important;
+    top:12px!important;
+    right:auto!important;
+    bottom:auto!important;
+    width:48px!important;
+    height:48px!important;
+    min-height:48px!important;
+    padding:0!important;
+    margin:0!important;
+    display:block!important;
+    background:transparent!important;
+    border:0!important;
+    box-shadow:none!important;
+    backdrop-filter:none!important;
+    -webkit-backdrop-filter:none!important;
+    z-index:95!important;
+    pointer-events:none!important;
+  }
+  .mobilebar.is-floating .mobile-title{
+    display:none!important;
+  }
+  .mobilebar.is-floating .menu-btn{
+    position:absolute!important;
+    inset:0 auto auto 0!important;
+    width:46px!important;
+    height:46px!important;
+    min-width:46px!important;
+    min-height:46px!important;
+    margin:0!important;
+    padding:0!important;
+    display:grid!important;
+    place-items:center!important;
+    border-radius:14px!important;
+    opacity:.62!important;
+    pointer-events:auto!important;
+    transform:none!important;
+    box-shadow:0 7px 20px rgba(8,61,106,.20)!important;
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+  }
+  .mobilebar.is-floating .menu-btn:hover,
+  .mobilebar.is-floating .menu-btn:focus-visible,
+  .mobilebar.is-floating.menu-open .menu-btn{
+    opacity:1!important;
+    transform:scale(1.04)!important;
+  }
+  .sidebar{z-index:125!important}
+  .overlay{z-index:115!important}
+}
+@media (max-width:520px){
+  .mobilebar.is-floating{left:10px!important;top:10px!important}
+  .mobilebar.is-floating .menu-btn{width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;border-radius:13px!important}
+}
 </style>
 </head>
 <body>
@@ -3678,7 +3736,7 @@ function closeMenu(){
 function syncFloatingMenu(){
   if(!mobileBar) return;
   const isMobileTablet=window.innerWidth<=1024;
-  mobileBar.classList.toggle('is-floating',isMobileTablet && window.scrollY>72);
+  mobileBar.classList.toggle('is-floating',isMobileTablet && window.scrollY>90);
   if(!isMobileTablet) closeMenu();
 }
 menu.setAttribute('aria-expanded','false');
