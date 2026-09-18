@@ -66,6 +66,11 @@ linear-gradient(135deg,#082f59 0%,#0d67ba 60%,#18a77b 120%);color:#fff;position:
 .ai-tool-desc{margin:0;color:#405f78;font-size:16px;line-height:1.65}
 .ai-tool-services{display:flex;flex-wrap:wrap;gap:8px}
 .ai-tool-services span{display:inline-flex;align-items:center;min-height:30px;padding:6px 10px;border-radius:999px;background:#eef7ff;color:#245e8c;border:1px solid #d3e8f6;font-size:13px;font-weight:850}
+.ai-tool-use{margin-top:2px;padding:14px 15px;border-radius:16px;background:linear-gradient(135deg,#f7fbff,#f3fcf8);border:1px solid #d8e9e4}
+.ai-tool-use-title{display:flex;align-items:center;gap:7px;margin:0 0 8px;color:#176f59;font-size:14px;font-weight:950}
+.ai-tool-use-title:before{content:"✓";display:grid;place-items:center;width:22px;height:22px;border-radius:7px;background:#e7f7f1;color:#16866a;font-size:12px}
+.ai-tool-use ul{margin:0;padding-left:19px;color:#405f74;font-size:13.5px;line-height:1.68}.ai-tool-use li+li{margin-top:4px}
+.ai-tool-use b{color:#183f61}
 .ai-tool-link{display:inline-flex;align-items:center;justify-content:center;gap:7px;align-self:flex-start;text-decoration:none;margin-top:auto;padding:11px 15px;border-radius:13px;background:linear-gradient(135deg,#0b66c3,#18a77b);color:#fff;font-size:14px;font-weight:900;box-shadow:0 9px 22px rgba(11,102,195,.20);transition:.18s transform,.18s box-shadow}
 .ai-tool-link:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(11,102,195,.27)}
 .ai-tools-note{margin-top:14px;padding:14px 16px;border-radius:14px;background:#f3fbf8;border:1px solid #cfeadf;color:#49697a;font-size:14px}
@@ -428,6 +433,28 @@ body{font-size:18px;line-height:1.78;letter-spacing:-.012em;background:linear-gr
   .search-wrap,.content,.footer{width:calc(100% - 24px)}
 }
 
+/* v15 unify section 01-10 body width with AI tools section */
+#tools,
+#s1,#s2,#s3,#s4,#s5,#s6,#s7,#s8,#s9,#s10{
+  width:100%;
+  max-width:none;
+  margin-left:0;
+  margin-right:0;
+  box-sizing:border-box;
+}
+#tools > .section-head,
+#s1 > .section-head,#s2 > .section-head,#s3 > .section-head,#s4 > .section-head,#s5 > .section-head,
+#s6 > .section-head,#s7 > .section-head,#s8 > .section-head,#s9 > .section-head,#s10 > .section-head,
+#tools > .ai-tools-grid,
+#s1 > .prompt-grid,#s2 > .prompt-grid,#s3 > .prompt-grid,#s4 > .prompt-grid,#s5 > .prompt-grid,
+#s6 > .prompt-grid,#s7 > .prompt-grid,#s8 > .prompt-grid,#s9 > .prompt-grid,#s10 > .prompt-grid{
+  width:100%;
+  max-width:none;
+  margin-left:0;
+  margin-right:0;
+  box-sizing:border-box;
+}
+
 </style>
 </head>
 <body>
@@ -480,6 +507,13 @@ body{font-size:18px;line-height:1.78;letter-spacing:-.012em;background:linear-gr
   </div>
   <p class="ai-tool-desc">대화형 AI를 활용해 학교 보건업무 문서, 수업 아이디어, 프롬프트, 이미지, 웹페이지·코드 등을 빠르게 기획하고 제작할 수 있습니다.</p>
   <div class="ai-tool-services"><span>문서 작성·요약</span><span>파일·자료 분석</span><span>이미지 생성</span><span>웹앱·코딩</span><span>아이디어·기획</span></div>
+  <div class="ai-tool-use"><div class="ai-tool-use-title">보건교사에게 특히 유용한 업무</div><ul>
+    <li><b>문서 실무</b>: 가정통신문·보건소식지·교직원 안내문·회의자료의 초안 작성과 표현 교정</li>
+    <li><b>자료 분석</b>: PDF·표·문서 업로드 후 핵심내용 요약, 비교표 제작, 보건수업용 재구성</li>
+    <li><b>수업 설계</b>: 학생참여형 보건수업 아이디어·퀴즈·활동지·평가기준·수업지도안 제작</li>
+    <li><b>콘텐츠 제작</b>: 카드뉴스·이미지·웹페이지·웹앱·간단한 자동화·코딩 실습</li>
+    <li><b>심화 활용</b>: Deep Research와 고급 추론을 활용한 교육자료 조사·근거 정리·프로젝트 기획</li>
+  </ul></div>
   <a class="ai-tool-link" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">ChatGPT 바로가기 ↗</a>
 </article>
 
@@ -490,6 +524,12 @@ body{font-size:18px;line-height:1.78;letter-spacing:-.012em;background:linear-gr
   </div>
   <p class="ai-tool-desc">텍스트·이미지·파일을 바탕으로 보건교육 자료를 만들고, Canvas를 활용한 웹앱 실습과 다양한 생성형 AI 작업을 진행할 수 있습니다.</p>
   <div class="ai-tool-services"><span>문서·수업자료</span><span>이미지·파일 이해</span><span>Canvas 웹앱</span><span>아이디어·조사</span><span>교육용 음악 실습</span></div>
+  <div class="ai-tool-use"><div class="ai-tool-use-title">보건교사에게 특히 유용한 업무</div><ul>
+    <li><b>Gemini Canvas</b>: 보건수업 퀴즈·체크리스트·보건실 웹앱 프로토타입 제작</li>
+    <li><b>Deep Research</b>: 보건교육 주제 조사, 근거자료 탐색, 수업자료 구조화</li>
+    <li><b>Google Workspace 연계</b>: Gmail·Docs·Drive 중심 공지문·회의자료·업무문서 작성 보조</li>
+    <li><b>창작 기능</b>: 보건교육 이미지·음악·영상 아이디어 및 Flow 연계 콘텐츠 제작</li>
+  </ul></div>
   <a class="ai-tool-link" href="https://gemini.google.com/app" target="_blank" rel="noopener noreferrer">Gemini 바로가기 ↗</a>
 </article>
 
@@ -500,6 +540,13 @@ body{font-size:18px;line-height:1.78;letter-spacing:-.012em;background:linear-gr
   </div>
   <p class="ai-tool-desc">긴 문서의 내용을 읽고 정리하거나 글을 다듬고, 코드·프로토타입을 제작하는 데 활용하기 좋은 생성형 AI 서비스입니다.</p>
   <div class="ai-tool-services"><span>긴 문서 분석</span><span>글쓰기·교정</span><span>요약·구조화</span><span>코딩</span><span>Artifacts 제작</span></div>
+  <div class="ai-tool-use"><div class="ai-tool-use-title">보건교사에게 특히 유용한 업무</div><ul>
+    <li><b>긴 문서 읽기</b>: 교육자료·회의자료·정책문서·연수자료를 구조화하고 핵심만 요약</li>
+    <li><b>문장 다듬기</b>: 가정통신문·보건자료를 학부모·학생이 이해하기 쉬운 문장으로 변환</li>
+    <li><b>비교·정리</b>: 여러 자료의 공통점·차이점을 비교하고 표·체크리스트·의사결정 항목으로 재구성</li>
+    <li><b>수업자료 재구성</b>: 긴 설명자료를 학년별 수준에 맞는 활동지·질문·토론자료로 변환</li>
+    <li><b>Artifacts·코딩</b>: 교육용 간단 웹페이지·도구·프로토타입 제작과 코드 수정</li>
+  </ul></div>
   <a class="ai-tool-link" href="https://claude.ai" target="_blank" rel="noopener noreferrer">Claude 바로가기 ↗</a>
 </article>
 
@@ -510,6 +557,13 @@ body{font-size:18px;line-height:1.78;letter-spacing:-.012em;background:linear-gr
   </div>
   <p class="ai-tool-desc">프롬프트를 바탕으로 영상 장면을 기획·생성하고 이미지와 영상 소재를 연결해 보건교육용 짧은 영상 콘텐츠를 제작할 때 활용할 수 있습니다.</p>
   <div class="ai-tool-services"><span>AI 영상 생성</span><span>장면·샷 제작</span><span>이미지 기반 영상</span><span>스토리보드 실습</span><span>보건 캠페인 영상</span></div>
+  <div class="ai-tool-use"><div class="ai-tool-use-title">보건교사에게 특히 유용한 업무</div><ul>
+    <li><b>보건 캠페인 영상</b>: 손씻기·감염병 예방·마음건강·응급처치 등 핵심 행동을 짧은 영상으로 제작</li>
+    <li><b>수업 도입 영상</b>: 보건수업 시작 전 학생의 관심을 끌 수 있는 10~30초 장면·상황 영상 제작</li>
+    <li><b>이미지 기반 영상</b>: 포스터·카드뉴스·캐릭터 이미지를 움직이는 영상 콘텐츠로 확장</li>
+    <li><b>스토리보드 실습</b>: 장면별 카메라·행동·분위기를 정리해 학생 참여형 영상 프로젝트 기획</li>
+    <li><b>SNS·학교행사 홍보</b>: 보건의 날·건강주간·학교 캠페인용 짧은 세로형 홍보영상 제작</li>
+  </ul></div>
   <a class="ai-tool-link" href="https://flow.google.com/" target="_blank" rel="noopener noreferrer">Google Flow 바로가기 ↗</a>
 </article>
 
@@ -520,6 +574,13 @@ body{font-size:18px;line-height:1.78;letter-spacing:-.012em;background:linear-gr
   </div>
   <p class="ai-tool-desc">사진과 스토리 아이디어를 활용해 AI 영상 콘텐츠를 제작할 수 있는 서비스입니다. 학생 참여형 보건교육 영상, 건강 캠페인 영상, 스토리형 홍보영상 실습에 활용할 수 있습니다.</p>
   <div class="ai-tool-services"><span>사진 기반 AI 영상</span><span>스토리 영상 제작</span><span>보건교육 홍보영상</span><span>학생 참여형 콘텐츠</span><span>짧은 영상 콘텐츠</span></div>
+  <div class="ai-tool-use"><div class="ai-tool-use-title">보건교사에게 특히 유용한 업무</div><ul>
+    <li><b>보건교육 스토리 영상</b>: 건강습관·감염병 예방·마음건강 메시지를 이야기형 영상으로 구성</li>
+    <li><b>사진 기반 영상</b>: 학교 행사·보건교육 활동 사진을 활용해 짧은 기록·홍보영상으로 제작</li>
+    <li><b>학생 참여형 콘텐츠</b>: 학생이 만든 스토리·캐릭터·장면 아이디어를 연결해 프로젝트 결과물 제작</li>
+    <li><b>나레이션 영상</b>: 장면 설명과 음성을 결합해 학부모 안내·학생 교육용 콘텐츠 제작</li>
+    <li><b>짧은 캠페인 영상</b>: 카드뉴스·이미지 자료를 20~30초 보건 캠페인 영상으로 확장</li>
+  </ul></div>
   <a class="ai-tool-link" href="https://vstory.io/ko/" target="_blank" rel="noopener noreferrer">vStory AI 바로가기 ↗</a>
 </article>
 </div>
@@ -566,14 +627,6 @@ body{font-size:18px;line-height:1.78;letter-spacing:-.012em;background:linear-gr
         </div>
       </div>
       <div class="google-clarity-note"><b>학교·기관 이용 참고</b><br>개인용 외에 ChatGPT Business·Enterprise·Edu 계열도 있습니다. 학교나 교육기관에서 조직 단위로 도입할 경우 개인 요금제보다 보안·관리·계정 운영 정책을 함께 검토하는 것이 좋습니다. 실제 한국 결제금액은 환율·세금·결제 플랫폼에 따라 달라질 수 있습니다.</div>
-      <div class="use-title">보건교사에게 특히 유용한 업무</div>
-      <ul class="use-list">
-        <li><b>문서 실무</b>: 가정통신문·보건소식지·교직원 안내문·회의자료의 초안 작성과 표현 교정</li>
-        <li><b>자료 분석</b>: PDF·표·문서 업로드 후 핵심내용 요약, 비교표 제작, 보건수업용 재구성</li>
-        <li><b>수업 설계</b>: 학생참여형 보건수업 아이디어·퀴즈·활동지·평가기준·수업지도안 제작</li>
-        <li><b>콘텐츠 제작</b>: 카드뉴스·이미지·웹페이지·웹앱·간단한 자동화·코딩 실습</li>
-        <li><b>심화 활용</b>: Deep Research와 고급 추론을 활용한 교육자료 조사·근거 정리·프로젝트 기획</li>
-      </ul>
       <a class="price-link" href="https://chatgpt.com/ko-KR/pricing/" target="_blank" rel="noopener noreferrer">ChatGPT 공식 요금제 확인 ↗</a>
     </article>
 
@@ -603,13 +656,6 @@ body{font-size:18px;line-height:1.78;letter-spacing:-.012em;background:linear-gr
         </div>
       </div>
       <div class="google-clarity-note"><b>가격·용량 표기 안내</b><br>2026년 9월 Google의 한국어 공식 페이지는 노출 경로·계정에 따라 일부 요금제의 저장용량·가격 표기가 다르게 보일 수 있습니다. 현재 Google One 요금제 페이지에는 AI Plus <b>US$9.99/월</b>, AI Pro <b>US$19.99/월</b>이 표시되며, Google AI 전용 페이지에는 Plus 400GB·Pro 5TB·Ultra 20TB부터로 안내되는 화면도 있습니다. 따라서 실제 가입 시 본인 계정의 최종 결제 화면을 기준으로 확인하세요.</div>
-      <div class="use-title">보건교사에게 특히 유용한 업무</div>
-      <ul class="use-list">
-        <li><b>Gemini Canvas</b>: 보건수업 퀴즈·체크리스트·보건실 웹앱 프로토타입 제작</li>
-        <li><b>Deep Research</b>: 보건교육 주제 조사, 근거자료 탐색, 수업자료 구조화</li>
-        <li><b>Google Workspace 연계</b>: Gmail·Docs·Drive 중심 공지문·회의자료·업무문서 작성 보조</li>
-        <li><b>창작 기능</b>: 보건교육 이미지·음악·영상 아이디어 및 Flow 연계 콘텐츠 제작</li>
-      </ul>
       <div class="official-links">
         <a class="price-link" href="https://one.google.com/about/google-ai-plans/" target="_blank" rel="noopener noreferrer">Google AI 요금제 상세 ↗</a>
         <a class="price-link secondary" href="https://one.google.com/about/plans?hl=ko" target="_blank" rel="noopener noreferrer">Google One 가격 확인 ↗</a>
@@ -642,14 +688,6 @@ body{font-size:18px;line-height:1.78;letter-spacing:-.012em;background:linear-gr
         </div>
       </div>
       <div class="google-clarity-note"><b>Claude 요금제 이용 참고</b><br>Claude Pro·Max 구독은 웹·데스크톱·모바일의 Claude 사용을 위한 개인 구독입니다. <b>Claude API와 Console 사용료는 별도</b>이며 개인 구독에 포함되지 않습니다. 조직용으로는 Team·Enterprise 플랜이 별도로 제공됩니다.</div>
-      <div class="use-title">보건교사에게 특히 유용한 업무</div>
-      <ul class="use-list">
-        <li><b>긴 문서 읽기</b>: 교육자료·회의자료·정책문서·연수자료를 구조화하고 핵심만 요약</li>
-        <li><b>문장 다듬기</b>: 가정통신문·보건자료를 학부모·학생이 이해하기 쉬운 문장으로 변환</li>
-        <li><b>비교·정리</b>: 여러 자료의 공통점·차이점을 비교하고 표·체크리스트·의사결정 항목으로 재구성</li>
-        <li><b>수업자료 재구성</b>: 긴 설명자료를 학년별 수준에 맞는 활동지·질문·토론자료로 변환</li>
-        <li><b>Artifacts·코딩</b>: 교육용 간단 웹페이지·도구·프로토타입 제작과 코드 수정</li>
-      </ul>
       <a class="price-link" href="https://claude.com/ko/pricing" target="_blank" rel="noopener noreferrer">Claude 공식 요금제 확인 ↗</a>
     </article>
   </div>
