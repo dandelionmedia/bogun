@@ -1716,6 +1716,18 @@ body{color:#17334d;-webkit-font-smoothing:antialiased}
 .prompt-card.example-on .prompt-controls{background:#f9fffc}
 @media(max-width:820px){.prompt-editor{padding:17px 15px;font-size:15.6px;min-height:210px}.prompt-controls{padding:14px 14px 9px}.example-toggle{font-size:14px;padding:12px}.prompt-card .card-actions{padding:8px 14px 16px}.prompt-card .card-actions .copy-btn{min-height:52px!important;font-size:15px!important}}
 @media print{.prompt-controls,.card-actions{display:none!important}.prompt-editor{height:auto;overflow:visible;min-height:0}}
+</style><style>
+/* 2026-11 expanded school practice prompts */
+#s9 .section-mini-links{max-height:280px;overflow:auto;padding:7px;scrollbar-width:thin}
+#s9 .section-mini-index{position:relative}
+#s9 .prompt-card .prompt-editor{min-height:350px}
+#s9 .practice-filters{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 22px}
+#s9 .practice-filter{border:1px solid #d2e2ee;background:#fff;color:#315b79;border-radius:99px;padding:9px 13px;font-size:14px;font-weight:800;cursor:pointer}
+#s9 .practice-filter.selected{color:white;background:#145f9c;border-color:#145f9c}
+#s9 .practice-counter{font-size:14px;color:#5e7487;margin:8px 0 0;font-weight:700}
+#s9 .prompt-card.category-hidden{display:none!important}
+#s9 .practice-filter:focus-visible{outline:3px solid #7dc5fa;outline-offset:2px}
+@media(max-width:820px){#s9 .section-mini-links{max-height:220px}#s9 .practice-filter{font-size:12.5px;padding:8px 10px}}
 </style></head>
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
@@ -1724,7 +1736,7 @@ body{color:#17334d;-webkit-font-smoothing:antialiased}
 <aside aria-label="강의 목차" class="sidebar" id="sidebar">
 <div class="brand"><small>AI콘텐츠마케팅연구소 · 유쌤클래스</small><h2>보건교사 AI 활용<br/>AI 실습 프롬프트</h2><p class="brand-subtitle">실습 주제별 상세 목차 · 클릭하여 바로 이동</p></div>
 <div class="toc-title">☰ 실습 카테고리 목차</div>
-<div class="toc-controls"><label class="toc-search-label" for="tocSearch">목차에서 항목 찾기</label><div class="toc-search-row"><input aria-label="세부 목차 검색" autocomplete="off" id="tocSearch" placeholder="목차 검색 · 예: 손씻기, 퀴즈" type="search"/><button aria-label="목차 검색 지우기" id="tocClear" title="목차 검색 지우기" type="button">×</button></div><div class="toc-control-actions"><button id="expandToc" type="button">전체 펼치기</button><button id="collapseToc" type="button">전체 접기</button></div><p aria-live="polite" class="toc-count" id="tocCount"></p></div><nav class="toc" id="toc"><details class="toc-group" data-group="tools" open=""><summary><span class="toc-group-label"><span class="toc-num">AI</span><span class="toc-group-name">AI도구툴 · 수업 실습 바로가기</span></span><span class="toc-group-count">도구</span></summary><div class="toc-children"><a class="toc-parent-link" href="#tools">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#pricing">AI 요금제 · 업무 활용</a><a class="toc-child-link" href="#tool-1">ChatGPT</a><a class="toc-child-link" href="#tool-2">Google Gemini</a><a class="toc-child-link" href="#tool-3">Claude</a><a class="toc-child-link" href="#tool-4">Google Flow</a><a class="toc-child-link" href="#tool-5">GitHub</a><a class="toc-child-link" href="#tool-6">Google Apps Script</a><a class="toc-child-link" href="#tool-7">vStory AI</a></div></details><details class="toc-group" data-group="s1" open=""><summary><span class="toc-group-label"><span class="toc-num">01</span><span class="toc-group-name">보건교사와 AI · 좋은 프롬프트</span></span><span class="toc-group-count">3</span></summary><div class="toc-children"><a class="toc-parent-link" href="#s1">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#s1-p01" title="좋은 프롬프트 6요소 기본 템플릿"><span class="toc-child-index">01</span><span>좋은 프롬프트 6요소 기본 템플릿</span></a><a class="toc-child-link" href="#s1-p02" title="첫 결과를 학교 문서에 맞게 다듬는 수정 프롬프트"><span class="toc-child-index">02</span><span>첫 결과를 학교 문서에 맞게 다듬는 수정 프롬프트</span></a><a class="toc-child-link" href="#s1-p03" title="기초실습 · 좋은 프롬프트 작성공식"><span class="toc-child-index">03</span><span>기초실습 · 좋은 프롬프트 작성공식</span></a></div></details><details class="toc-group" data-group="s2"><summary><span class="toc-group-label"><span class="toc-num">02</span><span class="toc-group-name">AI를 활용한 보건문서 · 가정통신문</span></span><span class="toc-group-count">4</span></summary><div class="toc-children"><a class="toc-parent-link" href="#s2">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#s2-p01" title="감염병 예방 가정통신문 만들기"><span class="toc-child-index">01</span><span>감염병 예방 가정통신문 만들기</span></a><a class="toc-child-link" href="#s2-p02" title="가정통신문을 한 번 더 다듬기"><span class="toc-child-index">02</span><span>가정통신문을 한 번 더 다듬기</span></a><a class="toc-child-link" href="#s2-p03" title="응급상황 이후 보호자 안내문 초안"><span class="toc-child-index">03</span><span>응급상황 이후 보호자 안내문 초안</span></a><a class="toc-child-link" href="#s2-p04" title="첨부 실습 ① 감염병 예방 가정통신문 제작"><span class="toc-child-index">04</span><span>첨부 실습 ① 감염병 예방 가정통신문 제작</span></a></div></details><details class="toc-group" data-group="s3"><summary><span class="toc-group-label"><span class="toc-num">03</span><span class="toc-group-name">학생참여형 보건교육 지도안 만들기</span></span><span class="toc-group-count">4</span></summary><div class="toc-children"><a class="toc-parent-link" href="#s3">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#s3-p01" title="학생참여형 보건교육 지도안 만들기"><span class="toc-child-index">01</span><span>학생참여형 보건교육 지도안 만들기</span></a><a class="toc-child-link" href="#s3-p02" title="설명식 수업을 참여형 활동으로 바꾸기"><span class="toc-child-index">02</span><span>설명식 수업을 참여형 활동으로 바꾸기</span></a><a class="toc-child-link" href="#s3-p03" title="수업 후 형성평가·자기점검 만들기"><span class="toc-child-index">03</span><span>수업 후 형성평가·자기점검 만들기</span></a><a class="toc-child-link" href="#s3-p04" title="첨부 실습 ② 보건교육 지도안(교수학습 계획안) 제작"><span class="toc-child-index">04</span><span>첨부 실습 ② 보건교육 지도안(교수학습 계획안) 제작</span></a></div></details><details class="toc-group" data-group="s4"><summary><span class="toc-group-label"><span class="toc-num">04</span><span class="toc-group-name">학교보건위원회 · 안내문 · 보건실 이용수칙</span></span><span class="toc-group-count">6</span></summary><div class="toc-children"><a class="toc-parent-link" href="#s4">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#s4-p01" title="학교보건위원회 회의자료 구조화"><span class="toc-child-index">01</span><span>학교보건위원회 회의자료 구조화</span></a><a class="toc-child-link" href="#s4-p02" title="식품알레르기·응급처치 안내문"><span class="toc-child-index">02</span><span>식품알레르기·응급처치 안내문</span></a><a class="toc-child-link" href="#s4-p03" title="딱딱한 보건실 규정을 학생이 이해하는 이용수칙으로 바꾸기"><span class="toc-child-index">03</span><span>딱딱한 보건실 규정을 학생이 이해하는 이용수칙으로 바꾸기</span></a><a class="toc-child-link" href="#s4-p04" title="첨부 실습 ③ 학교보건위원회 회의자료 제작"><span class="toc-child-index">04</span><span>첨부 실습 ③ 학교보건위원회 회의자료 제작</span></a><a class="toc-child-link" href="#s4-p05" title="첨부 실습 ④ 식품알레르기 · 응급처치 안내문 제작"><span class="toc-child-index">05</span><span>첨부 실습 ④ 식품알레르기 · 응급처치 안내문 제작</span></a><a class="toc-child-link" href="#s4-p06" title="첨부 실습 ⑤ 보건실 이용수칙 안내문 제작"><span class="toc-child-index">06</span><span>첨부 실습 ⑤ 보건실 이용수칙 안내문 제작</span></a></div></details><details class="toc-group" data-group="s5"><summary><span class="toc-group-label"><span class="toc-num">05</span><span class="toc-group-name">생성형 AI로 보건 이미지 콘텐츠 제작</span></span><span class="toc-group-count">7</span></summary><div class="toc-children"><a class="toc-parent-link" href="#s5">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#s5-p01" title="감염병 예방 카드뉴스 5장 기획"><span class="toc-child-index">01</span><span>감염병 예방 카드뉴스 5장 기획</span></a><a class="toc-child-link" href="#s5-p02" title="보건 이미지 생성 프롬프트 기본 공식"><span class="toc-child-index">02</span><span>보건 이미지 생성 프롬프트 기본 공식</span></a><a class="toc-child-link" href="#s5-p03" title="손 씻기 카드뉴스 이미지 예시"><span class="toc-child-index">03</span><span>손 씻기 카드뉴스 이미지 예시</span></a><a class="toc-child-link" href="#s5-p04" title="학교 보건 캠페인 포스터 기획 + 이미지 프롬프트"><span class="toc-child-index">04</span><span>학교 보건 캠페인 포스터 기획 + 이미지 프롬프트</span></a><a class="toc-child-link" href="#s5-p05" title="첨부 실습 · 올바른 손씻기 6장 카드뉴스"><span class="toc-child-index">05</span><span>첨부 실습 · 올바른 손씻기 6장 카드뉴스</span></a><a class="toc-child-link" href="#s5-p06" title="첨부 실습 · 카드뉴스 이미지 만들기"><span class="toc-child-index">06</span><span>첨부 실습 · 카드뉴스 이미지 만들기</span></a><a class="toc-child-link" href="#s5-p07" title="첨부 실습 · 학교 보건행사 홍보 포스터 만들기"><span class="toc-child-index">07</span><span>첨부 실습 · 학교 보건행사 홍보 포스터 만들기</span></a></div></details><details class="toc-group" data-group="s6"><summary><span class="toc-group-label"><span class="toc-num">06</span><span class="toc-group-name">생성형 AI 활용 보건영상 콘텐츠 제작</span></span><span class="toc-group-count">7</span></summary><div class="toc-children"><a class="toc-parent-link" href="#s6">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#s6-p01" title="30초 보건교육 영상 아이디어 5개 받기"><span class="toc-child-index">01</span><span>30초 보건교육 영상 아이디어 5개 받기</span></a><a class="toc-child-link" href="#s6-p02" title="영상 전체를 한 문장 로그라인으로 정리"><span class="toc-child-index">02</span><span>영상 전체를 한 문장 로그라인으로 정리</span></a><a class="toc-child-link" href="#s6-p03" title="영상 주인공 캐릭터 명세 + 이미지 프롬프트"><span class="toc-child-index">03</span><span>영상 주인공 캐릭터 명세 + 이미지 프롬프트</span></a><a class="toc-child-link" href="#s6-p04" title="20~30초 보건영상 6장면 스토리보드"><span class="toc-child-index">04</span><span>20~30초 보건영상 6장면 스토리보드</span></a><a class="toc-child-link" href="#s6-p05" title="30초 영상 내레이션·자막 다듬기"><span class="toc-child-index">05</span><span>30초 영상 내레이션·자막 다듬기</span></a><a class="toc-child-link" href="#s6-p06" title="첨부 실습 · 보건홍보영상 단계별 기획 마스터 프롬프트"><span class="toc-child-index">06</span><span>첨부 실습 · 보건홍보영상 단계별 기획 마스터 프롬프트</span></a><a class="toc-child-link" href="#s6-p07" title="첨부 실습 · 사진 기반 6패널 애니메이션 캐릭터시트"><span class="toc-child-index">07</span><span>첨부 실습 · 사진 기반 6패널 애니메이션 캐릭터시트</span></a></div></details><details class="toc-group" data-group="s7"><summary><span class="toc-group-label"><span class="toc-num">07</span><span class="toc-group-name">보건음악제작 · Google Gemini 음악 만들기</span></span><span class="toc-group-count">13</span></summary><div class="toc-children"><a class="toc-parent-link" href="#s7">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#s7-p01" title="보건교육용 음악 마스터 프롬프트"><span class="toc-child-index">01</span><span>보건교육용 음악 마스터 프롬프트</span></a><a class="toc-child-link" href="#s7-p02" title="초등학생 손씻기 실천송"><span class="toc-child-index">02</span><span>초등학생 손씻기 실천송</span></a><a class="toc-child-link" href="#s7-p03" title="감염병 예방 건강생활송"><span class="toc-child-index">03</span><span>감염병 예방 건강생활송</span></a><a class="toc-child-link" href="#s7-p04" title="양치습관 구강건강송"><span class="toc-child-index">04</span><span>양치습관 구강건강송</span></a><a class="toc-child-link" href="#s7-p05" title="중학생 수면·스마트폰 건강송"><span class="toc-child-index">05</span><span>중학생 수면·스마트폰 건강송</span></a><a class="toc-child-link" href="#s7-p06" title="스트레스·마음건강 자기돌봄송"><span class="toc-child-index">06</span><span>스트레스·마음건강 자기돌봄송</span></a><a class="toc-child-link" href="#s7-p07" title="특수학교·통합학급 쉬운 반복형 건강송"><span class="toc-child-index">07</span><span>특수학교·통합학급 쉬운 반복형 건강송</span></a><a class="toc-child-link" href="#s7-p08" title="보건실 이용수칙 안내송"><span class="toc-child-index">08</span><span>보건실 이용수칙 안내송</span></a><a class="toc-child-link" href="#s7-p09" title="식품알레르기 안전·배려송"><span class="toc-child-index">09</span><span>식품알레르기 안전·배려송</span></a><a class="toc-child-link" href="#s7-p10" title="사춘기 몸의 변화·존중송"><span class="toc-child-index">10</span><span>사춘기 몸의 변화·존중송</span></a><a class="toc-child-link" href="#s7-p11" title="학교 건강캠페인 징글 만들기"><span class="toc-child-index">11</span><span>학교 건강캠페인 징글 만들기</span></a><a class="toc-child-link" href="#s7-p12" title="보건교육 영상용 BGM 만들기"><span class="toc-child-index">12</span><span>보건교육 영상용 BGM 만들기</span></a><a class="toc-child-link" href="#s7-p13" title="생성된 보건음악 2차 수정 프롬프트"><span class="toc-child-index">13</span><span>생성된 보건음악 2차 수정 프롬프트</span></a></div></details><details class="toc-group" data-group="s8"><summary><span class="toc-group-label"><span class="toc-num">08</span><span class="toc-group-name">바이브코딩 활용 보건콘텐츠 웹페이지 제작</span></span><span class="toc-group-count">63</span></summary><div class="toc-children"><a class="toc-parent-link" href="#s8">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#s8-p01" title="우리학교 건강생활 웹페이지 만들기"><span class="toc-child-index">01</span><span>우리학교 건강생활 웹페이지 만들기</span></a><a class="toc-child-link" href="#s8-p02" title="완성된 웹페이지를 대화로 수정하기"><span class="toc-child-index">02</span><span>완성된 웹페이지를 대화로 수정하기</span></a><a class="toc-child-link" href="#s8-p03" title="보건교육 웹페이지 공개 전 점검"><span class="toc-child-index">03</span><span>보건교육 웹페이지 공개 전 점검</span></a><a class="toc-child-link" href="#s8-p04" title="보건수업 OX·객관식 퀴즈 앱 · 1차 제작"><span class="toc-child-index">04</span><span>보건수업 OX·객관식 퀴즈 앱 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p05" title="보건수업 OX·객관식 퀴즈 앱 · 2차 수정"><span class="toc-child-index">05</span><span>보건수업 OX·객관식 퀴즈 앱 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p06" title="응급상황 선택형 시나리오 앱 · 1차 제작"><span class="toc-child-index">06</span><span>응급상황 선택형 시나리오 앱 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p07" title="응급상황 선택형 시나리오 앱 · 2차 수정"><span class="toc-child-index">07</span><span>응급상황 선택형 시나리오 앱 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p08" title="감염예방 생활습관 체크 앱 · 1차 제작"><span class="toc-child-index">08</span><span>감염예방 생활습관 체크 앱 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p09" title="감염예방 생활습관 체크 앱 · 2차 수정"><span class="toc-child-index">09</span><span>감염예방 생활습관 체크 앱 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p10" title="특수학교용 시각적 위생 순서 앱 · 1차 제작"><span class="toc-child-index">10</span><span>특수학교용 시각적 위생 순서 앱 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p11" title="특수학교용 시각적 위생 순서 앱 · 2차 수정"><span class="toc-child-index">11</span><span>특수학교용 시각적 위생 순서 앱 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p12" title="흡연·전자담배 예방 의사결정 게임 · 1차 제작"><span class="toc-child-index">12</span><span>흡연·전자담배 예방 의사결정 게임 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p13" title="흡연·전자담배 예방 의사결정 게임 · 2차 수정"><span class="toc-child-index">13</span><span>흡연·전자담배 예방 의사결정 게임 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p14" title="약물 오남용 예방 카드 학습 앱 · 1차 제작"><span class="toc-child-index">14</span><span>약물 오남용 예방 카드 학습 앱 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p15" title="약물 오남용 예방 카드 학습 앱 · 2차 수정"><span class="toc-child-index">15</span><span>약물 오남용 예방 카드 학습 앱 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p16" title="보건실 방문 사유 통계 대시보드 · 1차 제작"><span class="toc-child-index">16</span><span>보건실 방문 사유 통계 대시보드 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p17" title="보건실 방문 사유 통계 대시보드 · 2차 수정"><span class="toc-child-index">17</span><span>보건실 방문 사유 통계 대시보드 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p18" title="건강교육 랜덤 질문 룰렛 · 1차 제작"><span class="toc-child-index">18</span><span>건강교육 랜덤 질문 룰렛 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p19" title="건강교육 랜덤 질문 룰렛 · 2차 수정"><span class="toc-child-index">19</span><span>건강교육 랜덤 질문 룰렛 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p20" title="교직원 응급처치 절차 체크리스트 · 1차 제작"><span class="toc-child-index">20</span><span>교직원 응급처치 절차 체크리스트 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p21" title="교직원 응급처치 절차 체크리스트 · 2차 수정"><span class="toc-child-index">21</span><span>교직원 응급처치 절차 체크리스트 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p22" title="보건 캠페인 아이디어 보드 · 1차 제작"><span class="toc-child-index">22</span><span>보건 캠페인 아이디어 보드 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p23" title="보건 캠페인 아이디어 보드 · 2차 수정"><span class="toc-child-index">23</span><span>보건 캠페인 아이디어 보드 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p24" title="보건교육 출구티켓 앱 · 1차 제작"><span class="toc-child-index">24</span><span>보건교육 출구티켓 앱 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p25" title="보건교육 출구티켓 앱 · 2차 수정"><span class="toc-child-index">25</span><span>보건교육 출구티켓 앱 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p26" title="보건소식 카드형 안내 웹페이지 · 1차 제작"><span class="toc-child-index">26</span><span>보건소식 카드형 안내 웹페이지 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p27" title="보건소식 카드형 안내 웹페이지 · 2차 수정"><span class="toc-child-index">27</span><span>보건소식 카드형 안내 웹페이지 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p28" title="디자인을 보건교육용으로 정리"><span class="toc-child-index">28</span><span>디자인을 보건교육용으로 정리</span></a><a class="toc-child-link" href="#s8-p29" title="초등학생용으로 쉽게"><span class="toc-child-index">29</span><span>초등학생용으로 쉽게</span></a><a class="toc-child-link" href="#s8-p30" title="특수교육 접근성 강화"><span class="toc-child-index">30</span><span>특수교육 접근성 강화</span></a><a class="toc-child-link" href="#s8-p31" title="오류 수정"><span class="toc-child-index">31</span><span>오류 수정</span></a><a class="toc-child-link" href="#s8-p32" title="인쇄 기능 추가"><span class="toc-child-index">32</span><span>인쇄 기능 추가</span></a><a class="toc-child-link" href="#s8-p33" title="학교급 변환"><span class="toc-child-index">33</span><span>학교급 변환</span></a><a class="toc-child-link" href="#s8-p34" title="보건수업 미니 퀴즈 HTML 앱 · 1차 제작"><span class="toc-child-index">34</span><span>보건수업 미니 퀴즈 HTML 앱 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p35" title="보건수업 미니 퀴즈 HTML 앱 · 2차 디버깅·개선"><span class="toc-child-index">35</span><span>보건수업 미니 퀴즈 HTML 앱 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p36" title="보건교육 수업안 생성 보조 앱 · 1차 제작"><span class="toc-child-index">36</span><span>보건교육 수업안 생성 보조 앱 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p37" title="보건교육 수업안 생성 보조 앱 · 2차 디버깅·개선"><span class="toc-child-index">37</span><span>보건교육 수업안 생성 보조 앱 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p38" title="보건실 물품 재고 체크 앱 · 1차 제작"><span class="toc-child-index">38</span><span>보건실 물품 재고 체크 앱 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p39" title="보건실 물품 재고 체크 앱 · 2차 디버깅·개선"><span class="toc-child-index">39</span><span>보건실 물품 재고 체크 앱 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p40" title="감염병 예방 캠페인 체크리스트 · 1차 제작"><span class="toc-child-index">40</span><span>감염병 예방 캠페인 체크리스트 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p41" title="감염병 예방 캠페인 체크리스트 · 2차 디버깅·개선"><span class="toc-child-index">41</span><span>감염병 예방 캠페인 체크리스트 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p42" title="건강생활 주간 목표 트래커 · 1차 제작"><span class="toc-child-index">42</span><span>건강생활 주간 목표 트래커 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p43" title="건강생활 주간 목표 트래커 · 2차 디버깅·개선"><span class="toc-child-index">43</span><span>건강생활 주간 목표 트래커 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p44" title="보건업무 일정 타임라인 · 1차 제작"><span class="toc-child-index">44</span><span>보건업무 일정 타임라인 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p45" title="보건업무 일정 타임라인 · 2차 디버깅·개선"><span class="toc-child-index">45</span><span>보건업무 일정 타임라인 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p46" title="교직원 보건연수 미니테스트 · 1차 제작"><span class="toc-child-index">46</span><span>교직원 보건연수 미니테스트 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p47" title="교직원 보건연수 미니테스트 · 2차 디버깅·개선"><span class="toc-child-index">47</span><span>교직원 보건연수 미니테스트 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p48" title="특수학교 큰버튼 의사표현 보조판 · 1차 제작"><span class="toc-child-index">48</span><span>특수학교 큰버튼 의사표현 보조판 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p49" title="특수학교 큰버튼 의사표현 보조판 · 2차 디버깅·개선"><span class="toc-child-index">49</span><span>특수학교 큰버튼 의사표현 보조판 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p50" title="학교 건강주간 아이디어 생성 폼 · 1차 제작"><span class="toc-child-index">50</span><span>학교 건강주간 아이디어 생성 폼 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p51" title="학교 건강주간 아이디어 생성 폼 · 2차 디버깅·개선"><span class="toc-child-index">51</span><span>학교 건강주간 아이디어 생성 폼 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p52" title="가상 CSV 보건실 방문 데이터 분석 웹앱 · 1차 제작"><span class="toc-child-index">52</span><span>가상 CSV 보건실 방문 데이터 분석 웹앱 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p53" title="가상 CSV 보건실 방문 데이터 분석 웹앱 · 2차 디버깅·개선"><span class="toc-child-index">53</span><span>가상 CSV 보건실 방문 데이터 분석 웹앱 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p54" title="보건소식 템플릿 웹페이지 제작기 · 1차 제작"><span class="toc-child-index">54</span><span>보건소식 템플릿 웹페이지 제작기 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p55" title="보건소식 템플릿 웹페이지 제작기 · 2차 디버깅·개선"><span class="toc-child-index">55</span><span>보건소식 템플릿 웹페이지 제작기 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p56" title="보건수업 타이머·활동 진행판 · 1차 제작"><span class="toc-child-index">56</span><span>보건수업 타이머·활동 진행판 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p57" title="보건수업 타이머·활동 진행판 · 2차 디버깅·개선"><span class="toc-child-index">57</span><span>보건수업 타이머·활동 진행판 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p58" title="한 파일로 다시 정리"><span class="toc-child-index">58</span><span>한 파일로 다시 정리</span></a><a class="toc-child-link" href="#s8-p59" title="초보교사용 주석 추가"><span class="toc-child-index">59</span><span>초보교사용 주석 추가</span></a><a class="toc-child-link" href="#s8-p60" title="문항만 교체"><span class="toc-child-index">60</span><span>문항만 교체</span></a><a class="toc-child-link" href="#s8-p61" title="접근성 점검"><span class="toc-child-index">61</span><span>접근성 점검</span></a><a class="toc-child-link" href="#s8-p62" title="localStorage 제거"><span class="toc-child-index">62</span><span>localStorage 제거</span></a><a class="toc-child-link" href="#s8-p63" title="인쇄용 결과화면"><span class="toc-child-index">63</span><span>인쇄용 결과화면</span></a></div></details><details class="toc-group" data-group="s9"><summary><span class="toc-group-label"><span class="toc-num">09</span><span class="toc-group-name">학교 현장 보건실무 핵심 프롬프트</span></span><span class="toc-group-count">8</span></summary><div class="toc-children"><a class="toc-parent-link" href="#s9">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#s9-p01" title="보건실 일일 업무 메모 정리"><span class="toc-child-index">01</span><span>보건실 일일 업무 메모 정리</span></a><a class="toc-child-link" href="#s9-p02" title="학생 건강상담 질문 설계"><span class="toc-child-index">02</span><span>학생 건강상담 질문 설계</span></a><a class="toc-child-link" href="#s9-p03" title="보건실 월간 이용 통계 요약"><span class="toc-child-index">03</span><span>보건실 월간 이용 통계 요약</span></a><a class="toc-child-link" href="#s9-p04" title="학교급별 보건교육 연간 주제 틀 만들기"><span class="toc-child-index">04</span><span>학교급별 보건교육 연간 주제 틀 만들기</span></a><a class="toc-child-link" href="#s9-p05" title="특수교육대상 학생용 쉬운 보건자료로 변환"><span class="toc-child-index">05</span><span>특수교육대상 학생용 쉬운 보건자료로 변환</span></a><a class="toc-child-link" href="#s9-p06" title="학부모 상담 전 대화 구조 만들기"><span class="toc-child-index">06</span><span>학부모 상담 전 대화 구조 만들기</span></a><a class="toc-child-link" href="#s9-p07" title="보건실 물품·소모품 점검표 만들기"><span class="toc-child-index">07</span><span>보건실 물품·소모품 점검표 만들기</span></a><a class="toc-child-link" href="#s9-p08" title="학교 건강캠페인 운영계획 초안"><span class="toc-child-index">08</span><span>학교 건강캠페인 운영계획 초안</span></a></div></details><details class="toc-group" data-group="s10"><summary><span class="toc-group-label"><span class="toc-num">10</span><span class="toc-group-name">AI 결과 검수 · 개인정보 · 정확성 점검</span></span><span class="toc-group-count">3</span></summary><div class="toc-children"><a class="toc-parent-link" href="#s10">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#s10-p01" title="AI가 만든 보건자료 최종 검수 프롬프트"><span class="toc-child-index">01</span><span>AI가 만든 보건자료 최종 검수 프롬프트</span></a><a class="toc-child-link" href="#s10-p02" title="AI 입력 전 개인정보 비식별화 점검"><span class="toc-child-index">02</span><span>AI 입력 전 개인정보 비식별화 점검</span></a><a class="toc-child-link" href="#s10-p03" title="내일부터 바로 해볼 한 가지 정하기"><span class="toc-child-index">03</span><span>내일부터 바로 해볼 한 가지 정하기</span></a></div></details></nav>
+<div class="toc-controls"><label class="toc-search-label" for="tocSearch">목차에서 항목 찾기</label><div class="toc-search-row"><input aria-label="세부 목차 검색" autocomplete="off" id="tocSearch" placeholder="목차 검색 · 예: 손씻기, 퀴즈" type="search"/><button aria-label="목차 검색 지우기" id="tocClear" title="목차 검색 지우기" type="button">×</button></div><div class="toc-control-actions"><button id="expandToc" type="button">전체 펼치기</button><button id="collapseToc" type="button">전체 접기</button></div><p aria-live="polite" class="toc-count" id="tocCount"></p></div><nav class="toc" id="toc"><details class="toc-group" data-group="tools" open=""><summary><span class="toc-group-label"><span class="toc-num">AI</span><span class="toc-group-name">AI도구툴 · 수업 실습 바로가기</span></span><span class="toc-group-count">도구</span></summary><div class="toc-children"><a class="toc-parent-link" href="#tools">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#pricing">AI 요금제 · 업무 활용</a><a class="toc-child-link" href="#tool-1">ChatGPT</a><a class="toc-child-link" href="#tool-2">Google Gemini</a><a class="toc-child-link" href="#tool-3">Claude</a><a class="toc-child-link" href="#tool-4">Google Flow</a><a class="toc-child-link" href="#tool-5">GitHub</a><a class="toc-child-link" href="#tool-6">Google Apps Script</a><a class="toc-child-link" href="#tool-7">vStory AI</a></div></details><details class="toc-group" data-group="s1" open=""><summary><span class="toc-group-label"><span class="toc-num">01</span><span class="toc-group-name">보건교사와 AI · 좋은 프롬프트</span></span><span class="toc-group-count">3</span></summary><div class="toc-children"><a class="toc-parent-link" href="#s1">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#s1-p01" title="좋은 프롬프트 6요소 기본 템플릿"><span class="toc-child-index">01</span><span>좋은 프롬프트 6요소 기본 템플릿</span></a><a class="toc-child-link" href="#s1-p02" title="첫 결과를 학교 문서에 맞게 다듬는 수정 프롬프트"><span class="toc-child-index">02</span><span>첫 결과를 학교 문서에 맞게 다듬는 수정 프롬프트</span></a><a class="toc-child-link" href="#s1-p03" title="기초실습 · 좋은 프롬프트 작성공식"><span class="toc-child-index">03</span><span>기초실습 · 좋은 프롬프트 작성공식</span></a></div></details><details class="toc-group" data-group="s2"><summary><span class="toc-group-label"><span class="toc-num">02</span><span class="toc-group-name">AI를 활용한 보건문서 · 가정통신문</span></span><span class="toc-group-count">4</span></summary><div class="toc-children"><a class="toc-parent-link" href="#s2">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#s2-p01" title="감염병 예방 가정통신문 만들기"><span class="toc-child-index">01</span><span>감염병 예방 가정통신문 만들기</span></a><a class="toc-child-link" href="#s2-p02" title="가정통신문을 한 번 더 다듬기"><span class="toc-child-index">02</span><span>가정통신문을 한 번 더 다듬기</span></a><a class="toc-child-link" href="#s2-p03" title="응급상황 이후 보호자 안내문 초안"><span class="toc-child-index">03</span><span>응급상황 이후 보호자 안내문 초안</span></a><a class="toc-child-link" href="#s2-p04" title="첨부 실습 ① 감염병 예방 가정통신문 제작"><span class="toc-child-index">04</span><span>첨부 실습 ① 감염병 예방 가정통신문 제작</span></a></div></details><details class="toc-group" data-group="s3"><summary><span class="toc-group-label"><span class="toc-num">03</span><span class="toc-group-name">학생참여형 보건교육 지도안 만들기</span></span><span class="toc-group-count">4</span></summary><div class="toc-children"><a class="toc-parent-link" href="#s3">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#s3-p01" title="학생참여형 보건교육 지도안 만들기"><span class="toc-child-index">01</span><span>학생참여형 보건교육 지도안 만들기</span></a><a class="toc-child-link" href="#s3-p02" title="설명식 수업을 참여형 활동으로 바꾸기"><span class="toc-child-index">02</span><span>설명식 수업을 참여형 활동으로 바꾸기</span></a><a class="toc-child-link" href="#s3-p03" title="수업 후 형성평가·자기점검 만들기"><span class="toc-child-index">03</span><span>수업 후 형성평가·자기점검 만들기</span></a><a class="toc-child-link" href="#s3-p04" title="첨부 실습 ② 보건교육 지도안(교수학습 계획안) 제작"><span class="toc-child-index">04</span><span>첨부 실습 ② 보건교육 지도안(교수학습 계획안) 제작</span></a></div></details><details class="toc-group" data-group="s4"><summary><span class="toc-group-label"><span class="toc-num">04</span><span class="toc-group-name">학교보건위원회 · 안내문 · 보건실 이용수칙</span></span><span class="toc-group-count">6</span></summary><div class="toc-children"><a class="toc-parent-link" href="#s4">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#s4-p01" title="학교보건위원회 회의자료 구조화"><span class="toc-child-index">01</span><span>학교보건위원회 회의자료 구조화</span></a><a class="toc-child-link" href="#s4-p02" title="식품알레르기·응급처치 안내문"><span class="toc-child-index">02</span><span>식품알레르기·응급처치 안내문</span></a><a class="toc-child-link" href="#s4-p03" title="딱딱한 보건실 규정을 학생이 이해하는 이용수칙으로 바꾸기"><span class="toc-child-index">03</span><span>딱딱한 보건실 규정을 학생이 이해하는 이용수칙으로 바꾸기</span></a><a class="toc-child-link" href="#s4-p04" title="첨부 실습 ③ 학교보건위원회 회의자료 제작"><span class="toc-child-index">04</span><span>첨부 실습 ③ 학교보건위원회 회의자료 제작</span></a><a class="toc-child-link" href="#s4-p05" title="첨부 실습 ④ 식품알레르기 · 응급처치 안내문 제작"><span class="toc-child-index">05</span><span>첨부 실습 ④ 식품알레르기 · 응급처치 안내문 제작</span></a><a class="toc-child-link" href="#s4-p06" title="첨부 실습 ⑤ 보건실 이용수칙 안내문 제작"><span class="toc-child-index">06</span><span>첨부 실습 ⑤ 보건실 이용수칙 안내문 제작</span></a></div></details><details class="toc-group" data-group="s5"><summary><span class="toc-group-label"><span class="toc-num">05</span><span class="toc-group-name">생성형 AI로 보건 이미지 콘텐츠 제작</span></span><span class="toc-group-count">7</span></summary><div class="toc-children"><a class="toc-parent-link" href="#s5">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#s5-p01" title="감염병 예방 카드뉴스 5장 기획"><span class="toc-child-index">01</span><span>감염병 예방 카드뉴스 5장 기획</span></a><a class="toc-child-link" href="#s5-p02" title="보건 이미지 생성 프롬프트 기본 공식"><span class="toc-child-index">02</span><span>보건 이미지 생성 프롬프트 기본 공식</span></a><a class="toc-child-link" href="#s5-p03" title="손 씻기 카드뉴스 이미지 예시"><span class="toc-child-index">03</span><span>손 씻기 카드뉴스 이미지 예시</span></a><a class="toc-child-link" href="#s5-p04" title="학교 보건 캠페인 포스터 기획 + 이미지 프롬프트"><span class="toc-child-index">04</span><span>학교 보건 캠페인 포스터 기획 + 이미지 프롬프트</span></a><a class="toc-child-link" href="#s5-p05" title="첨부 실습 · 올바른 손씻기 6장 카드뉴스"><span class="toc-child-index">05</span><span>첨부 실습 · 올바른 손씻기 6장 카드뉴스</span></a><a class="toc-child-link" href="#s5-p06" title="첨부 실습 · 카드뉴스 이미지 만들기"><span class="toc-child-index">06</span><span>첨부 실습 · 카드뉴스 이미지 만들기</span></a><a class="toc-child-link" href="#s5-p07" title="첨부 실습 · 학교 보건행사 홍보 포스터 만들기"><span class="toc-child-index">07</span><span>첨부 실습 · 학교 보건행사 홍보 포스터 만들기</span></a></div></details><details class="toc-group" data-group="s6"><summary><span class="toc-group-label"><span class="toc-num">06</span><span class="toc-group-name">생성형 AI 활용 보건영상 콘텐츠 제작</span></span><span class="toc-group-count">7</span></summary><div class="toc-children"><a class="toc-parent-link" href="#s6">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#s6-p01" title="30초 보건교육 영상 아이디어 5개 받기"><span class="toc-child-index">01</span><span>30초 보건교육 영상 아이디어 5개 받기</span></a><a class="toc-child-link" href="#s6-p02" title="영상 전체를 한 문장 로그라인으로 정리"><span class="toc-child-index">02</span><span>영상 전체를 한 문장 로그라인으로 정리</span></a><a class="toc-child-link" href="#s6-p03" title="영상 주인공 캐릭터 명세 + 이미지 프롬프트"><span class="toc-child-index">03</span><span>영상 주인공 캐릭터 명세 + 이미지 프롬프트</span></a><a class="toc-child-link" href="#s6-p04" title="20~30초 보건영상 6장면 스토리보드"><span class="toc-child-index">04</span><span>20~30초 보건영상 6장면 스토리보드</span></a><a class="toc-child-link" href="#s6-p05" title="30초 영상 내레이션·자막 다듬기"><span class="toc-child-index">05</span><span>30초 영상 내레이션·자막 다듬기</span></a><a class="toc-child-link" href="#s6-p06" title="첨부 실습 · 보건홍보영상 단계별 기획 마스터 프롬프트"><span class="toc-child-index">06</span><span>첨부 실습 · 보건홍보영상 단계별 기획 마스터 프롬프트</span></a><a class="toc-child-link" href="#s6-p07" title="첨부 실습 · 사진 기반 6패널 애니메이션 캐릭터시트"><span class="toc-child-index">07</span><span>첨부 실습 · 사진 기반 6패널 애니메이션 캐릭터시트</span></a></div></details><details class="toc-group" data-group="s7"><summary><span class="toc-group-label"><span class="toc-num">07</span><span class="toc-group-name">보건음악제작 · Google Gemini 음악 만들기</span></span><span class="toc-group-count">13</span></summary><div class="toc-children"><a class="toc-parent-link" href="#s7">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#s7-p01" title="보건교육용 음악 마스터 프롬프트"><span class="toc-child-index">01</span><span>보건교육용 음악 마스터 프롬프트</span></a><a class="toc-child-link" href="#s7-p02" title="초등학생 손씻기 실천송"><span class="toc-child-index">02</span><span>초등학생 손씻기 실천송</span></a><a class="toc-child-link" href="#s7-p03" title="감염병 예방 건강생활송"><span class="toc-child-index">03</span><span>감염병 예방 건강생활송</span></a><a class="toc-child-link" href="#s7-p04" title="양치습관 구강건강송"><span class="toc-child-index">04</span><span>양치습관 구강건강송</span></a><a class="toc-child-link" href="#s7-p05" title="중학생 수면·스마트폰 건강송"><span class="toc-child-index">05</span><span>중학생 수면·스마트폰 건강송</span></a><a class="toc-child-link" href="#s7-p06" title="스트레스·마음건강 자기돌봄송"><span class="toc-child-index">06</span><span>스트레스·마음건강 자기돌봄송</span></a><a class="toc-child-link" href="#s7-p07" title="특수학교·통합학급 쉬운 반복형 건강송"><span class="toc-child-index">07</span><span>특수학교·통합학급 쉬운 반복형 건강송</span></a><a class="toc-child-link" href="#s7-p08" title="보건실 이용수칙 안내송"><span class="toc-child-index">08</span><span>보건실 이용수칙 안내송</span></a><a class="toc-child-link" href="#s7-p09" title="식품알레르기 안전·배려송"><span class="toc-child-index">09</span><span>식품알레르기 안전·배려송</span></a><a class="toc-child-link" href="#s7-p10" title="사춘기 몸의 변화·존중송"><span class="toc-child-index">10</span><span>사춘기 몸의 변화·존중송</span></a><a class="toc-child-link" href="#s7-p11" title="학교 건강캠페인 징글 만들기"><span class="toc-child-index">11</span><span>학교 건강캠페인 징글 만들기</span></a><a class="toc-child-link" href="#s7-p12" title="보건교육 영상용 BGM 만들기"><span class="toc-child-index">12</span><span>보건교육 영상용 BGM 만들기</span></a><a class="toc-child-link" href="#s7-p13" title="생성된 보건음악 2차 수정 프롬프트"><span class="toc-child-index">13</span><span>생성된 보건음악 2차 수정 프롬프트</span></a></div></details><details class="toc-group" data-group="s8"><summary><span class="toc-group-label"><span class="toc-num">08</span><span class="toc-group-name">바이브코딩 활용 보건콘텐츠 웹페이지 제작</span></span><span class="toc-group-count">63</span></summary><div class="toc-children"><a class="toc-parent-link" href="#s8">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#s8-p01" title="우리학교 건강생활 웹페이지 만들기"><span class="toc-child-index">01</span><span>우리학교 건강생활 웹페이지 만들기</span></a><a class="toc-child-link" href="#s8-p02" title="완성된 웹페이지를 대화로 수정하기"><span class="toc-child-index">02</span><span>완성된 웹페이지를 대화로 수정하기</span></a><a class="toc-child-link" href="#s8-p03" title="보건교육 웹페이지 공개 전 점검"><span class="toc-child-index">03</span><span>보건교육 웹페이지 공개 전 점검</span></a><a class="toc-child-link" href="#s8-p04" title="보건수업 OX·객관식 퀴즈 앱 · 1차 제작"><span class="toc-child-index">04</span><span>보건수업 OX·객관식 퀴즈 앱 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p05" title="보건수업 OX·객관식 퀴즈 앱 · 2차 수정"><span class="toc-child-index">05</span><span>보건수업 OX·객관식 퀴즈 앱 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p06" title="응급상황 선택형 시나리오 앱 · 1차 제작"><span class="toc-child-index">06</span><span>응급상황 선택형 시나리오 앱 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p07" title="응급상황 선택형 시나리오 앱 · 2차 수정"><span class="toc-child-index">07</span><span>응급상황 선택형 시나리오 앱 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p08" title="감염예방 생활습관 체크 앱 · 1차 제작"><span class="toc-child-index">08</span><span>감염예방 생활습관 체크 앱 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p09" title="감염예방 생활습관 체크 앱 · 2차 수정"><span class="toc-child-index">09</span><span>감염예방 생활습관 체크 앱 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p10" title="특수학교용 시각적 위생 순서 앱 · 1차 제작"><span class="toc-child-index">10</span><span>특수학교용 시각적 위생 순서 앱 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p11" title="특수학교용 시각적 위생 순서 앱 · 2차 수정"><span class="toc-child-index">11</span><span>특수학교용 시각적 위생 순서 앱 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p12" title="흡연·전자담배 예방 의사결정 게임 · 1차 제작"><span class="toc-child-index">12</span><span>흡연·전자담배 예방 의사결정 게임 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p13" title="흡연·전자담배 예방 의사결정 게임 · 2차 수정"><span class="toc-child-index">13</span><span>흡연·전자담배 예방 의사결정 게임 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p14" title="약물 오남용 예방 카드 학습 앱 · 1차 제작"><span class="toc-child-index">14</span><span>약물 오남용 예방 카드 학습 앱 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p15" title="약물 오남용 예방 카드 학습 앱 · 2차 수정"><span class="toc-child-index">15</span><span>약물 오남용 예방 카드 학습 앱 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p16" title="보건실 방문 사유 통계 대시보드 · 1차 제작"><span class="toc-child-index">16</span><span>보건실 방문 사유 통계 대시보드 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p17" title="보건실 방문 사유 통계 대시보드 · 2차 수정"><span class="toc-child-index">17</span><span>보건실 방문 사유 통계 대시보드 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p18" title="건강교육 랜덤 질문 룰렛 · 1차 제작"><span class="toc-child-index">18</span><span>건강교육 랜덤 질문 룰렛 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p19" title="건강교육 랜덤 질문 룰렛 · 2차 수정"><span class="toc-child-index">19</span><span>건강교육 랜덤 질문 룰렛 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p20" title="교직원 응급처치 절차 체크리스트 · 1차 제작"><span class="toc-child-index">20</span><span>교직원 응급처치 절차 체크리스트 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p21" title="교직원 응급처치 절차 체크리스트 · 2차 수정"><span class="toc-child-index">21</span><span>교직원 응급처치 절차 체크리스트 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p22" title="보건 캠페인 아이디어 보드 · 1차 제작"><span class="toc-child-index">22</span><span>보건 캠페인 아이디어 보드 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p23" title="보건 캠페인 아이디어 보드 · 2차 수정"><span class="toc-child-index">23</span><span>보건 캠페인 아이디어 보드 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p24" title="보건교육 출구티켓 앱 · 1차 제작"><span class="toc-child-index">24</span><span>보건교육 출구티켓 앱 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p25" title="보건교육 출구티켓 앱 · 2차 수정"><span class="toc-child-index">25</span><span>보건교육 출구티켓 앱 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p26" title="보건소식 카드형 안내 웹페이지 · 1차 제작"><span class="toc-child-index">26</span><span>보건소식 카드형 안내 웹페이지 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p27" title="보건소식 카드형 안내 웹페이지 · 2차 수정"><span class="toc-child-index">27</span><span>보건소식 카드형 안내 웹페이지 · 2차 수정</span></a><a class="toc-child-link" href="#s8-p28" title="디자인을 보건교육용으로 정리"><span class="toc-child-index">28</span><span>디자인을 보건교육용으로 정리</span></a><a class="toc-child-link" href="#s8-p29" title="초등학생용으로 쉽게"><span class="toc-child-index">29</span><span>초등학생용으로 쉽게</span></a><a class="toc-child-link" href="#s8-p30" title="특수교육 접근성 강화"><span class="toc-child-index">30</span><span>특수교육 접근성 강화</span></a><a class="toc-child-link" href="#s8-p31" title="오류 수정"><span class="toc-child-index">31</span><span>오류 수정</span></a><a class="toc-child-link" href="#s8-p32" title="인쇄 기능 추가"><span class="toc-child-index">32</span><span>인쇄 기능 추가</span></a><a class="toc-child-link" href="#s8-p33" title="학교급 변환"><span class="toc-child-index">33</span><span>학교급 변환</span></a><a class="toc-child-link" href="#s8-p34" title="보건수업 미니 퀴즈 HTML 앱 · 1차 제작"><span class="toc-child-index">34</span><span>보건수업 미니 퀴즈 HTML 앱 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p35" title="보건수업 미니 퀴즈 HTML 앱 · 2차 디버깅·개선"><span class="toc-child-index">35</span><span>보건수업 미니 퀴즈 HTML 앱 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p36" title="보건교육 수업안 생성 보조 앱 · 1차 제작"><span class="toc-child-index">36</span><span>보건교육 수업안 생성 보조 앱 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p37" title="보건교육 수업안 생성 보조 앱 · 2차 디버깅·개선"><span class="toc-child-index">37</span><span>보건교육 수업안 생성 보조 앱 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p38" title="보건실 물품 재고 체크 앱 · 1차 제작"><span class="toc-child-index">38</span><span>보건실 물품 재고 체크 앱 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p39" title="보건실 물품 재고 체크 앱 · 2차 디버깅·개선"><span class="toc-child-index">39</span><span>보건실 물품 재고 체크 앱 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p40" title="감염병 예방 캠페인 체크리스트 · 1차 제작"><span class="toc-child-index">40</span><span>감염병 예방 캠페인 체크리스트 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p41" title="감염병 예방 캠페인 체크리스트 · 2차 디버깅·개선"><span class="toc-child-index">41</span><span>감염병 예방 캠페인 체크리스트 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p42" title="건강생활 주간 목표 트래커 · 1차 제작"><span class="toc-child-index">42</span><span>건강생활 주간 목표 트래커 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p43" title="건강생활 주간 목표 트래커 · 2차 디버깅·개선"><span class="toc-child-index">43</span><span>건강생활 주간 목표 트래커 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p44" title="보건업무 일정 타임라인 · 1차 제작"><span class="toc-child-index">44</span><span>보건업무 일정 타임라인 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p45" title="보건업무 일정 타임라인 · 2차 디버깅·개선"><span class="toc-child-index">45</span><span>보건업무 일정 타임라인 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p46" title="교직원 보건연수 미니테스트 · 1차 제작"><span class="toc-child-index">46</span><span>교직원 보건연수 미니테스트 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p47" title="교직원 보건연수 미니테스트 · 2차 디버깅·개선"><span class="toc-child-index">47</span><span>교직원 보건연수 미니테스트 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p48" title="특수학교 큰버튼 의사표현 보조판 · 1차 제작"><span class="toc-child-index">48</span><span>특수학교 큰버튼 의사표현 보조판 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p49" title="특수학교 큰버튼 의사표현 보조판 · 2차 디버깅·개선"><span class="toc-child-index">49</span><span>특수학교 큰버튼 의사표현 보조판 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p50" title="학교 건강주간 아이디어 생성 폼 · 1차 제작"><span class="toc-child-index">50</span><span>학교 건강주간 아이디어 생성 폼 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p51" title="학교 건강주간 아이디어 생성 폼 · 2차 디버깅·개선"><span class="toc-child-index">51</span><span>학교 건강주간 아이디어 생성 폼 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p52" title="가상 CSV 보건실 방문 데이터 분석 웹앱 · 1차 제작"><span class="toc-child-index">52</span><span>가상 CSV 보건실 방문 데이터 분석 웹앱 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p53" title="가상 CSV 보건실 방문 데이터 분석 웹앱 · 2차 디버깅·개선"><span class="toc-child-index">53</span><span>가상 CSV 보건실 방문 데이터 분석 웹앱 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p54" title="보건소식 템플릿 웹페이지 제작기 · 1차 제작"><span class="toc-child-index">54</span><span>보건소식 템플릿 웹페이지 제작기 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p55" title="보건소식 템플릿 웹페이지 제작기 · 2차 디버깅·개선"><span class="toc-child-index">55</span><span>보건소식 템플릿 웹페이지 제작기 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p56" title="보건수업 타이머·활동 진행판 · 1차 제작"><span class="toc-child-index">56</span><span>보건수업 타이머·활동 진행판 · 1차 제작</span></a><a class="toc-child-link" href="#s8-p57" title="보건수업 타이머·활동 진행판 · 2차 디버깅·개선"><span class="toc-child-index">57</span><span>보건수업 타이머·활동 진행판 · 2차 디버깅·개선</span></a><a class="toc-child-link" href="#s8-p58" title="한 파일로 다시 정리"><span class="toc-child-index">58</span><span>한 파일로 다시 정리</span></a><a class="toc-child-link" href="#s8-p59" title="초보교사용 주석 추가"><span class="toc-child-index">59</span><span>초보교사용 주석 추가</span></a><a class="toc-child-link" href="#s8-p60" title="문항만 교체"><span class="toc-child-index">60</span><span>문항만 교체</span></a><a class="toc-child-link" href="#s8-p61" title="접근성 점검"><span class="toc-child-index">61</span><span>접근성 점검</span></a><a class="toc-child-link" href="#s8-p62" title="localStorage 제거"><span class="toc-child-index">62</span><span>localStorage 제거</span></a><a class="toc-child-link" href="#s8-p63" title="인쇄용 결과화면"><span class="toc-child-index">63</span><span>인쇄용 결과화면</span></a></div></details><details class="toc-group" data-group="s9"><summary><span class="toc-group-label"><span class="toc-num">09</span><span class="toc-group-name">학교 현장 보건실무 핵심 프롬프트</span></span><span class="toc-group-count">56</span></summary><div class="toc-children"><a class="toc-parent-link" href="#s9">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#s9-p01" title="보건실 일일 업무 메모 정리"><span class="toc-child-index">01</span><span>보건실 일일 업무 메모 정리</span></a><a class="toc-child-link" href="#s9-p02" title="학생 건강상담 질문 설계"><span class="toc-child-index">02</span><span>학생 건강상담 질문 설계</span></a><a class="toc-child-link" href="#s9-p03" title="보건실 월간 이용 통계 요약"><span class="toc-child-index">03</span><span>보건실 월간 이용 통계 요약</span></a><a class="toc-child-link" href="#s9-p04" title="학교급별 보건교육 연간 주제 틀 만들기"><span class="toc-child-index">04</span><span>학교급별 보건교육 연간 주제 틀 만들기</span></a><a class="toc-child-link" href="#s9-p05" title="특수교육대상 학생용 쉬운 보건자료로 변환"><span class="toc-child-index">05</span><span>특수교육대상 학생용 쉬운 보건자료로 변환</span></a><a class="toc-child-link" href="#s9-p06" title="학부모 상담 전 대화 구조 만들기"><span class="toc-child-index">06</span><span>학부모 상담 전 대화 구조 만들기</span></a><a class="toc-child-link" href="#s9-p07" title="보건실 물품·소모품 점검표 만들기"><span class="toc-child-index">07</span><span>보건실 물품·소모품 점검표 만들기</span></a><a class="toc-child-link" href="#s9-p08" title="학교 건강캠페인 운영계획 초안"><span class="toc-child-index">08</span><span>학교 건강캠페인 운영계획 초안</span></a><a class="toc-child-link" href="#s9-p09" title="학기 초 보건실 운영 안내문"><span class="toc-child-index">09</span><span>학기 초 보건실 운영 안내문</span></a><a class="toc-child-link" href="#s9-p10" title="보건실 방문 사유별 안내 FAQ"><span class="toc-child-index">10</span><span>보건실 방문 사유별 안내 FAQ</span></a><a class="toc-child-link" href="#s9-p11" title="보건실 업무 주간 체크리스트"><span class="toc-child-index">11</span><span>보건실 업무 주간 체크리스트</span></a><a class="toc-child-link" href="#s9-p12" title="보건실 이용 현황 분석 보고"><span class="toc-child-index">12</span><span>보건실 이용 현황 분석 보고</span></a><a class="toc-child-link" href="#s9-p13" title="보건실 소모품 발주 요청서"><span class="toc-child-index">13</span><span>보건실 소모품 발주 요청서</span></a><a class="toc-child-link" href="#s9-p14" title="교내 구급함 위치별 점검표"><span class="toc-child-index">14</span><span>교내 구급함 위치별 점검표</span></a><a class="toc-child-link" href="#s9-p15" title="의약품·의약외품 보관 점검"><span class="toc-child-index">15</span><span>의약품·의약외품 보관 점검</span></a><a class="toc-child-link" href="#s9-p16" title="업무 인수인계 핵심 정리"><span class="toc-child-index">16</span><span>업무 인수인계 핵심 정리</span></a><a class="toc-child-link" href="#s9-p17" title="교내 응급상황 역할 분담표"><span class="toc-child-index">17</span><span>교내 응급상황 역할 분담표</span></a><a class="toc-child-link" href="#s9-p18" title="체육대회 응급대응 사전점검"><span class="toc-child-index">18</span><span>체육대회 응급대응 사전점검</span></a><a class="toc-child-link" href="#s9-p19" title="현장체험학습 보건안전 협의서"><span class="toc-child-index">19</span><span>현장체험학습 보건안전 협의서</span></a><a class="toc-child-link" href="#s9-p20" title="응급상황 훈련 시나리오"><span class="toc-child-index">20</span><span>응급상황 훈련 시나리오</span></a><a class="toc-child-link" href="#s9-p21" title="응급사고 보고 경위서 초안"><span class="toc-child-index">21</span><span>응급사고 보고 경위서 초안</span></a><a class="toc-child-link" href="#s9-p22" title="교직원용 119 신고 정보 카드"><span class="toc-child-index">22</span><span>교직원용 119 신고 정보 카드</span></a><a class="toc-child-link" href="#s9-p23" title="감염병 발생 시 학급 안내문"><span class="toc-child-index">23</span><span>감염병 발생 시 학급 안내문</span></a><a class="toc-child-link" href="#s9-p24" title="학교 감염병 대응 업무 체크리스트"><span class="toc-child-index">24</span><span>학교 감염병 대응 업무 체크리스트</span></a><a class="toc-child-link" href="#s9-p25" title="계절별 감염병 예방 주간 계획"><span class="toc-child-index">25</span><span>계절별 감염병 예방 주간 계획</span></a><a class="toc-child-link" href="#s9-p26" title="학부모 감염병 FAQ"><span class="toc-child-index">26</span><span>학부모 감염병 FAQ</span></a><a class="toc-child-link" href="#s9-p27" title="교실 기침예절·손씻기 안내 포스터"><span class="toc-child-index">27</span><span>교실 기침예절·손씻기 안내 포스터</span></a><a class="toc-child-link" href="#s9-p28" title="보건실 감염병 문의 요약표"><span class="toc-child-index">28</span><span>보건실 감염병 문의 요약표</span></a><a class="toc-child-link" href="#s9-p29" title="학생 건강검사 일정 안내문"><span class="toc-child-index">29</span><span>학생 건강검사 일정 안내문</span></a><a class="toc-child-link" href="#s9-p30" title="건강검사 결과 후속 관리표"><span class="toc-child-index">30</span><span>건강검사 결과 후속 관리표</span></a><a class="toc-child-link" href="#s9-p31" title="건강생활 실천 설문 문항 제작"><span class="toc-child-index">31</span><span>건강생활 실천 설문 문항 제작</span></a><a class="toc-child-link" href="#s9-p32" title="학생 건강실태 조사 가정 안내"><span class="toc-child-index">32</span><span>학생 건강실태 조사 가정 안내</span></a><a class="toc-child-link" href="#s9-p33" title="요보호 학생 지원 협의 회의안"><span class="toc-child-index">33</span><span>요보호 학생 지원 협의 회의안</span></a><a class="toc-child-link" href="#s9-p34" title="만성질환 학생 지원 업무 체크리스트"><span class="toc-child-index">34</span><span>만성질환 학생 지원 업무 체크리스트</span></a><a class="toc-child-link" href="#s9-p35" title="식품알레르기 예방 협업 안내"><span class="toc-child-index">35</span><span>식품알레르기 예방 협업 안내</span></a><a class="toc-child-link" href="#s9-p36" title="월경 건강 교육 수업 기획"><span class="toc-child-index">36</span><span>월경 건강 교육 수업 기획</span></a><a class="toc-child-link" href="#s9-p37" title="마음건강 도움 요청 안내 카드"><span class="toc-child-index">37</span><span>마음건강 도움 요청 안내 카드</span></a><a class="toc-child-link" href="#s9-p38" title="보호자 상담 후 협의사항 정리"><span class="toc-child-index">38</span><span>보호자 상담 후 협의사항 정리</span></a><a class="toc-child-link" href="#s9-p39" title="학년별 보건교육 성취목표 정리"><span class="toc-child-index">39</span><span>학년별 보건교육 성취목표 정리</span></a><a class="toc-child-link" href="#s9-p40" title="보건교육 40분 교수학습 과정안"><span class="toc-child-index">40</span><span>보건교육 40분 교수학습 과정안</span></a><a class="toc-child-link" href="#s9-p41" title="초등 저학년 건강 OX 퀴즈"><span class="toc-child-index">41</span><span>초등 저학년 건강 OX 퀴즈</span></a><a class="toc-child-link" href="#s9-p42" title="중고등학생 보건 토론 질문"><span class="toc-child-index">42</span><span>중고등학생 보건 토론 질문</span></a><a class="toc-child-link" href="#s9-p43" title="올바른 건강정보 판별 활동지"><span class="toc-child-index">43</span><span>올바른 건강정보 판별 활동지</span></a><a class="toc-child-link" href="#s9-p44" title="특수교육 대상 쉬운 그림 교육"><span class="toc-child-index">44</span><span>특수교육 대상 쉬운 그림 교육</span></a><a class="toc-child-link" href="#s9-p45" title="건강캠페인 학생 자치활동 계획"><span class="toc-child-index">45</span><span>건강캠페인 학생 자치활동 계획</span></a><a class="toc-child-link" href="#s9-p46" title="보건교육 수업 만족도 설문"><span class="toc-child-index">46</span><span>보건교육 수업 만족도 설문</span></a><a class="toc-child-link" href="#s9-p47" title="학교 보건 뉴스레터 월간호"><span class="toc-child-index">47</span><span>학교 보건 뉴스레터 월간호</span></a><a class="toc-child-link" href="#s9-p48" title="학생 건강교육 가정 연계 미션"><span class="toc-child-index">48</span><span>학생 건강교육 가정 연계 미션</span></a><a class="toc-child-link" href="#s9-p49" title="보건 관련 민원 답변 초안"><span class="toc-child-index">49</span><span>보건 관련 민원 답변 초안</span></a><a class="toc-child-link" href="#s9-p50" title="교직원 감염병 예방 연수 자료"><span class="toc-child-index">50</span><span>교직원 감염병 예방 연수 자료</span></a><a class="toc-child-link" href="#s9-p51" title="담임교사용 학생 보건실 이용 협조문"><span class="toc-child-index">51</span><span>담임교사용 학생 보건실 이용 협조문</span></a><a class="toc-child-link" href="#s9-p52" title="학교 축제 위생·안전 협업 계획"><span class="toc-child-index">52</span><span>학교 축제 위생·안전 협업 계획</span></a><a class="toc-child-link" href="#s9-p53" title="학교 보건 업무 월간 보고서"><span class="toc-child-index">53</span><span>학교 보건 업무 월간 보고서</span></a><a class="toc-child-link" href="#s9-p54" title="학교 보건교육 예산안 기초"><span class="toc-child-index">54</span><span>학교 보건교육 예산안 기초</span></a><a class="toc-child-link" href="#s9-p55" title="교육청 제출 자료 점검표"><span class="toc-child-index">55</span><span>교육청 제출 자료 점검표</span></a><a class="toc-child-link" href="#s9-p56" title="학교 보건사업 연말 결과보고"><span class="toc-child-index">56</span><span>학교 보건사업 연말 결과보고</span></a></div></details><details class="toc-group" data-group="s10"><summary><span class="toc-group-label"><span class="toc-num">10</span><span class="toc-group-name">AI 결과 검수 · 개인정보 · 정확성 점검</span></span><span class="toc-group-count">3</span></summary><div class="toc-children"><a class="toc-parent-link" href="#s10">↳ 이 장의 처음으로</a><a class="toc-child-link" href="#s10-p01" title="AI가 만든 보건자료 최종 검수 프롬프트"><span class="toc-child-index">01</span><span>AI가 만든 보건자료 최종 검수 프롬프트</span></a><a class="toc-child-link" href="#s10-p02" title="AI 입력 전 개인정보 비식별화 점검"><span class="toc-child-index">02</span><span>AI 입력 전 개인정보 비식별화 점검</span></a><a class="toc-child-link" href="#s10-p03" title="내일부터 바로 해볼 한 가지 정하기"><span class="toc-child-index">03</span><span>내일부터 바로 해볼 한 가지 정하기</span></a></div></details></nav>
 <div class="toc-title">강사 소개</div>
 <div class="instructor-wrap">
 <div style="font-family:Arial,'Malgun Gothic';color:#17213a;max-width:560px;border:1px solid #cbd2de;border-radius:11px;overflow:hidden;background:#fff"><div style="height:5px;background:#d3ad52"></div><div style="padding:16px;background:#102653"><table><tr><td style="padding-right:14px"><img alt="김유성 강사" height="83" loading="lazy" src="https://cdn.imweb.me/upload/S2017031458c7abc782f2d/4df5f3608cf4e.jpg" style="border:4px solid #e3bd61;border-radius:50%;object-fit:cover" width="83"/></td><td><div style="color:#ffe39a;font-size:13px;font-weight:bold">AI콘텐츠마케팅연구소</div><div style="color:#fff;font-size:25px;font-weight:bold">유쌤클래스</div><div style="margin-top:5px;padding-top:5px;border-top:1px solid #7184a9;color:#fff;font-size:15px"><b>대표 · 강사 김유성</b><br/><span style="color:#d9e0ed;font-size:12px">Kim Yu Seong</span></div></td></tr></table></div><div style="padding:10px 16px 3px"><div style="padding:8px 10px;background:#f3f6fb;border-left:4px solid #d3ad52;font-size:12px;line-height:1.55"><b style="color:#102653;font-size:14px">교육분야</b><br/>AI인공지능 · 콘텐츠제작 · 온라인마케팅 · 미디어 리터러시 · 퍼스널브랜딩 · 책출판 · 미디어창작 · 브랜드컨설팅</div></div><div style="padding:3px 16px"><div style="padding:8px 10px;background:#f3f6fb;border-left:4px solid #4771a9;font-size:12px;line-height:1.55"><b style="color:#102653;font-size:14px">교육대상</b><br/>정부·지자체·공공기관 임직원 · 공무원 · 교사 · 청소년 · 중소기업 임직원 · 신입사원 · 취업준비생 · 1인기업인</div></div><div style="padding:6px 16px;font-size:12px;line-height:1.7"><b style="color:#102653;font-size:14px">강의 및 협업 문의</b><br/><a href="tel:01027819669" style="color:#17213a;text-decoration:none">010-2781-9669</a> · <a href="tel:050713119669" style="color:#17213a;text-decoration:none">0507-1311-9669</a><br/><a href="mailto:kyseong3@naver.com" style="color:#17213a;text-decoration:none">kyseong3@naver.com</a> · <a href="https://www.yussamclass.com" rel="noreferrer noopener" style="color:#876319;text-decoration:none" target="_blank">www.yussamclass.com</a></div><div style="padding:3px 16px 14px"><div style="margin-bottom:6px;color:#102653;font-size:13px;font-weight:bold">SNS 채널</div><a href="https://www.yussamclass.com" rel="noreferrer noopener" target="_blank"><img alt="홈페이지" height="25" loading="lazy" src="https://cdn.imweb.me/upload/S2017031458c7abc782f2d/db109298c1c0e.png" width="25"/></a> <a href="https://blog.naver.com/mindlemedia" rel="noreferrer noopener" target="_blank"><img alt="블로그" height="25" loading="lazy" src="https://cdn.imweb.me/upload/S2017031458c7abc782f2d/e38ab291f5b3d.png" width="25"/></a> <a href="https://www.youtube.com/c/kyseong3" rel="noreferrer noopener" target="_blank"><img alt="유튜브" height="25" loading="lazy" src="https://cdn.imweb.me/upload/S2017031458c7abc782f2d/7716e23aacee7.png" width="25"/></a> <a href="https://www.instagram.com/yussamclass" rel="noreferrer noopener" target="_blank"><img alt="인스타그램" height="25" loading="lazy" src="https://cdn.imweb.me/upload/S2017031458c7abc782f2d/39127e5032943.png" width="25"/></a> <a href="https://www.facebook.com/dandelionmedia1004" rel="noreferrer noopener" target="_blank"><img alt="페이스북" height="25" loading="lazy" src="https://cdn.imweb.me/upload/S2017031458c7abc782f2d/47d6af62e63d6.png" width="25"/></a> <a href="https://www.threads.com/@yussamclass" rel="noreferrer noopener" target="_blank"><img alt="스레드" height="25" loading="lazy" src="https://cdn.imweb.me/upload/S2017031458c7abc782f2d/51b3b1e1118b8.png" width="25"/></a> <a href="https://open.kakao.com/o/gLAE28ui" rel="noreferrer noopener" target="_blank"><img alt="오픈카카오" height="25" loading="lazy" src="https://cdn.imweb.me/upload/S2017031458c7abc782f2d/ee583ebc6add0.png" width="25"/></a></div></div>
@@ -1737,12 +1749,12 @@ body{color:#17334d;-webkit-font-smoothing:antialiased}
 <p>보건교사의 문서·수업자료·이미지·영상·음악·웹페이지 제작을 돕는 AI 실습 가이드입니다. 학교급과 학습자 수준에 맞는 주제를 선택하고, 프롬프트를 복사해 교육 현장에서 바로 활용하세요.</p>
 <div class="hero-meta"><span class="pill">👩‍⚕️ 보건교사 · 보건교육 담당교원</span><span class="pill">🧪 현장 중심 실습</span><span class="pill">🏫 학교급·학년별 맞춤 활용</span></div>
 <div class="notice" style="margin:24px 0 0;background:#fff;color:var(--ink);position:relative;z-index:1"><strong>실습 활용 안내</strong><br/>기관과 교육 상황에 맞춰 필요한 카테고리부터 선택하세요. 프롬프트의 학교급·학년·주제·수업 분량은 직접 입력하고, 결과를 검수한 뒤 활용합니다.</div>
-<div class="hero-stats"><div class="hero-stat"><strong>10</strong><span>실습 주제</span></div><div class="hero-stat"><strong>118</strong><span>활용 프롬프트</span></div><div class="hero-stat"><strong>1 CLICK</strong><span>목차 바로 이동</span></div></div></header>
+<div class="hero-stats"><div class="hero-stat"><strong>10</strong><span>실습 주제</span></div><div class="hero-stat"><strong>166</strong><span>활용 프롬프트</span></div><div class="hero-stat"><strong>1 CLICK</strong><span>목차 바로 이동</span></div></div></header>
 <div class="search-wrap">
 <div class="searchbox"><input aria-label="프롬프트 검색" id="searchInput" placeholder="프롬프트 제목·키워드 검색 (예: 감염병, 지도안, 카드뉴스, 보건음악, 웹페이지)" type="search"/><span class="search-count" id="searchCount">전체 보기</span></div>
 </div>
 <div class="content">
-<section aria-label="전체 강의 바로가기" class="chapter-map"><div class="chapter-map-head"><div><span class="eyebrow">COURSE NAVIGATION</span><h2>실습 목차 한눈에 보기</h2><p>관심 있는 주제를 선택하면 해당 장으로 이동합니다. 왼쪽 목차에서는 세부 프롬프트까지 찾아갈 수 있습니다.</p></div><button class="chapter-toc-btn" id="openTocBtn" type="button">☰ 상세 목차 보기</button></div><div class="chapter-map-grid"><a class="chapter-tile" href="#tools"><span class="chapter-tile-num">AI</span><span class="chapter-tile-name">AI도구툴 · 수업 실습 바로가기</span><span class="chapter-tile-count">도구 바로가기</span></a><a class="chapter-tile" href="#s1"><span class="chapter-tile-num">01</span><span class="chapter-tile-name">보건교사와 AI · 좋은 프롬프트</span><span class="chapter-tile-count">3개 실습</span></a><a class="chapter-tile" href="#s2"><span class="chapter-tile-num">02</span><span class="chapter-tile-name">AI를 활용한 보건문서 · 가정통신문</span><span class="chapter-tile-count">4개 실습</span></a><a class="chapter-tile" href="#s3"><span class="chapter-tile-num">03</span><span class="chapter-tile-name">학생참여형 보건교육 지도안 만들기</span><span class="chapter-tile-count">4개 실습</span></a><a class="chapter-tile" href="#s4"><span class="chapter-tile-num">04</span><span class="chapter-tile-name">학교보건위원회 · 안내문 · 보건실 이용수칙</span><span class="chapter-tile-count">6개 실습</span></a><a class="chapter-tile" href="#s5"><span class="chapter-tile-num">05</span><span class="chapter-tile-name">생성형 AI로 보건 이미지 콘텐츠 제작</span><span class="chapter-tile-count">7개 실습</span></a><a class="chapter-tile" href="#s6"><span class="chapter-tile-num">06</span><span class="chapter-tile-name">생성형 AI 활용 보건영상 콘텐츠 제작</span><span class="chapter-tile-count">7개 실습</span></a><a class="chapter-tile" href="#s7"><span class="chapter-tile-num">07</span><span class="chapter-tile-name">보건음악제작 · Google Gemini 음악 만들기</span><span class="chapter-tile-count">13개 실습</span></a><a class="chapter-tile" href="#s8"><span class="chapter-tile-num">08</span><span class="chapter-tile-name">바이브코딩 활용 보건콘텐츠 웹페이지 제작</span><span class="chapter-tile-count">63개 실습</span></a><a class="chapter-tile" href="#s9"><span class="chapter-tile-num">09</span><span class="chapter-tile-name">학교 현장 보건실무 핵심 프롬프트</span><span class="chapter-tile-count">8개 실습</span></a><a class="chapter-tile" href="#s10"><span class="chapter-tile-num">10</span><span class="chapter-tile-name">AI 결과 검수 · 개인정보 · 정확성 점검</span><span class="chapter-tile-count">3개 실습</span></a></div></section><div aria-label="실습 흐름" class="quickflow"><div class="flow"><b>①</b>생각</div><div class="flow"><b>②</b>프롬프트</div><div class="flow"><b>③</b>생성</div><div class="flow"><b>④</b>검토</div><div class="flow"><b>⑤</b>수정</div><div class="flow"><b>⑥</b>활용</div></div>
+<section aria-label="전체 강의 바로가기" class="chapter-map"><div class="chapter-map-head"><div><span class="eyebrow">COURSE NAVIGATION</span><h2>실습 목차 한눈에 보기</h2><p>관심 있는 주제를 선택하면 해당 장으로 이동합니다. 왼쪽 목차에서는 세부 프롬프트까지 찾아갈 수 있습니다.</p></div><button class="chapter-toc-btn" id="openTocBtn" type="button">☰ 상세 목차 보기</button></div><div class="chapter-map-grid"><a class="chapter-tile" href="#tools"><span class="chapter-tile-num">AI</span><span class="chapter-tile-name">AI도구툴 · 수업 실습 바로가기</span><span class="chapter-tile-count">도구 바로가기</span></a><a class="chapter-tile" href="#s1"><span class="chapter-tile-num">01</span><span class="chapter-tile-name">보건교사와 AI · 좋은 프롬프트</span><span class="chapter-tile-count">3개 실습</span></a><a class="chapter-tile" href="#s2"><span class="chapter-tile-num">02</span><span class="chapter-tile-name">AI를 활용한 보건문서 · 가정통신문</span><span class="chapter-tile-count">4개 실습</span></a><a class="chapter-tile" href="#s3"><span class="chapter-tile-num">03</span><span class="chapter-tile-name">학생참여형 보건교육 지도안 만들기</span><span class="chapter-tile-count">4개 실습</span></a><a class="chapter-tile" href="#s4"><span class="chapter-tile-num">04</span><span class="chapter-tile-name">학교보건위원회 · 안내문 · 보건실 이용수칙</span><span class="chapter-tile-count">6개 실습</span></a><a class="chapter-tile" href="#s5"><span class="chapter-tile-num">05</span><span class="chapter-tile-name">생성형 AI로 보건 이미지 콘텐츠 제작</span><span class="chapter-tile-count">7개 실습</span></a><a class="chapter-tile" href="#s6"><span class="chapter-tile-num">06</span><span class="chapter-tile-name">생성형 AI 활용 보건영상 콘텐츠 제작</span><span class="chapter-tile-count">7개 실습</span></a><a class="chapter-tile" href="#s7"><span class="chapter-tile-num">07</span><span class="chapter-tile-name">보건음악제작 · Google Gemini 음악 만들기</span><span class="chapter-tile-count">13개 실습</span></a><a class="chapter-tile" href="#s8"><span class="chapter-tile-num">08</span><span class="chapter-tile-name">바이브코딩 활용 보건콘텐츠 웹페이지 제작</span><span class="chapter-tile-count">63개 실습</span></a><a class="chapter-tile" href="#s9"><span class="chapter-tile-num">09</span><span class="chapter-tile-name">학교 현장 보건실무 핵심 프롬프트</span><span class="chapter-tile-count">56개 실습</span></a><a class="chapter-tile" href="#s10"><span class="chapter-tile-num">10</span><span class="chapter-tile-name">AI 결과 검수 · 개인정보 · 정확성 점검</span><span class="chapter-tile-count">3개 실습</span></a></div></section><div aria-label="실습 흐름" class="quickflow"><div class="flow"><b>①</b>생각</div><div class="flow"><b>②</b>프롬프트</div><div class="flow"><b>③</b>생성</div><div class="flow"><b>④</b>검토</div><div class="flow"><b>⑤</b>수정</div><div class="flow"><b>⑥</b>활용</div></div>
 <div class="notice"><strong>실습 원칙:</strong> 학생 이름·연락처·건강정보·상담내용 등 개인정보는 그대로 입력하지 않습니다. 질병·약물·응급처치·법령·수치·학교정책은 반드시 학교 지침과 최신 공식자료로 다시 확인하고, 최종 게시·배포 전에는 보건교사가 직접 검수합니다.</div>
 <section class="section" id="tools">
 <div class="section-head"><div class="num">AI</div><div><h2>AI도구툴 · 수업 실습 바로가기</h2><p class="section-desc">교육 현장에서 바로 활용하는 생성형 AI·영상 제작·웹페이지 배포·업무 자동화 도구를 한곳에 모았습니다. 로고 또는 버튼을 눌러 새 창에서 서비스를 열 수 있습니다.</p></div></div>
@@ -3890,8 +3902,8 @@ date,category,grade
 - 이번 실습에서 특히 강조할 사항: [    ]</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s8-p63"><input class="example-checkbox" id="example-s8-p63" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크할 때마다 학교급·주제·활동 예시가 다르게 조합됩니다. 입력된 내용을 직접 수정한 뒤 복사하세요.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article>
 </div>
 </section>
-<section class="section" id="s9"><div class="section-head"><div class="num">09</div><div><h2>학교 현장 보건실무 핵심 프롬프트</h2><p class="section-desc">초·중·고·특수학교에서 반복적으로 발생하는 문서·상담·교육·행정 업무를 빠르게 초안화하는 추가 실무 세트</p></div></div>
-<div aria-label="이 장의 세부 목차" class="section-mini-index"><div class="section-mini-label">이 장의 실습 바로가기</div><div class="section-mini-links"><a href="#s9-p01">01  보건실 일일 업무 메모 정리</a><a href="#s9-p02">02  학생 건강상담 질문 설계</a><a href="#s9-p03">03  보건실 월간 이용 통계 요약</a><a href="#s9-p04">04  학교급별 보건교육 연간 주제 틀 만들기</a><a href="#s9-p05">05  특수교육대상 학생용 쉬운 보건자료로 변환</a><a href="#s9-p06">06  학부모 상담 전 대화 구조 만들기</a><a href="#s9-p07">07  보건실 물품·소모품 점검표 만들기</a><a href="#s9-p08">08  학교 건강캠페인 운영계획 초안</a></div></div><div class="prompt-grid">
+<section class="section" id="s9"><div class="section-head"><div class="num">09</div><div><h2>학교 현장 보건실무 핵심 프롬프트</h2><p class="section-desc">초·중·고·특수학교에서 반복되는 학교보건 실무를 위한 56개 업무별 실습 프롬프트 · 교육용 가상자료와 공식 지침 검토 원칙 적용</p></div></div>
+<div aria-label="이 장의 세부 목차" class="section-mini-index"><div class="section-mini-label">이 장의 실습 바로가기</div><div class="section-mini-links"><a href="#s9-p01">01  보건실 일일 업무 메모 정리</a><a href="#s9-p02">02  학생 건강상담 질문 설계</a><a href="#s9-p03">03  보건실 월간 이용 통계 요약</a><a href="#s9-p04">04  학교급별 보건교육 연간 주제 틀 만들기</a><a href="#s9-p05">05  특수교육대상 학생용 쉬운 보건자료로 변환</a><a href="#s9-p06">06  학부모 상담 전 대화 구조 만들기</a><a href="#s9-p07">07  보건실 물품·소모품 점검표 만들기</a><a href="#s9-p08">08  학교 건강캠페인 운영계획 초안</a><a href="#s9-p09">09  학기 초 보건실 운영 안내문</a><a href="#s9-p10">10  보건실 방문 사유별 안내 FAQ</a><a href="#s9-p11">11  보건실 업무 주간 체크리스트</a><a href="#s9-p12">12  보건실 이용 현황 분석 보고</a><a href="#s9-p13">13  보건실 소모품 발주 요청서</a><a href="#s9-p14">14  교내 구급함 위치별 점검표</a><a href="#s9-p15">15  의약품·의약외품 보관 점검</a><a href="#s9-p16">16  업무 인수인계 핵심 정리</a><a href="#s9-p17">17  교내 응급상황 역할 분담표</a><a href="#s9-p18">18  체육대회 응급대응 사전점검</a><a href="#s9-p19">19  현장체험학습 보건안전 협의서</a><a href="#s9-p20">20  응급상황 훈련 시나리오</a><a href="#s9-p21">21  응급사고 보고 경위서 초안</a><a href="#s9-p22">22  교직원용 119 신고 정보 카드</a><a href="#s9-p23">23  감염병 발생 시 학급 안내문</a><a href="#s9-p24">24  학교 감염병 대응 업무 체크리스트</a><a href="#s9-p25">25  계절별 감염병 예방 주간 계획</a><a href="#s9-p26">26  학부모 감염병 FAQ</a><a href="#s9-p27">27  교실 기침예절·손씻기 안내 포스터</a><a href="#s9-p28">28  보건실 감염병 문의 요약표</a><a href="#s9-p29">29  학생 건강검사 일정 안내문</a><a href="#s9-p30">30  건강검사 결과 후속 관리표</a><a href="#s9-p31">31  건강생활 실천 설문 문항 제작</a><a href="#s9-p32">32  학생 건강실태 조사 가정 안내</a><a href="#s9-p33">33  요보호 학생 지원 협의 회의안</a><a href="#s9-p34">34  만성질환 학생 지원 업무 체크리스트</a><a href="#s9-p35">35  식품알레르기 예방 협업 안내</a><a href="#s9-p36">36  월경 건강 교육 수업 기획</a><a href="#s9-p37">37  마음건강 도움 요청 안내 카드</a><a href="#s9-p38">38  보호자 상담 후 협의사항 정리</a><a href="#s9-p39">39  학년별 보건교육 성취목표 정리</a><a href="#s9-p40">40  보건교육 40분 교수학습 과정안</a><a href="#s9-p41">41  초등 저학년 건강 OX 퀴즈</a><a href="#s9-p42">42  중고등학생 보건 토론 질문</a><a href="#s9-p43">43  올바른 건강정보 판별 활동지</a><a href="#s9-p44">44  특수교육 대상 쉬운 그림 교육</a><a href="#s9-p45">45  건강캠페인 학생 자치활동 계획</a><a href="#s9-p46">46  보건교육 수업 만족도 설문</a><a href="#s9-p47">47  학교 보건 뉴스레터 월간호</a><a href="#s9-p48">48  학생 건강교육 가정 연계 미션</a><a href="#s9-p49">49  보건 관련 민원 답변 초안</a><a href="#s9-p50">50  교직원 감염병 예방 연수 자료</a><a href="#s9-p51">51  담임교사용 학생 보건실 이용 협조문</a><a href="#s9-p52">52  학교 축제 위생·안전 협업 계획</a><a href="#s9-p53">53  학교 보건 업무 월간 보고서</a><a href="#s9-p54">54  학교 보건교육 예산안 기초</a><a href="#s9-p55">55  교육청 제출 자료 점검표</a><a href="#s9-p56">56  학교 보건사업 연말 결과보고</a></div></div><div class="prompt-grid">
 <article class="prompt-card" data-fill-examples='["교육용 가상 자료: 초등학교 3학년 대상 마음건강과 도움 요청 수업을 진행할 계획이며, 학생 참여활동과 가정 연계 안내를 준비하고 있습니다.", "교육용 가상 자료: 중학교 2학년 대상 안전한 보건실 이용 수업을 진행할 계획이며, 학생 참여활동과 가정 연계 안내를 준비하고 있습니다.", "특수학교 학생 대상 건강한 디지털 생활 실습: 가정과 연계하는 실천 미션", "중학교 1학년", "마음건강과 도움 요청을 주제로 짧은 퀴즈와 즉시 피드백을 적용해줘."]' data-title="보건실 일일 기록 메모 요약 비식별" id="s9-p01"><div class="card-top"><div class="tags"><span class="tag mint">보건실 운영</span></div><h3>보건실 일일 업무 메모 정리</h3></div><textarea aria-label="보건실 일일 업무 메모 정리 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 학교 보건실 행정 정리에 능숙한 보건교사야.
 아래의 비식별화된 업무 메모를 하루 업무 기록으로 정리해줘.
 
@@ -4053,7 +4065,919 @@ date,category,grade
 [우리 학교에 맞게 바꿀 실습 설정]
 - 교육대상: [    ]
 - 이번 실습에서 특히 강조할 사항: [    ]</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p08"><input class="example-checkbox" id="example-s9-p08" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크할 때마다 학교급·주제·활동 예시가 다르게 조합됩니다. 입력된 내용을 직접 수정한 뒤 복사하세요.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article>
-</div>
+<article class="prompt-card" data-fill-examples='["3월 신입생 대상 보건실 방문 전 담임에게 알리는 절차", "점심시간 보건실 위치와 긴급상황 예외를 구분", "초등학교 1학년", "가정통신문과 교실 게시판"]' data-title="학기 초 보건실 운영 안내문 보건실 운영" id="s9-p09"><div class="card-top"><div class="tags"><span class="tag mint">보건실 운영</span></div><h3>학기 초 보건실 운영 안내문</h3><div class="card-note">2026년 11월 학교 실무 응용 · 보건실 운영</div></div><textarea aria-label="학기 초 보건실 운영 안내문 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 학기 초 보건실 이용절차를 학교 구성원에게 알린다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+학생용 안내문·교직원용 안내문·게시판용 5줄 요약
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 이용시간과 연락·이동 절차.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p09"><input class="example-checkbox" id="example-s9-p09" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["수업시간 복통, 쉬는 시간 넘어짐, 체육시간 어지러움", "방문 목적을 존중하고 도움이 필요한 경우 즉시 알려야 함", "중학교 1학년", "학생용 FAQ"]' data-title="보건실 방문 사유별 안내 FAQ 보건실 운영" id="s9-p10"><div class="card-top"><div class="tags"><span class="tag mint">보건실 운영</span></div><h3>보건실 방문 사유별 안내 FAQ</h3><div class="card-note">2026년 11월 학교 실무 응용 · 보건실 운영</div></div><textarea aria-label="보건실 방문 사유별 안내 FAQ 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 반복적으로 질문받는 보건실 이용 규칙을 정리한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+질문 10개와 쉬운 답변·안내포스터 문구
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 학교별 이용 수칙.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p10"><input class="example-checkbox" id="example-s9-p10" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["월요일 구급함 점검, 수요일 교육자료 점검, 금요일 재고 확인", "기존 학교 업무분장 및 규정과 대조", "초등학교 전 학년", "체크박스 표"]' data-title="보건실 업무 주간 체크리스트 보건실 운영" id="s9-p11"><div class="card-top"><div class="tags"><span class="tag mint">보건실 운영</span></div><h3>보건실 업무 주간 체크리스트</h3><div class="card-note">2026년 11월 학교 실무 응용 · 보건실 운영</div></div><textarea aria-label="보건실 업무 주간 체크리스트 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 반복되는 보건실 업무를 주간 단위로 정리한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+요일별 체크리스트·담당자·완료기준
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 정기 점검 대상.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p11"><input class="example-checkbox" id="example-s9-p11" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["9월 월간 이용 185건, 휴식 80건, 경미한 상처 55건, 상담 50건", "반복 방문 인원 및 개인 정보는 입력하지 않음", "중학교", "교감 보고용 1쪽"]' data-title="보건실 이용 현황 분석 보고 보건실 운영" id="s9-p12"><div class="card-top"><div class="tags"><span class="tag mint">보건실 운영</span></div><h3>보건실 이용 현황 분석 보고</h3><div class="card-note">2026년 11월 학교 실무 응용 · 보건실 운영</div></div><textarea aria-label="보건실 이용 현황 분석 보고 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 익명 집계 데이터에서 이용 경향을 파악한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+이용 추이 표·시사점·후속 조치 제안
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 비식별 통계만 사용.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p12"><input class="example-checkbox" id="example-s9-p12" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["거즈 재고 25개, 월평균 사용 18개, 일회용 장갑 재고 3상자", "가격은 미확인, 임의의 견적 금지", "초등학교", "행정실 협조 요청"]' data-title="보건실 소모품 발주 요청서 보건실 운영" id="s9-p13"><div class="card-top"><div class="tags"><span class="tag mint">보건실 운영</span></div><h3>보건실 소모품 발주 요청서</h3><div class="card-note">2026년 11월 학교 실무 응용 · 보건실 운영</div></div><textarea aria-label="보건실 소모품 발주 요청서 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 재고와 사용량에 근거하여 구매 품목을 제안한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+품목별 재고·필요수량·구매사유·승인요청 문안
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 예산과 단가 확인 필요 표시.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p13"><input class="example-checkbox" id="example-s9-p13" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["체육관 2개, 과학실 1개, 운동장 관리실 1개", "학교 규정에 따른 품목과 사용기록 확인", "고등학교", "월별 관리대장"]' data-title="교내 구급함 위치별 점검표 보건실 운영" id="s9-p14"><div class="card-top"><div class="tags"><span class="tag mint">보건실 운영</span></div><h3>교내 구급함 위치별 점검표</h3><div class="card-note">2026년 11월 학교 실무 응용 · 보건실 운영</div></div><textarea aria-label="교내 구급함 위치별 점검표 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 특별실 및 체육시설 구급함을 점검한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+장소별 점검표·유효기간 확인·조치 기록
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 학교의 구급함 관리 기준.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p14"><input class="example-checkbox" id="example-s9-p14" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["유효기간, 보관온도, 잠금장치, 분리보관 상태 점검", "제품별 처방·투약 결정은 제외", "중학교", "내부 점검표"]' data-title="의약품·의약외품 보관 점검 보건실 운영" id="s9-p15"><div class="card-top"><div class="tags"><span class="tag mint">보건실 운영</span></div><h3>의약품·의약외품 보관 점검</h3><div class="card-note">2026년 11월 학교 실무 응용 · 보건실 운영</div></div><textarea aria-label="의약품·의약외품 보관 점검 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 보건실 물품 보관 상태를 자체 점검한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+점검 항목·관찰 사항·조치 요청 사항
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 학교 관련 규정과 제품 설명서 우선.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p15"><input class="example-checkbox" id="example-s9-p15" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["학교 보건교육 일정, 교육청 보고 일정, 구급물품 정비 목록", "학생 건강정보는 승인된 별도 시스템으로 인계", "고등학교", "새 담당자용 체크리스트"]' data-title="업무 인수인계 핵심 정리 보건실 운영" id="s9-p16"><div class="card-top"><div class="tags"><span class="tag mint">보건실 운영</span></div><h3>업무 인수인계 핵심 정리</h3><div class="card-note">2026년 11월 학교 실무 응용 · 보건실 운영</div></div><textarea aria-label="업무 인수인계 핵심 정리 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 보건실 담당 업무를 개인정보 없이 인수인계한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+업무별 절차·문서 위치·주기·확인 사항
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 업무분장과 공식 매뉴얼 근거.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p16"><input class="example-checkbox" id="example-s9-p16" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["체육관 수업 중 학생이 의식을 잃는 가상 훈련 상황", "즉시 119 신고 및 훈련 운영, 구체 처치는 공식 지침 확인", "중학교", "역할별 비상연락 흐름도"]' data-title="교내 응급상황 역할 분담표 응급 대응" id="s9-p17"><div class="card-top"><div class="tags"><span class="tag mint">응급 대응</span></div><h3>교내 응급상황 역할 분담표</h3><div class="card-note">2026년 11월 학교 실무 응용 · 응급 대응</div></div><textarea aria-label="교내 응급상황 역할 분담표 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 응급상황을 가정한 교직원 연락 및 역할을 정리한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+상황 전파·119 신고·현장관리·보호자 연락 역할표
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 학교 응급환자 관리계획 기준.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p17"><input class="example-checkbox" id="example-s9-p17" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["운동장 체육대회, 학생 600명, 9시부터 15시까지", "현장 연락체계·폭염 대응·휴식공간 확인", "고등학교", "학교 행사 결재용"]' data-title="체육대회 응급대응 사전점검 응급 대응" id="s9-p18"><div class="card-top"><div class="tags"><span class="tag mint">응급 대응</span></div><h3>체육대회 응급대응 사전점검</h3><div class="card-note">2026년 11월 학교 실무 응용 · 응급 대응</div></div><textarea aria-label="체육대회 응급대응 사전점검 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 행사 전 보건안전 준비사항을 점검한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+사전·당일·사후 체크리스트·담당부서 협조사항
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 행사 장소와 일정.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p18"><input class="example-checkbox" id="example-s9-p18" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["초등 4학년 당일 박물관 견학, 버스 3대", "휴대 구급함과 인솔자 연락체계, 위기 시 119", "초등학교 4학년", "인솔교사용 1쪽"]' data-title="현장체험학습 보건안전 협의서 응급 대응" id="s9-p19"><div class="card-top"><div class="tags"><span class="tag mint">응급 대응</span></div><h3>현장체험학습 보건안전 협의서</h3><div class="card-note">2026년 11월 학교 실무 응용 · 응급 대응</div></div><textarea aria-label="현장체험학습 보건안전 협의서 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 외부활동의 일반 보건안전 준비사항을 협의한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+출발 전 확인표·교직원 역할·연락체계
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 개별 학생의 민감정보 제외.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p19"><input class="example-checkbox" id="example-s9-p19" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["급식실 앞에서 학생이 쓰러진 상황을 가정한 모의훈련", "신고·연락·현장 접근 확보를 훈련하고 처치 세부는 검증", "중학교", "10분 모의훈련"]' data-title="응급상황 훈련 시나리오 응급 대응" id="s9-p20"><div class="card-top"><div class="tags"><span class="tag mint">응급 대응</span></div><h3>응급상황 훈련 시나리오</h3><div class="card-note">2026년 11월 학교 실무 응용 · 응급 대응</div></div><textarea aria-label="응급상황 훈련 시나리오 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 교직원 대상 모의훈련을 설계한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+상황카드·참여자 역할·관찰평가표
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 공식 대응 매뉴얼 확인.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p20"><input class="example-checkbox" id="example-s9-p20" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["교육용 가상사례: 10:15 체육수업 중 넘어짐, 10:18 보건실 연락, 10:23 보호자 연락", "추측이나 책임 판단 없이 기록", "초등학교", "사실 중심 보고서"]' data-title="응급사고 보고 경위서 초안 응급 대응" id="s9-p21"><div class="card-top"><div class="tags"><span class="tag mint">응급 대응</span></div><h3>응급사고 보고 경위서 초안</h3><div class="card-note">2026년 11월 학교 실무 응용 · 응급 대응</div></div><textarea aria-label="응급사고 보고 경위서 초안 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 비식별 사고 사실을 시간순으로 정리한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+발생시각·목격정보·조치·연락·추가 확인 사항
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 확인된 사실만 기록.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p21"><input class="example-checkbox" id="example-s9-p21" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["학교 정문 옆 체육관에서 가상 응급상황 발생", "정확한 위치, 환자 상태, 연락번호를 현장 확인", "고등학교", "A5 카드 문안"]' data-title="교직원용 119 신고 정보 카드 응급 대응" id="s9-p22"><div class="card-top"><div class="tags"><span class="tag mint">응급 대응</span></div><h3>교직원용 119 신고 정보 카드</h3><div class="card-note">2026년 11월 학교 실무 응용 · 응급 대응</div></div><textarea aria-label="교직원용 119 신고 정보 카드 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 응급상황 시 전달할 정보를 훈련용 카드로 정리한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+신고 전 확인사항·전달 순서·후속 연락
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 학교 주소와 출입구는 현장 입력.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p22"><input class="example-checkbox" id="example-s9-p22" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["교육용 가상사례: 같은 반에서 호흡기 증상 학생이 여러 명 확인됨", "질환 확진·등교중지 기간 임의 판단 금지", "초등학교 3학년", "알림장 250자"]' data-title="감염병 발생 시 학급 안내문 감염병 예방" id="s9-p23"><div class="card-top"><div class="tags"><span class="tag mint">감염병 예방</span></div><h3>감염병 발생 시 학급 안내문</h3><div class="card-note">2026년 11월 학교 실무 응용 · 감염병 예방</div></div><textarea aria-label="감염병 발생 시 학급 안내문 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 확인된 정보만으로 예방 안내문을 작성한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+학생용 안내·가정 안내·교직원 전달 문안
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 공식 지침과 학교 계획 확인.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p23"><input class="example-checkbox" id="example-s9-p23" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["감염병 의심 사례가 보건실에 보고된 상황", "확진 여부 및 출결 판단은 관련 공식 지침 확인", "중학교", "담당부서별 체크리스트"]' data-title="학교 감염병 대응 업무 체크리스트 감염병 예방" id="s9-p24"><div class="card-top"><div class="tags"><span class="tag mint">감염병 예방</span></div><h3>학교 감염병 대응 업무 체크리스트</h3><div class="card-note">2026년 11월 학교 실무 응용 · 감염병 예방</div></div><textarea aria-label="학교 감염병 대응 업무 체크리스트 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 학교 매뉴얼에 맞게 대응 흐름을 검토한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+인지·보고·협의·안내·사후점검 체크리스트
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 교육부 3차 개정판과 지역 교육청 계획.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p24"><input class="example-checkbox" id="example-s9-p24" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["겨울 호흡기 감염병 예방 주간, 기침예절과 손씻기", "손 위생 시범과 환기 교육 중심", "초등학교 2학년", "하루 5분 활동"]' data-title="계절별 감염병 예방 주간 계획 감염병 예방" id="s9-p25"><div class="card-top"><div class="tags"><span class="tag mint">감염병 예방</span></div><h3>계절별 감염병 예방 주간 계획</h3><div class="card-note">2026년 11월 학교 실무 응용 · 감염병 예방</div></div><textarea aria-label="계절별 감염병 예방 주간 계획 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 학교급에 맞는 예방 교육 주간을 설계한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+5일 일정·홍보 문구·준비물·평가 방법
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 현행 보건당국 권고 우선.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p25"><input class="example-checkbox" id="example-s9-p25" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["독감 증상 때 등교 판단은 어떻게 하나요 등 문의", "격리·등교 기간 수치를 임의 작성하지 않음", "중학교", "학부모 안내용 FAQ"]' data-title="학부모 감염병 FAQ 감염병 예방" id="s9-p26"><div class="card-top"><div class="tags"><span class="tag mint">감염병 예방</span></div><h3>학부모 감염병 FAQ</h3><div class="card-note">2026년 11월 학교 실무 응용 · 감염병 예방</div></div><textarea aria-label="학부모 감염병 FAQ 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 자주 묻는 출결 및 감염병 관리 질문을 모은다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+FAQ 10문답·공식 확인 필요 항목
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 관할 교육청 및 학교 방침.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p26"><input class="example-checkbox" id="example-s9-p26" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["기침할 때 옷소매로 가리기, 비누로 손 씻기", "공포나 낙인 표현 금지", "초등학교 1학년", "A3 포스터"]' data-title="교실 기침예절·손씻기 안내 포스터 감염병 예방" id="s9-p27"><div class="card-top"><div class="tags"><span class="tag mint">감염병 예방</span></div><h3>교실 기침예절·손씻기 안내 포스터</h3><div class="card-note">2026년 11월 학교 실무 응용 · 감염병 예방</div></div><textarea aria-label="교실 기침예절·손씻기 안내 포스터 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 학생 참여형 보건 포스터 문안을 만든다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+제목·짧은 행동수칙·그림 설명·교사용 검수표
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 연령에 맞는 쉬운 표현.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p27"><input class="example-checkbox" id="example-s9-p27" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["일주일 문의 30건: 출결 12, 예방수칙 10, 가정안내 8", "환자 정보와 학급 추적 자료 입력 금지", "고등학교", "교직원 공유용 요약"]' data-title="보건실 감염병 문의 요약표 감염병 예방" id="s9-p28"><div class="card-top"><div class="tags"><span class="tag mint">감염병 예방</span></div><h3>보건실 감염병 문의 요약표</h3><div class="card-note">2026년 11월 학교 실무 응용 · 감염병 예방</div></div><textarea aria-label="보건실 감염병 문의 요약표 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 익명 문의를 유형별로 분류한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+문의 유형·빈도·답변 초안·확인 필요 항목
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 개인정보 제거.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p28"><input class="example-checkbox" id="example-s9-p28" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["6월 실시 예정인 학년별 건강검사 안내", "검사기관·비용·항목은 학교 확인 전 단정 금지", "초등학교", "가정통신문"]' data-title="학생 건강검사 일정 안내문 건강검사" id="s9-p29"><div class="card-top"><div class="tags"><span class="tag mint">건강검사</span></div><h3>학생 건강검사 일정 안내문</h3><div class="card-note">2026년 11월 학교 실무 응용 · 건강검사</div></div><textarea aria-label="학생 건강검사 일정 안내문 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 건강검사 계획을 학생·보호자에게 알린다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+가정통신문·준비 안내·자주 묻는 질문
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 검사 대상 및 시행지침 확인.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p29"><input class="example-checkbox" id="example-s9-p29" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["교육용 가상상황: 추가 확인 안내가 필요한 사례가 여러 건 발생", "진단명·개인별 검진 수치는 입력하지 않음", "중학교", "업무 절차표"]' data-title="건강검사 결과 후속 관리표 건강검사" id="s9-p30"><div class="card-top"><div class="tags"><span class="tag mint">건강검사</span></div><h3>건강검사 결과 후속 관리표</h3><div class="card-note">2026년 11월 학교 실무 응용 · 건강검사</div></div><textarea aria-label="건강검사 결과 후속 관리표 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 검사 결과 관리 업무 절차만 정리한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+담당자 체크리스트·보호자 안내 문구·기록관리 주의
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 학생 개인정보 절대 입력 금지.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p30"><input class="example-checkbox" id="example-s9-p30" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["수면·손씻기·아침식사 습관에 대한 익명 설문", "질병·약물·개인식별정보 질문 제외", "고등학교 1학년", "구글폼용 문항"]' data-title="건강생활 실천 설문 문항 제작 건강검사" id="s9-p31"><div class="card-top"><div class="tags"><span class="tag mint">건강검사</span></div><h3>건강생활 실천 설문 문항 제작</h3><div class="card-note">2026년 11월 학교 실무 응용 · 건강검사</div></div><textarea aria-label="건강생활 실천 설문 문항 제작 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 익명 학생 생활습관 설문을 기획한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+선택형 10문항·응답 안내·결과 분석 틀
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 민감정보 수집 최소화.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p31"><input class="example-checkbox" id="example-s9-p31" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["신학기 건강실태 조사 실시 전 안내", "민감정보는 채팅형 AI에 입력하지 않도록 안내", "초등학교", "학부모 가정통신문"]' data-title="학생 건강실태 조사 가정 안내 건강검사" id="s9-p32"><div class="card-top"><div class="tags"><span class="tag mint">건강검사</span></div><h3>학생 건강실태 조사 가정 안내</h3><div class="card-note">2026년 11월 학교 실무 응용 · 건강검사</div></div><textarea aria-label="학생 건강실태 조사 가정 안내 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 건강실태 조사 목적과 제출 방법을 안내한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+보호자 안내문·개인정보 주의문·문의 안내
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 승인된 제출 경로 사용.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p32"><input class="example-checkbox" id="example-s9-p32" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["교육용 가상상황: 지속적인 건강 지원이 필요한 학생의 학교생활 협의", "의료인 지시와 보호자·학생 의견 및 학교 절차 존중", "중학교", "20분 협의회의"]' data-title="요보호 학생 지원 협의 회의안 학생 지원" id="s9-p33"><div class="card-top"><div class="tags"><span class="tag mint">학생 지원</span></div><h3>요보호 학생 지원 협의 회의안</h3><div class="card-note">2026년 11월 학교 실무 응용 · 학생 지원</div></div><textarea aria-label="요보호 학생 지원 협의 회의안 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 학생 지원 협의에 필요한 논의 구조를 준비한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+회의목적·역할별 협의 질문·후속 과제
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 실제 개인 사례 입력 금지.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p33"><input class="example-checkbox" id="example-s9-p33" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["교육용 가상상황: 천식 관련 개별 지원계획 검토", "학생별 실제 조치는 의료지시·학교 절차를 우선", "초등학교", "협의용 체크리스트"]' data-title="만성질환 학생 지원 업무 체크리스트 학생 지원" id="s9-p34"><div class="card-top"><div class="tags"><span class="tag mint">학생 지원</span></div><h3>만성질환 학생 지원 업무 체크리스트</h3><div class="card-note">2026년 11월 학교 실무 응용 · 학생 지원</div></div><textarea aria-label="만성질환 학생 지원 업무 체크리스트 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 개별 지원계획 수립 시 누락 사항을 점검한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+관계자 확인·비상연락·시설 점검·교육 협의
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 개별 처방이나 약물 지시 생성 금지.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p34"><input class="example-checkbox" id="example-s9-p34" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["급식과 학교 행사 간식 제공 전 확인 절차", "개별 알레르기 유발식품과 대응계획은 승인된 자료만 사용", "초등학교", "업무 협조문"]' data-title="식품알레르기 예방 협업 안내 학생 지원" id="s9-p35"><div class="card-top"><div class="tags"><span class="tag mint">학생 지원</span></div><h3>식품알레르기 예방 협업 안내</h3><div class="card-note">2026년 11월 학교 실무 응용 · 학생 지원</div></div><textarea aria-label="식품알레르기 예방 협업 안내 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 급식실·담임·보건실 협력 논의를 준비한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+협력 체크리스트·예방 안내·응급연락 점검
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 특정 학생 정보 공유 금지.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p35"><input class="example-checkbox" id="example-s9-p35" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["월경의 일반적 변화와 위생용품 사용에 대한 수업", "학생 경험 공개 요구 금지", "중학교 1학년", "익명 질문 중심 수업"]' data-title="월경 건강 교육 수업 기획 학생 지원" id="s9-p36"><div class="card-top"><div class="tags"><span class="tag mint">학생 지원</span></div><h3>월경 건강 교육 수업 기획</h3><div class="card-note">2026년 11월 학교 실무 응용 · 학생 지원</div></div><textarea aria-label="월경 건강 교육 수업 기획 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 학생 수준에 맞는 존중하는 건강교육을 준비한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+20분 수업안·질문함·오해 바로잡기 5문항
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 연령 적합성 확인.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p36"><input class="example-checkbox" id="example-s9-p36" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["시험기간 스트레스가 심할 때 도움 요청하는 방법", "자해 위험 등이 의심되면 즉시 담당 인력 연결, AI 판단 금지", "고등학교", "교실 게시 카드뉴스"]' data-title="마음건강 도움 요청 안내 카드 학생 지원" id="s9-p37"><div class="card-top"><div class="tags"><span class="tag mint">학생 지원</span></div><h3>마음건강 도움 요청 안내 카드</h3><div class="card-note">2026년 11월 학교 실무 응용 · 학생 지원</div></div><textarea aria-label="마음건강 도움 요청 안내 카드 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 학생이 신뢰할 수 있는 어른에게 도움 요청하도록 안내한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+도움 요청 문구·학교 내 지원 경로 안내·카드뉴스 4장
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 위기 대응은 공식 경로 우선.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p37"><input class="example-checkbox" id="example-s9-p37" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["교육용 가상 대화: 보호자와 수면 습관 및 학교생활 협의", "진단 추측이나 보호자 발언 창작 금지", "중학교", "내부 확인 메모"]' data-title="보호자 상담 후 협의사항 정리 학생 지원" id="s9-p38"><div class="card-top"><div class="tags"><span class="tag mint">학생 지원</span></div><h3>보호자 상담 후 협의사항 정리</h3><div class="card-note">2026년 11월 학교 실무 응용 · 학생 지원</div></div><textarea aria-label="보호자 상담 후 협의사항 정리 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 비식별 상담 메모에서 후속 약속을 정리한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+논의 주제·확인된 합의·추가 확인·기한
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 민감정보·개인식별정보 삭제.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p38"><input class="example-checkbox" id="example-s9-p38" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["초등 5학년 감염예방 및 도움 요청 교육", "학교 교육과정 성취기준은 원문 대조 필요", "초등학교 5학년", "수업 계획표"]' data-title="학년별 보건교육 성취목표 정리 보건교육" id="s9-p39"><div class="card-top"><div class="tags"><span class="tag mint">보건교육</span></div><h3>학년별 보건교육 성취목표 정리</h3><div class="card-note">2026년 11월 학교 실무 응용 · 보건교육</div></div><textarea aria-label="학년별 보건교육 성취목표 정리 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 교육과정과 학교 계획에 근거한 목표를 정리한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+학년별 목표·핵심개념·활동 예시
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 교육과정 문구 출처 확인.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p39"><input class="example-checkbox" id="example-s9-p39" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["중학교 2학년 생활 속 응급 신고 교육", "119 신고 역할극, 의료행위 실습 제외", "중학교 2학년", "40분 지도안"]' data-title="보건교육 40분 교수학습 과정안 보건교육" id="s9-p40"><div class="card-top"><div class="tags"><span class="tag mint">보건교육</span></div><h3>보건교육 40분 교수학습 과정안</h3><div class="card-note">2026년 11월 학교 실무 응용 · 보건교육</div></div><textarea aria-label="보건교육 40분 교수학습 과정안 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 수업 시간에 맞춘 참여형 보건교육을 설계한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+도입·전개·정리·형성평가·준비물
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 정규 교육과정과 학급 수준 반영.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p40"><input class="example-checkbox" id="example-s9-p40" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["손씻기·기침예절·건강한 수면 관련 문제", "애매하거나 속임수 같은 문제 배제", "초등학교 2학년", "교실 화면용 퀴즈"]' data-title="초등 저학년 건강 OX 퀴즈 보건교육" id="s9-p41"><div class="card-top"><div class="tags"><span class="tag mint">보건교육</span></div><h3>초등 저학년 건강 OX 퀴즈</h3><div class="card-note">2026년 11월 학교 실무 응용 · 보건교육</div></div><textarea aria-label="초등 저학년 건강 OX 퀴즈 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 쉬운 문장으로 건강 습관 퀴즈를 만든다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+OX 12문항·정답·한 줄 해설
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 보건당국 근거 확인.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p41"><input class="example-checkbox" id="example-s9-p41" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["SNS 건강정보 진위 확인에 관한 토론", "개인 건강 경험 공개 요구 금지", "고등학교 1학년", "20분 모둠 토론"]' data-title="중고등학생 보건 토론 질문 보건교육" id="s9-p42"><div class="card-top"><div class="tags"><span class="tag mint">보건교육</span></div><h3>중고등학생 보건 토론 질문</h3><div class="card-note">2026년 11월 학교 실무 응용 · 보건교육</div></div><textarea aria-label="중고등학생 보건 토론 질문 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 학생이 근거를 찾고 소통하는 토론을 만든다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+논제 5개·양쪽 관점·안전 수칙
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 교실 분위기와 익명성 고려.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p42"><input class="example-checkbox" id="example-s9-p42" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["온라인에서 본 감기 예방법 가상 글 3종", "과장된 치료효과 주장 구분", "중학교 3학년", "한 장 활동지"]' data-title="올바른 건강정보 판별 활동지 보건교육" id="s9-p43"><div class="card-top"><div class="tags"><span class="tag mint">보건교육</span></div><h3>올바른 건강정보 판별 활동지</h3><div class="card-note">2026년 11월 학교 실무 응용 · 보건교육</div></div><textarea aria-label="올바른 건강정보 판별 활동지 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 온라인 건강정보의 신뢰도를 따져보게 한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+체크리스트·가상 게시글·정답 근거
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 공신력 있는 출처 확인.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p43"><input class="example-checkbox" id="example-s9-p43" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["손 씻는 순서 5단계 교육", "문장당 한 행동, 낙인 표현 금지", "특수학교", "쉬운 읽기 카드"]' data-title="특수교육 대상 쉬운 그림 교육 보건교육" id="s9-p44"><div class="card-top"><div class="tags"><span class="tag mint">보건교육</span></div><h3>특수교육 대상 쉬운 그림 교육</h3><div class="card-note">2026년 11월 학교 실무 응용 · 보건교육</div></div><textarea aria-label="특수교육 대상 쉬운 그림 교육 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 이해하기 쉬운 단계를 활용해 내용을 바꾼다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+짧은 문장·그림 장면 설명·교사용 지도 팁
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 학생별 의사소통 방식 반영.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p44"><input class="example-checkbox" id="example-s9-p44" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["점심시간 손씻기 캠페인 1주일", "선택적 참여·개인정보 없는 집계", "중학교", "학생회 협업 기획서"]' data-title="건강캠페인 학생 자치활동 계획 보건교육" id="s9-p45"><div class="card-top"><div class="tags"><span class="tag mint">보건교육</span></div><h3>건강캠페인 학생 자치활동 계획</h3><div class="card-note">2026년 11월 학교 실무 응용 · 보건교육</div></div><textarea aria-label="건강캠페인 학생 자치활동 계획 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 학생회가 운영 가능한 보건 캠페인을 구성한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+역할분담·일정·홍보물·참여기록
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 학교 행사 승인 절차.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p45"><input class="example-checkbox" id="example-s9-p45" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["건강한 수면 수업 후 간단 피드백", "질병·가족사·학생 이름을 묻지 않음", "고등학교 1학년", "익명 6문항"]' data-title="보건교육 수업 만족도 설문 보건교육" id="s9-p46"><div class="card-top"><div class="tags"><span class="tag mint">보건교육</span></div><h3>보건교육 수업 만족도 설문</h3><div class="card-note">2026년 11월 학교 실무 응용 · 보건교육</div></div><textarea aria-label="보건교육 수업 만족도 설문 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 학생의 수업 이해와 개선점을 익명으로 수집한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+5점 문항·서술 문항·집계표
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 익명성과 자율참여 보장.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p46"><input class="example-checkbox" id="example-s9-p46" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["11월 호흡기 감염병 예방과 손씻기", "질환별 등교지침은 확인 필요로 남김", "초등학교", "A4 한 장 뉴스레터"]' data-title="학교 보건 뉴스레터 월간호 학부모 소통" id="s9-p47"><div class="card-top"><div class="tags"><span class="tag mint">학부모 소통</span></div><h3>학교 보건 뉴스레터 월간호</h3><div class="card-note">2026년 11월 학교 실무 응용 · 학부모 소통</div></div><textarea aria-label="학교 보건 뉴스레터 월간호 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 가정에서 실천할 건강 습관을 안내한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+이달의 주제·생활 실천 3개·공식자료 링크 칸
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 실제 출처 검수 후 게시.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p47"><input class="example-checkbox" id="example-s9-p47" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["저녁 준비 전 손씻기 습관 점검 미션", "사진 제출 및 가정 민감정보 요구 금지", "초등학교 3학년", "5일 실천 카드"]' data-title="학생 건강교육 가정 연계 미션 학부모 소통" id="s9-p48"><div class="card-top"><div class="tags"><span class="tag mint">학부모 소통</span></div><h3>학생 건강교육 가정 연계 미션</h3><div class="card-note">2026년 11월 학교 실무 응용 · 학부모 소통</div></div><textarea aria-label="학생 건강교육 가정 연계 미션 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 수업을 가정에서 간단히 실천하도록 돕는다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+가정 미션·선택적 참여 방법·피드백
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 가정환경 차이 배려.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p48"><input class="example-checkbox" id="example-s9-p48" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["보건실 이용 대기시간에 관한 문의 접수", "확인되지 않은 사실과 약속은 제외", "중학교", "300자 회신"]' data-title="보건 관련 민원 답변 초안 학부모 소통" id="s9-p49"><div class="card-top"><div class="tags"><span class="tag mint">학부모 소통</span></div><h3>보건 관련 민원 답변 초안</h3><div class="card-note">2026년 11월 학교 실무 응용 · 학부모 소통</div></div><textarea aria-label="보건 관련 민원 답변 초안 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 사실관계에 근거해 차분한 회신을 작성한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+공감 문장·확인 사실·조치 계획·문의 경로
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 책임·법률 판단 임의작성 금지.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p49"><input class="example-checkbox" id="example-s9-p49" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["겨울철 교실 환기·증상 학생 지원 절차", "질환별 등교 결정 기준은 최신 지침 확인", "초등학교", "교직원 회의용"]' data-title="교직원 감염병 예방 연수 자료 교직원 협력" id="s9-p50"><div class="card-top"><div class="tags"><span class="tag mint">교직원 협력</span></div><h3>교직원 감염병 예방 연수 자료</h3><div class="card-note">2026년 11월 학교 실무 응용 · 교직원 협력</div></div><textarea aria-label="교직원 감염병 예방 연수 자료 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 교직원에게 필요한 기본 예방 협조사항을 공유한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+10분 연수 구성·핵심 체크·질문 5개
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 현행 공식 매뉴얼 검토.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p50"><input class="example-checkbox" id="example-s9-p50" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["수업시간 보건실 이동 시 정보 전달 절차", "위급 상황에는 지연 없이 도움 요청", "고등학교", "교내 메신저 공지"]' data-title="담임교사용 학생 보건실 이용 협조문 교직원 협력" id="s9-p51"><div class="card-top"><div class="tags"><span class="tag mint">교직원 협력</span></div><h3>담임교사용 학생 보건실 이용 협조문</h3><div class="card-note">2026년 11월 학교 실무 응용 · 교직원 협력</div></div><textarea aria-label="담임교사용 학생 보건실 이용 협조문 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 담임과 보건실의 원활한 연락을 위한 문안을 만든다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+안내 목적·기본 절차·긴급상황 예외
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 학교 보건실 운영계획.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p51"><input class="example-checkbox" id="example-s9-p51" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["학교 축제 먹거리 부스 12개와 실내 공연", "식품 위생·더위·응급연락 체계 점검", "고등학교", "행사 운영 협의안"]' data-title="학교 축제 위생·안전 협업 계획 교직원 협력" id="s9-p52"><div class="card-top"><div class="tags"><span class="tag mint">교직원 협력</span></div><h3>학교 축제 위생·안전 협업 계획</h3><div class="card-note">2026년 11월 학교 실무 응용 · 교직원 협력</div></div><textarea aria-label="학교 축제 위생·안전 협업 계획 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 학교 축제 부스 운영 전 점검사항을 정리한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+분야별 점검표·책임자·회의 안건
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 학교 축제 및 식품 위생 규정 확인.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p52"><input class="example-checkbox" id="example-s9-p52" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["10월 보건교육 6회, 보건실 방문 180건, 캠페인 2회", "실제 수치 출처 명시, 미제공 수치 생성 금지", "중학교", "결재용 2쪽"]' data-title="학교 보건 업무 월간 보고서 보고·행정" id="s9-p53"><div class="card-top"><div class="tags"><span class="tag mint">보고·행정</span></div><h3>학교 보건 업무 월간 보고서</h3><div class="card-note">2026년 11월 학교 실무 응용 · 보고·행정</div></div><textarea aria-label="학교 보건 업무 월간 보고서 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 월간 실적을 근거로 학교장 보고 초안을 만든다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+업무 성과·통계·문제·차월 계획
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 제공한 수치만 사용.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p53"><input class="example-checkbox" id="example-s9-p53" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["학급당 교육자료 30부, 대상 6개 학급", "확정된 업체·단가 없이 금액 추정 금지", "초등학교", "행정실 검토용 표"]' data-title="학교 보건교육 예산안 기초 보고·행정" id="s9-p54"><div class="card-top"><div class="tags"><span class="tag mint">보고·행정</span></div><h3>학교 보건교육 예산안 기초</h3><div class="card-note">2026년 11월 학교 실무 응용 · 보고·행정</div></div><textarea aria-label="학교 보건교육 예산안 기초 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 교육 행사에 필요한 예산 항목을 구분한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+품목·수량·단가·산출근거·확인 필요
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 단가 미제공 시 빈칸 유지.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p54"><input class="example-checkbox" id="example-s9-p54" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["분기별 보건교육 운영실적 제출 준비", "공문 원문에 없는 서류나 기한 창작 금지", "고등학교", "제출 직전 체크리스트"]' data-title="교육청 제출 자료 점검표 보고·행정" id="s9-p55"><div class="card-top"><div class="tags"><span class="tag mint">보고·행정</span></div><h3>교육청 제출 자료 점검표</h3><div class="card-note">2026년 11월 학교 실무 응용 · 보고·행정</div></div><textarea aria-label="교육청 제출 자료 점검표 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 제출 전 문서 누락과 개인정보를 점검한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+제출항목·근거자료·검수자·상태표
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 해당 연도 공문 원문 입력 필요.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p55"><input class="example-checkbox" id="example-s9-p55" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article><article class="prompt-card" data-fill-examples='["보건교육 28회, 캠페인 4회, 보건실 교육자료 12종 제작", "교육용 가정 수치임을 표시", "초등학교", "보고서 3쪽"]' data-title="학교 보건사업 연말 결과보고 보고·행정" id="s9-p56"><div class="card-top"><div class="tags"><span class="tag mint">보고·행정</span></div><h3>학교 보건사업 연말 결과보고</h3><div class="card-note">2026년 11월 학교 실무 응용 · 보고·행정</div></div><textarea aria-label="학교 보건사업 연말 결과보고 프롬프트 직접 편집" class="prompt prompt-editor" spellcheck="false">너는 대한민국 초·중·고등학교 보건교사의 학교 현장실무 문서 작성 지원 전문가야.
+[업무 목표] 한 해 운영실적과 다음 해 개선점을 정리한다
+
+[우리 학교 입력 정보]
+- 상황·대상·업무 내용: [    ]
+- 꼭 반영할 학교 여건·확인 사실: [    ]
+- 적용 학교급 또는 대상: [    ]
+- 원하는 결과물 형태: [    ]
+
+[작성할 결과물]
+사업별 목표·실적·개선점·증빙 목록
+
+[작성 기준]
+1. 2026년 11월 기준 학교보건법, 학교건강검사규칙, 교육부 학교 감염병 예방·위기대응 매뉴얼 및 관할 교육청의 최신 지침은 실제 적용 전 확인하도록 표시해줘.
+2. 보건교사가 실제 검토·결정할 부분과 행정용 초안을 명확히 구분해줘. 의료 진단, 처방, 개별 투약, 응급처치 판단을 AI가 대신하지 마.
+3. 학생 이름·학번·생년월일·연락처·진단명·개별 건강기록 등 식별 가능하거나 민감한 정보는 입력·출력하지 마. 예시는 전부 가상 사례로 작성해줘.
+4. 없는 날짜·수치·법령·공문 내용·근거 링크는 만들어내지 말고 '확인 필요'로 표시해줘.
+5. 문장은 간결하고 학교에 바로 붙여넣기 쉽게 작성해줘.
+
+[특별 요청] 실제 집계와 자료 구분.</textarea><div class="prompt-controls"><label class="example-toggle" for="example-s9-p56"><input class="example-checkbox" id="example-s9-p56" type="checkbox"/><span>예시내용 넣어서 프롬프트 완성하기</span></label><p class="example-help">체크하면 이 업무에 맞는 가상 예시가 입력됩니다. 직접 수정한 후 복사할 수 있습니다.</p></div><div class="card-actions"><button class="copy-btn" type="button">📋 프롬프트 전체 복사하기</button></div></article></div>
 </section>
 <section class="section" id="s10"><div class="section-head"><div class="num">10</div><div><h2>AI 결과 검수 · 개인정보 · 정확성 점검</h2><p class="section-desc">핵심: 개인정보 보호, 공식자료 재확인, AI 추정과 사실 구분, 교사의 최종 책임</p></div></div>
 <div aria-label="이 장의 세부 목차" class="section-mini-index"><div class="section-mini-label">이 장의 실습 바로가기</div><div class="section-mini-links"><a href="#s10-p01">01  AI가 만든 보건자료 최종 검수 프롬프트</a><a href="#s10-p02">02  AI 입력 전 개인정보 비식별화 점검</a><a href="#s10-p03">03  내일부터 바로 해볼 한 가지 정하기</a></div></div><div class="prompt-grid">
@@ -4230,7 +5154,6 @@ const sections=[...document.querySelectorAll('.section')]; const links=[...docum
 const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-25% 0px -65% 0px'});
 sections.forEach(s=>obs.observe(s));
 </script>
-
 <script id="ys-source-menu-protection">
 (function(){
   'use strict';
@@ -4373,5 +5296,26 @@ sections.forEach(s=>obs.observe(s));
    timer=setTimeout(()=>{button.classList.remove('copied');button.textContent='📋 프롬프트 전체 복사하기'},2300);
   });
  });
-})();</script></body>
+})();</script><script>
+(function(){
+const sec=document.getElementById('s9'); if(!sec)return;
+const grid=sec.querySelector('.prompt-grid'), cards=[...grid.querySelectorAll('.prompt-card')];
+const oldCategories=new Map([['s9-p01','보건실 운영'],['s9-p02','학생 지원'],['s9-p03','보건실 운영'],['s9-p04','보건교육'],['s9-p05','보건교육'],['s9-p06','학부모 소통'],['s9-p07','보건실 운영'],['s9-p08','보건교육']]);
+const categories=[...new Set(cards.map(c=>c.querySelector('.tags .tag')?.textContent.trim()||oldCategories.get(c.id)||'기타'))];
+const box=document.createElement('div');box.className='practice-filters';box.setAttribute('aria-label','09장 업무분야별 필터');
+const counter=document.createElement('p');counter.className='practice-counter';
+let selected='전체';
+['전체',...categories].forEach(cat=>{const b=document.createElement('button');b.type='button';b.className='practice-filter';b.textContent=cat;b.addEventListener('click',()=>{selected=cat;render();});box.append(b)});
+function render(){
+ let visible=0;
+ cards.forEach(c=>{const cat=c.querySelector('.tags .tag')?.textContent.trim()||oldCategories.get(c.id)||'기타';const ok=selected==='전체'||cat===selected;c.classList.toggle('category-hidden',!ok);if(ok)visible++});
+ [...box.children].forEach(b=>{const active=b.textContent===selected;b.classList.toggle('selected',active);b.setAttribute('aria-pressed',String(active))});
+ counter.textContent=`${selected} · ${visible}개 프롬프트 표시 / 전체 ${cards.length}개`;
+}
+const heading=sec.querySelector('.section-mini-index');heading.after(box,counter);render();
+// Entering any deep link unhides the targeted category
+sec.addEventListener('click',e=>{const a=e.target.closest('a[href^="#s9-p"]');if(a){selected='전체';render()}});
+window.addEventListener('hashchange',()=>{if(location.hash.startsWith('#s9-p')){selected='전체';render()}});
+})();
+</script></body>
 </html>
