@@ -2008,7 +2008,70 @@ body{font-family:Pretendard,"Noto Sans KR","Malgun Gothic",sans-serif;line-heigh
 @media(max-width:1024px){.toc-desktop-tools{display:none!important}}
 @media(prefers-reduced-motion:reduce){.sidebar,.main{transition:none!important}}
 @media print{.main{margin-left:0!important}}
-</style></head>
+</style><style id="visibility-accessibility-fix-v1">
+/* 2026-11: legibility & contrast hardening. Preserve every prompt and UI behavior. */
+:root{--muted:#465f75;--ys-muted:#465f75}
+body{color:#152d43}
+/* headers on dark backgrounds */
+.hero,.hero h1,.hero p,.hero-kicker,.hero-stat,.hero-stat strong,.hero-stat span,.hero-meta .pill{color:#fff!important}
+.hero p,.hero-stat span{color:#edf8ff!important}
+.hero-meta .pill{background:#134a78!important;border:1px solid #b5d3e6!important}
+.eval-intro,.eval-intro h3,.eval-intro p,.eval-steps span{color:#fff!important}
+.eval-kicker{color:#bdf7f2!important}
+/* titles & supporting text on white/light backgrounds */
+.section h2,.prompt-card h3,.chapter-map-head h2,.chapter-tile-name,.ai-tool-name,.price-brand h3,.vibe-overview h3,.eval-output-head h3{color:#102f4a!important}
+.section-desc,.card-note,.source-note,.brand-subtitle,.chapter-map-head p,.chapter-tile-count,.vibe-subgroup p,.eval-hint,.eval-output-guide,.eval-notice,.eval-char,.ai-tool-desc,.price-note,.google-plan-item p,.use-list,.teacher-guide p{color:#405a70!important}
+.tag{color:#145b91!important;background:#eaf4ff!important;border-color:#b9d7e9!important}
+.tag.mint{color:#11634c!important;background:#e2f7ec!important;border-color:#b0ddc6!important}
+.tag.yellow{color:#70500a!important;background:#fff1bc!important;border-color:#ebd17b!important}
+/* Sidebar: small washed-out labels made readable */
+.toc-title,.toc-search-label,.toc-count,.toc-desktop-tools span{color:#34546c!important;font-size:max(13px,1em)}
+.toc-group>summary,.toc-group-name{color:#173b59!important}
+.toc-group-count{color:#274c68!important;background:#e6f0f8!important}
+.toc .toc-children a{color:#294b64!important;font-weight:750!important;font-size:14px}
+.toc .toc-children a.active{color:#074c80!important;background:#dcefff!important}
+.toc-child-index{color:#355c77!important;font-size:12px!important;font-weight:800}
+.toc-children{background:#fff!important}
+#tocSearch{background:#fff!important;color:#183a55!important;font-size:15px!important}
+#tocSearch::placeholder,.searchbox input::placeholder{color:#516b80!important;opacity:1!important}
+#tocClear{color:#23577c!important}
+/* Editable prompt text: prevent invisible text even with forced browser colors */
+.prompt-editor,.prompt-editor:not(:focus),textarea.prompt-editor{color:#152e44!important;background:#f6faff!important;-webkit-text-fill-color:#152e44!important;opacity:1!important;font-weight:500;caret-color:#0b66b4!important;border-top:1px solid #d4e5f2!important}
+.prompt-editor:focus{background:#fff!important;color:#102c44!important;-webkit-text-fill-color:#102c44!important}
+.prompt-editor::selection{background:#b1dcff!important;color:#062c49!important}
+.example-toggle{color:#0e493b!important;background:#e4f7ed!important;border-color:#7abda4!important}
+.example-help,.prompt-controls .example-help{font-size:14px!important;color:#36566d!important;font-weight:600}
+.prompt-card .card-actions .copy-btn{color:#fff!important;-webkit-text-fill-color:#fff!important}
+/* Form labels and result text */
+.eval-options label,.eval-fieldset legend,.eval-legend{color:#153750!important}
+.eval-options label{font-size:15px!important;font-weight:750}
+.eval-options label:has(input:checked){color:#105840!important;background:#e3f5ec!important}
+#evalComment,.eval-result-text{color:#142f45!important;background:#fff!important;-webkit-text-fill-color:#142f45!important}
+.eval-status{color:#285b7b!important}
+.eval-local-badge{color:#31566c!important}
+.eval-reset{color:#254c65!important}
+/* navigation tiles & inline anchors */
+.chapter-tile-count{font-size:12.5px!important}
+.section-mini-links a{color:#254d69!important;border-color:#bcd6e7!important;font-size:13px!important}
+.chapter-toc-btn,.toc-control-actions button{color:#125785!important}
+.vibe-overview p,.vibe-meta,.vibe-steps span{color:#284b65!important}
+/* Mobile button previously drawn at 62% opacity, unreadable against imagery */
+@media(max-width:820px){
+ .mobilebar.is-floating .menu-btn{opacity:1!important;background:#09599d!important;color:#fff!important;box-shadow:0 6px 20px rgba(0,40,80,.32)!important}
+ .toc .toc-children a{font-size:14.5px!important;line-height:1.55!important}
+ .toc-group>summary{font-size:15px!important}
+ .chapter-tile-name{font-size:13px!important}
+ .chapter-tile-count{font-size:12px!important}
+ .card-note{font-size:14px!important}
+ .section-desc{font-size:15px!important}
+ .prompt-editor{font-size:16px!important;line-height:1.8!important}
+ .eval-hint,.eval-output-guide{font-size:14px!important}
+}
+/* focus and high contrast adjustments */
+button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #096cb9!important;outline-offset:3px!important}
+@media(forced-colors:active){.prompt-editor,.example-toggle,.toc-group>summary{forced-color-adjust:auto}}
+</style>
+</head>
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
 <div class="mobilebar"><button aria-label="목차 열기" class="menu-btn" id="menuBtn">☰</button><div class="mobile-title">학생참여형 보건교육 · AI 실습 프롬프트</div></div>
