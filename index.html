@@ -2071,6 +2071,34 @@ body{color:#152d43}
 button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #096cb9!important;outline-offset:3px!important}
 @media(forced-colors:active){.prompt-editor,.example-toggle,.toc-group>summary{forced-color-adjust:auto}}
 </style>
+<style id="hero-guide-contrast-fix">
+/* 밝은 안내 상자 안의 문단에 전역 .hero p 흰색 규칙이 적용되지 않도록 교정 */
+.hero .notice {
+  background: #f8fafc !important;
+  color: #18354d !important;
+  border-color: #d2e3eb !important;
+  border-left: 5px solid #16846c !important;
+}
+.hero .notice > strong { color: #123b5b !important; font-weight: 900 !important; }
+.hero .notice p.review-guidance {
+  display: block;
+  color: #203c54 !important;
+  opacity: 1 !important;
+  font-size: 15.5px !important;
+  font-weight: 650 !important;
+  line-height: 1.75 !important;
+  text-shadow: none !important;
+  max-width: none !important;
+  margin: 11px 0 0 !important;
+  padding: 10px 14px !important;
+  background: #eaf3f9 !important;
+  border-left: 3px solid #2779a5 !important;
+  border-radius: 0 9px 9px 0;
+}
+@media (max-width:820px) {
+  .hero .notice p.review-guidance { font-size: 14.5px !important; line-height:1.72 !important; padding: 10px 11px !important; }
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
